@@ -15,7 +15,7 @@ Joule is available directly within SAP Build Work Zone — no BTP cockpit access
     ![SAP Build Work Zone site home screen after login](images/01_01_0010.png)
     > *📸 Capture: The SAP Build Work Zone home screen as it appears immediately after participant login — showing the site launchpad or home page.*
 
-2. In the top menu bar, click the **diamond (◇) Joule icon** to open the Joule panel.
+2. In the top menu bar, click the **<img src="images/JouleIcon.png" width="16" height="16"> Joule icon** to open the Joule panel.
 
     ![Joule icon in the SAP Build Work Zone top menu bar](images/01_01_0020.png)
     > *📸 Capture: The SAP Build Work Zone top menu bar with the Joule diamond icon highlighted. The Joule side panel should be visible opening on the right side of the screen.*
