@@ -22,7 +22,7 @@ You will build the dealer portal from scratch using Joule, populate it with AI-g
 - How to generate dealer-facing content with **AI-assisted text generation**
 - How to configure **Document Grounding** so Joule can answer questions from your own documents
 - How to assemble a structured ordering workflow using a **Guided Experience** with pre-built UI cards
-- How to use Joule as an **inline assistant** while filling in a form — without leaving the page
+- How to use Joule as an **inline assistant** while collaborating in the workspace or filling in a form within Guided Experiences — without leaving the page
 - How to access an external workspace from **Joule Work Mobile**
 
 ## Requirements
