@@ -46,7 +46,7 @@ Joule Work Mobile is installed and signed in. You are ready to access the BestRu
     ![Joule Work Mobile home screen showing the list of accessible workspaces](images/06_02_0010.png)
     > *📸 Capture: The Joule Work Mobile home screen or workspace list showing the BestRun EV Dealer Portal workspace alongside any other available workspaces.*
 
-2. Tap the **BestRun EV Dealer Portal - ###** workspace to open it.
+2. Tap the **BestRun EV Dealer Portal XXX** workspace to open it.
 
     ![BestRun EV Dealer Portal opening in Joule Work Mobile — mobile view of the Apex Series page](images/06_02_0020.png)
     > *📸 Capture: The BestRun EV Dealer Portal workspace open in Joule Work Mobile — showing the Apex Series hero image and content adapted for a mobile screen. The product images and page layout should be clearly legible on mobile.*

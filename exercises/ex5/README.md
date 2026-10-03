@@ -16,7 +16,7 @@ In this exercise you experience the portal from the dealer's perspective — usi
     ![Login screen showing the dealer participant login](images/05_01_0010.png)
     > *📸 Capture: The SAP Build Work Zone login screen, with the dealer user email/identifier entered. The "participant number" placeholder should be visible if applicable.*
 
-2. After login, locate the portal invitation notification for **BestRun EV Dealer Portal - ###**.
+2. After login, locate the portal invitation notification for **BestRun EV Dealer Portal XXX**.
 
     > [!IMPORTANT]
     > **TODO:** Confirm how workspace invitations are surfaced to external users in SAP Build Work Zone — via a notification bell, a dedicated invitations page, or an email link. Update this step with the actual invitation path.
@@ -37,7 +37,7 @@ You have accepted the invitation and the workspace is accessible. Open the porta
 
 ## Exercise 5.2 Explore the Apex Series Launch Content
 
-1. Open the **BestRun EV Dealer Portal - ###** workspace.
+1. Open the **BestRun EV Dealer Portal XXX** workspace.
 
     ![BestRun EV Dealer Portal home page as seen by the dealer — Apex Series hero image visible](images/05_02_0010.png)
     > *📸 Capture: The dealer's view of the BestRun EV portal — the Apex Series hero image at the top, the launch announcement text below, and the three model cards (City / Trail / Pro) in the lower section. This is the "reveal" moment of the session.*

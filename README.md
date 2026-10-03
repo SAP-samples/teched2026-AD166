@@ -74,7 +74,7 @@ There are no specific technical requirements to follow exercises 1–5. For Exer
 The following systems are used for this hands-on session. Please find your participant number on your desk. Login credentials will be provided by the instructor.
 
 > [!IMPORTANT]
-> Make sure to replace `###` throughout the exercises with your participant number.
+> Make sure to replace `XXX` throughout the exercises with your assigned participant number (e.g. **005** for participant AD166-005).
 
 > [!IMPORTANT]
 > **TODO:** Add the SAP Build Work Zone tenant URL once the landscape is provisioned.
