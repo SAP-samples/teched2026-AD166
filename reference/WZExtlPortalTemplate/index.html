@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>External Portal Template — SAP Build Work Zone</title>
+  <style>
+
+    /* ─── Tokens ───────────────────────────────────────────── */
+    :root {
+      --sap-blue:       #0070F2;
+      --sap-blue-dark:  #0040B0;
+      --sap-blue-light: #EBF5FE;
+      --sap-dark:       #1C2B38;
+      --sap-mid:        #506070;
+      --sap-muted:      #8696A7;
+      --sap-border:     #D9E0E7;
+      --sap-bg:         #F5F6FA;
+      --sap-white:      #FFFFFF;
+      --sap-green:      #107E3E;
+      --sap-orange:     #E76500;
+      --sap-tag-new:    #107E3E;
+      --sap-tag-info:   #0070F2;
+      --sap-tag-update: #E76500;
+      --radius-card:    10px;
+      --radius-btn:     6px;
+      --shadow-card:    0 2px 10px rgba(0,0,0,0.07);
+      --shadow-hover:   0 6px 20px rgba(0,0,0,0.12);
+      --font:           "72", "SAP72", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      font-size: 14px;
+      color: var(--sap-dark);
+      background: var(--sap-bg);
+      line-height: 1.5;
+    }
+
+    /* ─── WZ Top Navigation Bar ────────────────────────────── */
+    .wz-topbar {
+      height: 44px;
+      background: var(--sap-white);
+      border-bottom: 1px solid var(--sap-border);
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .wz-topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+      text-decoration: none;
+    }
+    .wz-topbar-brand .sap-logo {
+      width: 32px;
+      height: 20px;
+      background: #007DB8;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .wz-search {
+      flex: 1;
+      max-width: 340px;
+      margin-left: 8px;
+      height: 30px;
+      border: 1px solid var(--sap-border);
+      border-radius: 15px;
+      padding: 0 14px 0 32px;
+      font-size: 13px;
+      color: var(--sap-mid);
+      background: var(--sap-bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238696A7' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") no-repeat 10px center;
+      outline: none;
+    }
+    .wz-topbar-actions {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .wz-icon-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sap-mid);
+      font-size: 16px;
+    }
+    .wz-icon-btn:hover { background: var(--sap-bg); }
+    .wz-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--sap-blue);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* ─── WZ Left Sidebar ───────────────────────────────────── */
+    .wz-layout {
+      display: flex;
+      min-height: calc(100vh - 44px);
+    }
+    .wz-sidebar {
+      width: 44px;
+      background: var(--sap-white);
+      border-right: 1px solid var(--sap-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 12px 0;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .wz-sidebar-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sap-mid);
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .wz-sidebar-icon:hover { background: var(--sap-bg); color: var(--sap-blue); }
+    .wz-sidebar-icon.active { background: var(--sap-blue-light); color: var(--sap-blue); }
+
+    /* ─── WZ Main Content Area ──────────────────────────────── */
+    .wz-main { flex: 1; overflow: hidden; }
+
+    /* ─── Workspace Header ──────────────────────────────────── */
+    .ws-header {
+      background: var(--sap-white);
+      border-bottom: 1px solid var(--sap-border);
+    }
+    .ws-banner {
+      height: 140px;
+      background: linear-gradient(135deg, #1C4E80 0%, #0070F2 50%, #38A3D1 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .ws-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='140'%3E%3Ccircle cx='320' cy='20' r='80' fill='rgba(255,255,255,0.06)'/%3E%3Ccircle cx='380' cy='110' r='60' fill='rgba(255,255,255,0.04)'/%3E%3Ccircle cx='60' cy='130' r='90' fill='rgba(255,255,255,0.03)'/%3E%3C/svg%3E") no-repeat right center;
+    }
+    .ws-banner-label {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 10px;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+    .ws-identity {
+      display: flex;
+      align-items: flex-end;
+      gap: 14px;
+      padding: 0 24px 12px;
+      position: relative;
+    }
+    .ws-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      background: var(--sap-white);
+      border: 3px solid var(--sap-white);
+      margin-top: -24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      flex-shrink: 0;
+    }
+    .ws-meta { padding-bottom: 2px; }
+    .ws-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--sap-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ws-name svg { color: var(--sap-muted); cursor: pointer; }
+    .ws-desc { font-size: 12px; color: var(--sap-mid); margin-top: 2px; }
+    .ws-badges {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .ws-badge {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: var(--sap-muted);
+    }
+    .ws-header-actions {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 10px;
+    }
+    .btn-invite {
+      background: var(--sap-blue);
+      color: white;
+      border: none;
+      border-radius: var(--radius-btn);
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .btn-invite:hover { background: var(--sap-blue-dark); }
+    .btn-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: var(--radius-btn);
+      border: 1px solid var(--sap-border);
+      background: var(--sap-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--sap-mid);
+      font-size: 14px;
+    }
+    .btn-icon:hover { background: var(--sap-bg); }
+
+    /* ─── Page Tab Bar ──────────────────────────────────────── */
+    .ws-tabs {
+      display: flex;
+      align-items: center;
+      border-top: 1px solid var(--sap-border);
+      padding: 0 24px;
+      background: var(--sap-white);
+      gap: 2px;
+    }
+    .ws-tab {
+      padding: 10px 16px;
+      font-size: 13px;
+      color: var(--sap-mid);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+    }
+    .ws-tab:hover { color: var(--sap-blue); }
+    .ws-tab.active {
+      color: var(--sap-blue);
+      border-bottom-color: var(--sap-blue);
+      font-weight: 600;
+    }
+    .ws-tabs-add {
+      margin-left: auto;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px dashed var(--sap-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sap-muted);
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* ─── Page Content ──────────────────────────────────────── */
+    .page-content {
+      padding: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* ─── Widget: Hero Banner ───────────────────────────────── */
+    .widget-hero {
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: linear-gradient(135deg, #0D2E4E 0%, #0059B3 60%, #2196D8 100%);
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      padding: 48px 56px;
+      position: relative;
+    }
+    .widget-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='280'%3E%3Ccircle cx='650' cy='-20' r='200' fill='rgba(255,255,255,0.05)'/%3E%3Ccircle cx='750' cy='280' r='160' fill='rgba(255,255,255,0.04)'/%3E%3Ccircle cx='500' cy='140' r='300' fill='rgba(255,255,255,0.025)'/%3E%3C/svg%3E") no-repeat right center;
+    }
+    .hero-content { position: relative; max-width: 540px; }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .hero-subtitle {
+      font-size: 15px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: #FFFFFF;
+      color: var(--sap-blue);
+      border: none;
+      border-radius: var(--radius-btn);
+      padding: 10px 22px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: #EBF5FE; }
+    .btn-secondary {
+      background: transparent;
+      color: #FFFFFF;
+      border: 1.5px solid rgba(255,255,255,0.55);
+      border-radius: var(--radius-btn);
+      padding: 10px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+    /* ─── Section title ─────────────────────────────────────── */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--sap-dark);
+    }
+    .section-link {
+      font-size: 13px;
+      color: var(--sap-blue);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .section-link:hover { text-decoration: underline; }
+
+    /* ─── Widget: 3-Column Feature Cards ────────────────────── */
+    .card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    .feature-card {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow .2s, transform .2s;
+      cursor: default;
+    }
+    .feature-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+    .feature-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      background: var(--sap-blue-light);
+    }
+    .feature-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--sap-dark);
+    }
+    .feature-card-body {
+      font-size: 13px;
+      color: var(--sap-mid);
+      line-height: 1.55;
+      flex: 1;
+    }
+    .feature-card-link {
+      font-size: 13px;
+      color: var(--sap-blue);
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
+    }
+    .feature-card-link:hover { text-decoration: underline; }
+
+    /* ─── Widget: Featured Content (2-col) ──────────────────── */
+    .featured-section {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 260px;
+    }
+    .featured-image {
+      background: linear-gradient(135deg, #1a3a5c 0%, #2a6099 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 13px;
+      font-style: italic;
+      min-height: 260px;
+      position: relative;
+      overflow: hidden;
+    }
+    .featured-image-label {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(0,0,0,0.35);
+      color: rgba(255,255,255,0.75);
+      font-size: 10px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .featured-image-shapes {
+      position: absolute;
+      inset: 0;
+    }
+    .featured-content {
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+    }
+    .featured-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--sap-blue);
+      background: var(--sap-blue-light);
+      padding: 3px 8px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+    .featured-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--sap-dark);
+      line-height: 1.25;
+    }
+    .featured-body {
+      font-size: 14px;
+      color: var(--sap-mid);
+      line-height: 1.65;
+    }
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--sap-blue);
+      color: white;
+      border: none;
+      border-radius: var(--radius-btn);
+      padding: 9px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      width: fit-content;
+      margin-top: 4px;
+    }
+    .btn-action:hover { background: var(--sap-blue-dark); }
+
+    /* ─── Widget: Quick Links / Icon Tiles ──────────────────── */
+    .quick-links-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .quick-link-tile {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .quick-link-tile:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+    .quick-link-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--sap-blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .quick-link-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+    }
+    .quick-link-sub {
+      font-size: 11px;
+      color: var(--sap-muted);
+      line-height: 1.4;
+    }
+
+    /* ─── Widget: Update Cards ──────────────────────────────── */
+    .update-card {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow .2s;
+    }
+    .update-card:hover { box-shadow: var(--shadow-hover); }
+    .update-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .update-tag {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .tag-new     { background: #E4F5ED; color: var(--sap-green); }
+    .tag-info    { background: var(--sap-blue-light); color: var(--sap-blue); }
+    .tag-update  { background: #FFF0E0; color: var(--sap-orange); }
+    .update-date { font-size: 11px; color: var(--sap-muted); }
+    .update-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sap-dark);
+      line-height: 1.3;
+    }
+    .update-body {
+      font-size: 12px;
+      color: var(--sap-mid);
+      line-height: 1.55;
+    }
+    .update-link {
+      font-size: 12px;
+      color: var(--sap-blue);
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .update-link:hover { text-decoration: underline; }
+
+    /* ─── Edit overlay hint (template annotation) ───────────── */
+    .widget-edit-hint {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0,112,242,0.12);
+      color: var(--sap-blue);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: none;
+    }
+    .wz-widget:hover .widget-edit-hint { display: block; }
+    .wz-widget { position: relative; }
+
+    /* ─── Inline edit icons (simulated WZ) ──────────────────── */
+    .wz-edit-bar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: none;
+      gap: 6px;
+    }
+    .wz-widget:hover .wz-edit-bar { display: flex; }
+    .wz-edit-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* ─── Footer note ───────────────────────────────────────── */
+    .template-note {
+      background: #FFF8E1;
+      border: 1px solid #FFD54F;
+      border-left: 4px solid #FFB300;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 12px;
+      color: #5D4037;
+      line-height: 1.6;
+    }
+    .template-note strong { color: #3E2723; }
+
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  WZ TOP NAVIGATION BAR                                    -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="wz-topbar">
+  <a class="wz-topbar-brand" href="#">
+    <div class="sap-logo">SAP</div>
+    <span>SAP Build Work Zone</span>
+  </a>
+  <input class="wz-search" type="text" placeholder="Search in this workspace…" readonly />
+  <div class="wz-topbar-actions">
+    <button class="wz-icon-btn" title="Bookmarks">🔖</button>
+    <button class="wz-icon-btn" title="Share">🔗</button>
+    <button class="wz-icon-btn" title="Notifications">🔔</button>
+    <div class="wz-avatar" title="AU">AU</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  LAYOUT: SIDEBAR + MAIN                                   -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="wz-layout">
+
+  <!-- Left sidebar icons -->
+  <div class="wz-sidebar">
+    <div class="wz-sidebar-icon" title="Home">⌂</div>
+    <div class="wz-sidebar-icon active" title="Workspaces">⊞</div>
+    <div class="wz-sidebar-icon" title="Pages">☰</div>
+  </div>
+
+  <!-- Main content area -->
+  <div class="wz-main">
+
+    <!-- Workspace header -->
+    <div class="ws-header">
+      <div class="ws-banner">
+        <span class="ws-banner-label">Workspace banner image (850 × 150 px)</span>
+      </div>
+      <div class="ws-identity">
+        <div class="ws-avatar">🏢</div>
+        <div class="ws-meta">
+          <div class="ws-name">
+            Partner Portal
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="ws-desc">External partner portal — product information, resources, and ordering</div>
+          <div class="ws-badges">
+            <span class="ws-badge">🔒 Private</span>
+            <span class="ws-badge">👥 Members: 1</span>
+          </div>
+        </div>
+        <div class="ws-header-actions">
+          <button class="btn-invite">+ Invite</button>
+          <div class="btn-icon" title="Settings">⚙</div>
+          <div class="btn-icon" title="More">…</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page tab bar -->
+    <div class="ws-tabs">
+      <div class="ws-tab active">Overview</div>
+      <div class="ws-tab">Page 2</div>
+      <div class="ws-tab">Page 3</div>
+      <div class="ws-tab">Page 4</div>
+      <div class="ws-tabs-add" title="Add page">＋</div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!--  PAGE CONTENT — WIDGETS BELOW                         -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <div class="page-content">
+
+      <!-- ── TEMPLATE NOTE ─────────────────────────────────── -->
+      <div class="template-note">
+        <strong>Template Reference</strong> — This page shows the recommended widget layout for an external partner portal in SAP Build Work Zone, advanced edition.
+        Sections from top to bottom: <strong>Hero Banner · Feature Cards (×3) · Featured Section · Quick Links (×4) · Latest Updates (×3)</strong>.
+        Replace placeholder text, images, and labels with workspace-specific content.
+      </div>
+
+      <!-- ── WIDGET 1: HERO BANNER ─────────────────────────── -->
+      <div class="wz-widget">
+        <div class="widget-hero">
+          <div class="hero-content">
+            <div class="hero-eyebrow">Eyebrow / Category Label</div>
+            <h1 class="hero-title">Your Portal Title<br>Goes Here</h1>
+            <p class="hero-subtitle">
+              A one to two sentence value proposition for the portal.
+              Tell partners what they can do here and why it matters.
+            </p>
+            <div class="hero-actions">
+              <button class="btn-primary">Primary Action</button>
+              <button class="btn-secondary">Secondary Action</button>
+            </div>
+          </div>
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+          <div class="wz-edit-icon" title="Widget settings">⚙</div>
+        </div>
+      </div>
+
+      <!-- ── WIDGET 2: FEATURE CARDS (3-col) ───────────────── -->
+      <div class="wz-widget">
+        <div class="section-header">
+          <span class="section-title">Key Highlights</span>
+          <a class="section-link" href="#">View all →</a>
+        </div>
+        <div class="card-grid-3">
+
+          <div class="feature-card">
+            <div class="feature-card-icon">📦</div>
+            <div class="feature-card-title">Feature Category 1</div>
+            <div class="feature-card-body">
+              Short description of this feature or content area.
+              Two to three sentences explaining value to the partner.
+            </div>
+            <a class="feature-card-link" href="#">Explore →</a>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">🛒</div>
+            <div class="feature-card-title">Feature Category 2</div>
+            <div class="feature-card-body">
+              Short description of this feature or content area.
+              Two to three sentences explaining value to the partner.
+            </div>
+            <a class="feature-card-link" href="#">Explore →</a>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">📋</div>
+            <div class="feature-card-title">Feature Category 3</div>
+            <div class="feature-card-body">
+              Short description of this feature or content area.
+              Two to three sentences explaining value to the partner.
+            </div>
+            <a class="feature-card-link" href="#">Explore →</a>
+          </div>
+
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+        </div>
+      </div>
+
+      <!-- ── WIDGET 3: FEATURED CONTENT (2-col) ────────────── -->
+      <div class="wz-widget">
+        <div class="section-header">
+          <span class="section-title">Featured</span>
+        </div>
+        <div class="featured-section">
+          <div class="featured-image">
+            <svg class="featured-image-shapes" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="400" cy="30" r="120" fill="rgba(255,255,255,0.04)"/>
+              <circle cx="80" cy="200" r="100" fill="rgba(255,255,255,0.05)"/>
+              <circle cx="260" cy="130" r="180" fill="rgba(255,255,255,0.025)"/>
+            </svg>
+            <span class="featured-image-label">Featured image (850 × 400 px)</span>
+          </div>
+          <div class="featured-content">
+            <span class="featured-tag">Featured</span>
+            <h2 class="featured-title">Featured Story or<br>Announcement Title</h2>
+            <p class="featured-body">
+              Supporting paragraph that gives context. Two to three sentences describing
+              the featured item — a product launch, a key update, or a campaign.
+              Keep it concise and action-oriented.
+            </p>
+            <button class="btn-action">Learn more →</button>
+          </div>
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+        </div>
+      </div>
+
+      <!-- ── WIDGET 4: QUICK LINKS (4 tiles) ───────────────── -->
+      <div class="wz-widget">
+        <div class="section-header">
+          <span class="section-title">Quick Links</span>
+        </div>
+        <div class="quick-links-grid">
+
+          <div class="quick-link-tile">
+            <div class="quick-link-icon">📄</div>
+            <div class="quick-link-label">Resource 1</div>
+            <div class="quick-link-sub">Short label or description</div>
+          </div>
+
+          <div class="quick-link-tile">
+            <div class="quick-link-icon">🎓</div>
+            <div class="quick-link-label">Resource 2</div>
+            <div class="quick-link-sub">Short label or description</div>
+          </div>
+
+          <div class="quick-link-tile">
+            <div class="quick-link-icon">🔧</div>
+            <div class="quick-link-label">Resource 3</div>
+            <div class="quick-link-sub">Short label or description</div>
+          </div>
+
+          <div class="quick-link-tile">
+            <div class="quick-link-icon">💬</div>
+            <div class="quick-link-label">Resource 4</div>
+            <div class="quick-link-sub">Short label or description</div>
+          </div>
+
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+        </div>
+      </div>
+
+      <!-- ── WIDGET 5: LATEST UPDATES (3 cards) ────────────── -->
+      <div class="wz-widget">
+        <div class="section-header">
+          <span class="section-title">Latest Updates</span>
+          <a class="section-link" href="#">See all →</a>
+        </div>
+        <div class="card-grid-3">
+
+          <div class="update-card">
+            <div class="update-card-meta">
+              <span class="update-tag tag-new">New</span>
+              <span class="update-date">DD Mon YYYY</span>
+            </div>
+            <div class="update-title">Update or announcement title — keep to one line</div>
+            <div class="update-body">
+              Two to three sentence summary of the update. Give enough detail
+              so the partner knows whether to read further.
+            </div>
+            <a class="update-link" href="#">Read more →</a>
+          </div>
+
+          <div class="update-card">
+            <div class="update-card-meta">
+              <span class="update-tag tag-update">Updated</span>
+              <span class="update-date">DD Mon YYYY</span>
+            </div>
+            <div class="update-title">Update or announcement title — keep to one line</div>
+            <div class="update-body">
+              Two to three sentence summary of the update. Give enough detail
+              so the partner knows whether to read further.
+            </div>
+            <a class="update-link" href="#">Read more →</a>
+          </div>
+
+          <div class="update-card">
+            <div class="update-card-meta">
+              <span class="update-tag tag-info">Info</span>
+              <span class="update-date">DD Mon YYYY</span>
+            </div>
+            <div class="update-title">Update or announcement title — keep to one line</div>
+            <div class="update-body">
+              Two to three sentence summary of the update. Give enough detail
+              so the partner knows whether to read further.
+            </div>
+            <a class="update-link" href="#">Read more →</a>
+          </div>
+
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+        </div>
+      </div>
+
+    </div><!-- /page-content -->
+  </div><!-- /wz-main -->
+</div><!-- /wz-layout -->
+
+</body>
+</html>
