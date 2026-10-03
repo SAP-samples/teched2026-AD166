@@ -38,7 +38,7 @@ There are no specific technical requirements to follow exercises 1–5. For Exer
 
 - [Getting Started (Optional)](exercises/ex0/) — Meet BestRun EV, the Apex Series, and the tools you will use today
 - [Exercise 1 - Set Up the Dealer Portal with Joule](exercises/ex1/)
-    - [Exercise 1.1 - Open Joule and access SAP Build Work Zone](exercises/ex1/README.md#exercise-11-open-joule-and-access-sap-build-work-zone)
+    - [Exercise 1.1 - Log in and open Joule](exercises/ex1/README.md#exercise-11-log-in-and-open-joule)
     - [Exercise 1.2 - Create the BestRun EV Dealer Portal workspace](exercises/ex1/README.md#exercise-12-create-the-bestrun-ev-dealer-portal-workspace)
     - [Exercise 1.3 - Add team members using Joule](exercises/ex1/README.md#exercise-13-add-team-members-using-joule)
     - [Exercise 1.4 - Configure the workspace as an external-facing portal](exercises/ex1/README.md#exercise-14-configure-the-workspace-as-an-external-facing-portal)
