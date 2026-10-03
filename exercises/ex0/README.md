@@ -1,26 +1,71 @@
-# Level 1 Heading
+# Getting Started (Optional)
 
-In this exercise, you will...
+This section introduces the business scenario and tools you will work with throughout the session. If you are already familiar with SAP Build Work Zone, advanced edition, you can skip ahead to [Exercise 1](../ex1/README.md).
 
-## Level 2 Heading
+## The Scenario: BestRun EV
 
-After completing these steps you will have....
+**BestRun EV** is a premium electric mobility company that designs and sells ebikes and electric scooters through an authorized dealer network of 200+ dealers across Europe and Asia-Pacific.
 
-1.	Click here.
-<br>![](/exercises/ex0/images/00_00_0010.png)
+Their existing dealer portal is a static website — a collection of downloadable PDF spec sheets, a quarterly price list emailed to dealers, and a contact form. Dealers wait up to 48 hours for answers to product questions. There is no way to place an order through the portal.
 
-2.	Insert this code.
-``` abap
- DATA(params) = request->get_form_fields(  ).
- READ TABLE params REFERENCE INTO DATA(param) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-```
+BestRun EV is about to launch their most significant product line in five years: the **Apex Series**.
+
+| Model | Type | Key Highlight |
+|---|---|---|
+| **Apex City** | Urban commuter scooter | Lightweight, city-optimized |
+| **Apex Trail** | Adventure ebike | 140 km range, all-terrain |
+| **Apex Pro** | Performance ebike | 200 km range, new LFP battery system |
+
+With the launch 90 days away, the digital team has decided: **migrate from the static portal to SAP Build Work Zone, advanced edition, and launch the Apex Series on the new platform.**
+
+![Overview diagram: static portal (before) vs. SAP Build Work Zone dealer portal (after)](images/00_00_0010.png)
+> *📸 Capture: A simple before/after comparison diagram or screenshot showing a static HTML dealer page on the left and the BestRun EV Work Zone portal on the right.*
+
+## What is SAP Build Work Zone, Advanced Edition?
+
+SAP Build Work Zone, advanced edition is a digital experience platform that lets organizations create structured workspaces — internal or external-facing — for teams, partners, and customers. It brings together apps, content, documents, and processes in one place, accessible from any device.
+
+In this session, you are using it to build an **external-facing dealer portal** — a workspace that BestRun EV's authorized dealers can access to find product information, place pre-orders, and get instant answers using AI.
+
+## Tools You Will Use
+
+### Joule
+
+Joule is SAP's AI copilot. In this session, Joule has two roles:
+
+1. **Admin tool** — you use Joule to create and configure the workspace (exercises 1–4)
+2. **Dealer assistant** — once the portal is live, dealers use Joule to ask product questions and get answers grounded in the uploaded documents (exercise 5)
+
+### AI-Assisted Text Generation
+
+SAP Build Work Zone includes built-in AI text generation powered by Joule. You use it to draft dealer-facing content for the workspace — product announcements, model overviews, and page copy — without leaving the editor.
+
+### Document Grounding
+
+Document Grounding allows Joule to answer questions based on documents you upload to the workspace. Instead of a dealer downloading a 40-page PDF and searching manually, they ask Joule a natural language question and receive a sourced answer in seconds.
+
+### Guided Experience
+
+A Guided Experience is a structured multi-step workflow built from UI cards. In this session, you will assemble a four-step pre-order wizard from pre-built cards already loaded in the workspace card catalog. Dealers use the wizard to configure and submit a pre-order for Apex Series units.
+
+### Joule Work Mobile
+
+Joule Work Mobile (formerly SAP Mobile Start) is the mobile app for accessing SAP Build Work Zone workspaces. In Exercise 6 (optional), you access the dealer portal from a smartphone.
+
+## Your Personas
+
+During this session you play two roles:
+
+| Persona | When | What you do |
+|---|---|---|
+| **Digital Experience Manager, BestRun EV** | Exercises 1–4 | Build and configure the dealer portal |
+| **Authorized Dealer, Amsterdam** | Exercises 5–6 | Experience and use the portal as a dealer |
 
 ## Summary
 
-Now that you have ... 
-Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+You now have the context to start building. The landscape is already provisioned — you have access to SAP Build Work Zone, advanced edition with Joule and Document Grounding enabled.
+
+> [!IMPORTANT]
+> **TODO:** Add any landscape-specific login instructions or pre-checks the participant should complete before starting Exercise 1 (e.g., confirm login works, confirm participant number assignment).
+
+Continue to — [Exercise 1 - Set Up the Dealer Portal with Joule](../ex1/README.md)
