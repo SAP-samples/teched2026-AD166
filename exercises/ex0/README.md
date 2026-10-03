@@ -18,9 +18,13 @@ BestRun EV is about to launch their most significant product line in five years:
 
 With the launch 90 days away, the digital team has decided: **migrate from the static portal to SAP Build Work Zone, advanced edition, and launch the Apex Series on the new platform.**
 
+<div align="center">
+
 | Legacy Dealer Portal | Work Zone AI-enabled Dealer Workspace |
 |:---:|:---:|
-| ![Legacy Dealer Portal](images/LegacyDealerPortal.png) | ![Work Zone AI-enabled Dealer Workspace](images/TargetDealerWorkspace.png) |
+| <img src="images/LegacyDealerPortal.png" width="436" height="321"> | <img src="images/TargetDealerWorkspace.png" width="436" height="321"> |
+
+</div>
 
 ## What is SAP Build Work Zone, Advanced Edition?
 
