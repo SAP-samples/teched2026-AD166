@@ -38,7 +38,7 @@ In this session, you are using it to build an **external-facing dealer portal** 
 
 Joule is SAP's AI copilot. In this session, Joule has two roles:
 
-1. **Admin tool** — you use Joule to create and configure the workspace (exercises 1–4)
+1. **Content Creator tool** — you use Joule to create and configure the workspace (exercises 1–4)
 2. **Dealer assistant** — once the portal is live, dealers use Joule to ask product questions and get answers grounded in the uploaded documents (exercise 5)
 
 ### AI-Assisted Text Generation
