@@ -1,4 +1,4 @@
-# Session ID - Session Title
+# AD166 - Experience AI-enabled business sites with SAP Build Work Zone
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2026-AD166)](https://api.reuse.software/info/github.com/SAP-samples/teched2026-AD166)
 
 <p align="center"><img src="./exercises/images/ad166-banner.png" width="80%" /></p>
@@ -8,7 +8,7 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2026 session **Session ID - Session Title**.
+This repository contains the material for the SAP TechEd 2026 session **AD166 - Experience AI-enabled business sites with SAP Build Work Zone**.
 
 ## Overview
 
