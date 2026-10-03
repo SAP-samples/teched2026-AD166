@@ -76,12 +76,12 @@ The following systems are used for this hands-on session. Please find your parti
 > [!IMPORTANT]
 > Make sure to replace `XXX` throughout the exercises with your assigned participant number (e.g. **005** for participant AD166-005).
 
-> [!IMPORTANT]
-> **TODO:** Add the SAP Build Work Zone tenant URL once the landscape is provisioned.
-
 | System | URL |
 |---|---|
-| SAP Build Work Zone | `TODO: https://ad166-XXXXXXXX.workzone.cfapps.eu10.hana.ondemand.com/site` |
+| SAP Build Work Zone | [https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/](https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/) |
+
+> [!NOTE]
+> This URL is only accessible to in-person participants of the SAP TechEd 2026 hands-on session. Outside of the session, use your own SAP Build Work Zone tenant.
 
 > [!NOTE]
 > Outside of the hands-on session of SAP TechEd 2026, your own systems will be required to execute the exercises.

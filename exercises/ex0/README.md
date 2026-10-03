@@ -71,8 +71,12 @@ The landscape for this session is already fully configured. You have access to:
 - **Joule** — available directly within SAP Build Work Zone, no BTP cockpit access required
 - **Document Grounding** — already connected and ready to be enabled per workspace
 
-> [!IMPORTANT]
-> **TODO:** Add the system access URL and login instructions for the TechEd 2026 landscape.
+Open the following URL to access the landscape:
+
+> **[https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/](https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/)**
+
+> [!NOTE]
+> This URL is only accessible on-site at SAP TechEd 2026. Login credentials will be provided by the instructor.
 
 > [!IMPORTANT]
 > Throughout the exercises, replace `XXX` with your assigned participant number (e.g. if you are participant **AD166-005**, use **005**).
