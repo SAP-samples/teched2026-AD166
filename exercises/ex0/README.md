@@ -18,8 +18,13 @@ BestRun EV is about to launch their most significant product line in five years:
 
 With the launch 90 days away, the digital team has decided: **migrate from the static portal to SAP Build Work Zone, advanced edition, and launch the Apex Series on the new platform.**
 
-![Overview diagram: static portal (before) vs. SAP Build Work Zone dealer portal (after)](images/00_00_0010.png)
-> *📸 Capture: A simple before/after comparison diagram or screenshot showing a static HTML dealer page on the left and the BestRun EV Work Zone portal on the right.*
+<div align="center">
+
+| Legacy Dealer Portal | Work Zone AI-enabled Dealer Workspace |
+|:---:|:---:|
+| <img src="images/LegacyDealerPortal.png" width="436" height="321"> | <img src="images/TargetDealerWorkspace.png" width="436" height="321"> |
+
+</div>
 
 ## What is SAP Build Work Zone, Advanced Edition?
 
@@ -33,7 +38,7 @@ In this session, you are using it to build an **external-facing dealer portal** 
 
 Joule is SAP's AI copilot. In this session, Joule has two roles:
 
-1. **Admin tool** — you use Joule to create and configure the workspace (exercises 1–4)
+1. **Content Creator tool** — you use Joule to create and configure the workspace (exercises 1–4)
 2. **Dealer assistant** — once the portal is live, dealers use Joule to ask product questions and get answers grounded in the uploaded documents (exercise 5)
 
 ### AI-Assisted Text Generation
@@ -71,8 +76,12 @@ The landscape for this session is already fully configured. You have access to:
 - **Joule** — available directly within SAP Build Work Zone, no BTP cockpit access required
 - **Document Grounding** — already connected and ready to be enabled per workspace
 
-> [!IMPORTANT]
-> **TODO:** Add the system access URL and login instructions for the TechEd 2026 landscape.
+Open the following URL to access the landscape:
+
+> **[https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/](https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/)**
+
+> [!NOTE]
+> This URL is only accessible on-site at SAP TechEd 2026. Login credentials will be provided by the instructor.
 
 > [!IMPORTANT]
 > Throughout the exercises, replace `XXX` with your assigned participant number (e.g. if you are participant **AD166-005**, use **005**).

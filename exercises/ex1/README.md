@@ -8,10 +8,9 @@ By the end of this exercise, you will have a live workspace ready to receive con
 
 Joule is available directly within SAP Build Work Zone — no BTP cockpit access is needed. You will log in to the Work Zone site, open Joule, and navigate to the workspace administration console.
 
-1. Open the SAP Build Work Zone URL provided on your desk card and log in with your participant credentials.
+1. Open the following URL in your browser and log in with your participant credentials:
 
-    > [!IMPORTANT]
-    > **TODO:** Add the SAP Build Work Zone site URL once the landscape is provisioned.
+    > **[https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/](https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/)**
 
     ![SAP Build Work Zone site home screen after login](images/01_01_0010.png)
     > *📸 Capture: The SAP Build Work Zone home screen as it appears immediately after participant login — showing the site launchpad or home page.*
