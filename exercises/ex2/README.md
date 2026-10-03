@@ -8,7 +8,7 @@ By the end of this exercise, the portal will have a complete, dealer-ready Apex 
 
 You will add a new page to the workspace and set it up as the main entry point for Apex Series content.
 
-1. In the **BestRun EV Dealer Portal - ###** workspace, open the page management view.
+1. In the **BestRun EV Dealer Portal XXX** workspace, open the page management view.
 
     > [!IMPORTANT]
     > **TODO:** Confirm the navigation path to add a new page in the workspace (e.g., via the page editor, workspace admin, or a + button in the navigation).

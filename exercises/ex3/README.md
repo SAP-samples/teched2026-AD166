@@ -1,8 +1,8 @@
 # Exercise 3 - Enable Document Grounding
 
-In this exercise you upload the BestRun EV product documents to the workspace and enable Document Grounding. Once grounded, Joule will be able to answer dealer questions directly from the content of those documents — without requiring dealers to open or search through any file.
+In this exercise you upload the BestRun EV product documents to the workspace and enable Document Grounding for it. Document Grounding is already provisioned and connected to SAP Build Work Zone in this landscape — you do not need to set it up from scratch. Your task is to upload the source documents and activate grounding specifically for the **BestRun EV Dealer Portal XXX** workspace.
 
-By the end of this exercise, the workspace is grounded and you can verify Joule is returning sourced answers.
+Once enabled, Joule will answer dealer questions directly from the content of those documents — without requiring dealers to open or search through any file.
 
 ## Exercise 3.1 Upload Product Documents to the Workspace
 
@@ -45,37 +45,37 @@ All source documents are uploaded. You are ready to enable Document Grounding.
 
 ## Exercise 3.2 Configure Document Grounding
 
-You will now enable Document Grounding for the workspace. This connects the uploaded documents to Joule, allowing it to search and quote from them when answering questions.
+Document Grounding is already available in the landscape. In this step you enable it for your workspace and confirm that the uploaded documents are included in the grounding scope.
 
-1. Open the workspace **Settings** and navigate to the **AI** or **Joule** settings section.
+1. Open the workspace **Settings** and navigate to the **AI** or **Document Grounding** section.
 
     > [!IMPORTANT]
-    > **TODO:** Confirm the exact location of Document Grounding settings in this version of SAP Build Work Zone advanced edition. It may be under workspace settings → AI, or under a separate Knowledge Base / Grounding configuration panel.
+    > **TODO:** Confirm the exact location of the Document Grounding settings within a workspace in this version of SAP Build Work Zone advanced edition (e.g., workspace settings → AI, or a dedicated Knowledge Base / Grounding panel).
 
-    ![Workspace settings with the AI or Document Grounding configuration section visible](images/03_02_0010.png)
-    > *📸 Capture: The workspace settings panel open at the AI / Document Grounding section. The section header and configuration options should be clearly visible.*
+    ![Workspace settings open at the Document Grounding section](images/03_02_0010.png)
+    > *📸 Capture: The workspace settings panel showing the Document Grounding configuration section. The section should indicate Document Grounding is available (the service is pre-configured) but not yet enabled for this workspace.*
 
 2. Enable **Document Grounding** for the workspace.
 
     ![Document Grounding toggle switched to enabled](images/03_02_0020.png)
-    > *📸 Capture: The Document Grounding setting in its enabled state — toggle or checkbox switched on, with any confirmation message visible.*
+    > *📸 Capture: The Document Grounding toggle or setting in its enabled state, with a confirmation message visible.*
 
-3. In the grounding scope settings, confirm that all five uploaded documents are included in the grounding scope.
+3. Confirm that all five uploaded documents are included in the grounding scope.
 
     > [!IMPORTANT]
-    > **TODO:** Confirm whether document scope is configured per document, per folder, or is applied automatically to all documents in the workspace. Update this step accordingly.
+    > **TODO:** Confirm whether grounding scope is configured per document, per folder, or applied automatically to all workspace documents. Update this step accordingly.
 
-    ![Grounding scope configuration showing all five documents selected](images/03_02_0030.png)
-    > *📸 Capture: The grounding scope or source selection panel showing all five BestRun EV documents checked/included.*
+    ![Grounding scope showing all five documents included](images/03_02_0030.png)
+    > *📸 Capture: The grounding scope configuration showing all five BestRun EV documents selected or confirmed as included.*
 
 4. Save the settings.
 
-    ![Document Grounding settings saved confirmation](images/03_02_0040.png)
-    > *📸 Capture: The settings saved successfully — confirmation message or updated settings panel with Document Grounding shown as active.*
+    ![Document Grounding enabled and saved — workspace is now grounded](images/03_02_0040.png)
+    > *📸 Capture: Confirmation that settings were saved — Document Grounding shown as active for the workspace.*
 
 ### Summary
 
-Document Grounding is enabled. Joule can now draw from the uploaded documents when answering questions in this workspace. Run a quick test to verify.
+Document Grounding is active for the workspace. Joule can now draw from the uploaded documents when answering questions in this workspace.
 
 ---
 
