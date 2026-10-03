@@ -65,7 +65,16 @@ During this session you play two roles:
 
 You now have the context to start building. The landscape is already provisioned — you have access to SAP Build Work Zone, advanced edition with Joule and Document Grounding enabled.
 
+The landscape for this session is already fully configured. You have access to:
+
+- **SAP Build Work Zone, advanced edition** — your starting point for every exercise
+- **Joule** — available directly within SAP Build Work Zone, no BTP cockpit access required
+- **Document Grounding** — already connected and ready to be enabled per workspace
+
 > [!IMPORTANT]
-> **TODO:** Add any landscape-specific login instructions or pre-checks the participant should complete before starting Exercise 1 (e.g., confirm login works, confirm participant number assignment).
+> **TODO:** Add the system access URL and login instructions for the TechEd 2026 landscape.
+
+> [!IMPORTANT]
+> Throughout the exercises, replace `XXX` with your assigned participant number (e.g. if you are participant **AD166-005**, use **005**).
 
 Continue to — [Exercise 1 - Set Up the Dealer Portal with Joule](../ex1/README.md)

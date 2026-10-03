@@ -6,41 +6,35 @@ By the end of this exercise, you will have a live workspace ready to receive con
 
 ## Exercise 1.1 Open Joule and Access SAP Build Work Zone
 
-Joule is available directly from the SAP BTP cockpit. You will open Joule, confirm it is connected to SAP Build Work Zone, and navigate to the administration console.
+Joule is available directly within SAP Build Work Zone — no BTP cockpit access is needed. You will log in to the Work Zone site, open Joule, and navigate to the workspace administration console.
 
-1. Log in to SAP BTP cockpit using your participant credentials.
-
-    > [!IMPORTANT]
-    > **TODO:** Add the BTP cockpit URL and confirm the login path (BTP subaccount → Joule entry point).
-
-    ![BTP cockpit home screen showing the Joule entry point or button](images/01_01_0010.png)
-    > *📸 Capture: The BTP cockpit home screen or subaccount overview. The Joule icon or launch point should be clearly visible.*
-
-2. Click the **Joule** icon to open the Joule panel.
-
-    ![Joule panel opening on the right side of the screen](images/01_01_0020.png)
-    > *📸 Capture: The Joule side panel sliding open, showing the Joule chat interface and the greeting prompt.*
-
-3. Type the following prompt and press **Enter**:
-
-    ```
-    Open SAP Build Work Zone
-    ```
-
-    ![Joule responding with a link or navigation action to SAP Build Work Zone](images/01_01_0030.png)
-    > *📸 Capture: Joule's response showing a navigation card or link to SAP Build Work Zone. The response should confirm Joule understood the instruction.*
-
-4. Click the link or action in Joule's response to navigate to the SAP Build Work Zone administration console.
-
-    ![SAP Build Work Zone administration console home screen](images/01_01_0040.png)
-    > *📸 Capture: The SAP Build Work Zone administration console, showing the main dashboard or home screen as it appears after first login.*
+1. Open the SAP Build Work Zone URL provided on your desk card and log in with your participant credentials.
 
     > [!IMPORTANT]
-    > **TODO:** Confirm the exact Joule prompt that navigates to SAP Build Work Zone and the exact response format (link card, button, direct navigation, etc.).
+    > **TODO:** Add the SAP Build Work Zone site URL once the landscape is provisioned.
+
+    ![SAP Build Work Zone site home screen after login](images/01_01_0010.png)
+    > *📸 Capture: The SAP Build Work Zone home screen as it appears immediately after participant login — showing the site launchpad or home page.*
+
+2. Click the **Joule** icon in the Work Zone interface to open the Joule panel.
+
+    > [!IMPORTANT]
+    > **TODO:** Confirm the exact location of the Joule entry point within SAP Build Work Zone (e.g., top navigation bar icon, floating button, or menu item).
+
+    ![Joule panel open within SAP Build Work Zone](images/01_01_0020.png)
+    > *📸 Capture: The Joule side panel open within SAP Build Work Zone — showing the chat interface and a welcome/greeting prompt. The Work Zone page should be visible behind the panel.*
+
+3. Navigate to the **Administration Console** of SAP Build Work Zone.
+
+    > [!IMPORTANT]
+    > **TODO:** Confirm the navigation path to the Administration Console from the Work Zone home screen (e.g., user menu → Administration Console, or a direct tile/link on the home page).
+
+    ![SAP Build Work Zone Administration Console home screen](images/01_01_0030.png)
+    > *📸 Capture: The SAP Build Work Zone Administration Console — showing the main admin dashboard. This is the starting point for workspace creation in the next step.*
 
 ### Summary
 
-You have opened Joule and reached the SAP Build Work Zone administration console. Continue to the next step to create your workspace.
+You are logged in to SAP Build Work Zone and the Joule panel is open. Continue to the next step to create your workspace.
 
 ---
 
@@ -65,7 +59,7 @@ You will now use Joule to create a new workspace for the BestRun EV dealer netwo
     ![Template selection screen showing available workspace templates](images/01_02_0020.png)
     > *📸 Capture: The workspace template selection screen or Joule's prompt for template choice, with the external/portal template option highlighted.*
 
-3. Confirm the workspace name **BestRun EV Dealer Portal - ###** (replace `###` with your participant number) and click **Create** or confirm via Joule.
+3. Confirm the workspace name **BestRun EV Dealer Portal XXX** (replace `XXX` with your participant number) and click **Create** or confirm via Joule.
 
     ![Workspace creation confirmation screen showing the workspace name and settings](images/01_02_0030.png)
     > *📸 Capture: The final creation confirmation step — workspace name field pre-filled, template confirmed, ready to create.*
@@ -73,7 +67,7 @@ You will now use Joule to create a new workspace for the BestRun EV dealer netwo
 4. After a few seconds, the new workspace opens. Verify the workspace name appears correctly in the header.
 
     ![Newly created BestRun EV Dealer Portal workspace, empty, ready to be configured](images/01_02_0040.png)
-    > *📸 Capture: The newly created workspace in its initial state — empty pages, no content yet. The workspace name "BestRun EV Dealer Portal - ###" should be visible in the header.*
+    > *📸 Capture: The newly created workspace in its initial state — empty pages, no content yet. The workspace name "BestRun EV Dealer Portal XXX" should be visible in the header.*
 
 ### Summary
 
@@ -88,7 +82,7 @@ The BestRun EV regional sales managers need access to the workspace so they can 
 1. With the Joule panel open, type the following prompt:
 
     ```
-    Add user ### as a member of BestRun EV Dealer Portal - ###
+    Add user AD166-XXX as a member of BestRun EV Dealer Portal XXX
     ```
 
     > [!IMPORTANT]
