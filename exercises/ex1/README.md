@@ -108,12 +108,12 @@ Your workspace **BestRun EV Dealer Portal XXX** is created. Next, you will add y
 
 ## Exercise 1.3 Add Team Members Using Joule
 
-The BestRun EV regional sales managers need access to the workspace so they can review and contribute content. You will use Joule to add them as workspace members.
+You will add the session moderator account as a member of your workspace. **AD166-000** is the moderator user shared by the session instructors — adding this account to every participant workspace allows the moderators to log in, review content, and assist during the session without needing a separate invitation each time.
 
 1. With the Joule panel open, type the following prompt:
 
     ```
-    Add user AD166-XXX as a member of BestRun EV Dealer Portal XXX
+    Add user AD166-000 as a member of BestRun EV Dealer Portal XXX
     ```
 
     > [!IMPORTANT]
