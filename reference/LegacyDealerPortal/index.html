@@ -1,0 +1,853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>BestRun EV :: Authorized Dealer Portal</title>
+  <style type="text/css">
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      background-color: #d8d8d8;
+      background-image: url("data:image/png;base64,");
+      margin: 0;
+      padding: 0;
+      color: #333333;
+    }
+
+    a { color: #0033aa; text-decoration: underline; }
+    a:visited { color: #551a8b; }
+    a:hover { color: #cc0000; }
+
+    /* ── Top bar ── */
+    #topbar {
+      background-color: #1a3a5c;
+      color: #ffffff;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-bottom: 2px solid #f5a623;
+    }
+    #topbar a { color: #aaccff; font-size: 11px; }
+
+    /* ── Header ── */
+    #header {
+      background-color: #1a3a5c;
+      background-image: linear-gradient(to bottom, #1a3a5c 0%, #0d2240 100%);
+      padding: 0;
+      border-bottom: 4px solid #f5a623;
+    }
+    #header table {
+      width: 100%;
+    }
+    #logo-cell {
+      padding: 12px 16px;
+    }
+    #logo-text {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ffffff;
+      letter-spacing: 1px;
+      font-family: "Times New Roman", Times, serif;
+    }
+    #logo-text span {
+      color: #f5a623;
+    }
+    #logo-sub {
+      font-size: 11px;
+      color: #99bbdd;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    #header-right {
+      text-align: right;
+      padding: 10px 16px;
+      vertical-align: bottom;
+      font-size: 10px;
+      color: #99bbdd;
+    }
+    #header-right .tagline {
+      font-style: italic;
+      color: #ccddee;
+      font-size: 12px;
+    }
+
+    /* ── Navigation ── */
+    #navbar {
+      background-color: #2a5080;
+      padding: 0;
+      border-bottom: 1px solid #1a3a5c;
+    }
+    #navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: block;
+    }
+    #navbar ul li {
+      display: inline-block;
+    }
+    #navbar ul li a {
+      display: inline-block;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 7px 14px;
+      border-right: 1px solid #3a6090;
+    }
+    #navbar ul li a:hover {
+      background-color: #f5a623;
+      color: #1a3a5c;
+    }
+    #navbar ul li.active a {
+      background-color: #1a3a5c;
+      color: #f5a623;
+    }
+
+    /* ── Page wrapper ── */
+    #wrapper {
+      width: 960px;
+      margin: 10px auto;
+    }
+
+    /* ── Content area (sidebar + main) ── */
+    #content-table {
+      width: 100%;
+      border-spacing: 8px;
+      border-collapse: separate;
+    }
+    #sidebar {
+      width: 200px;
+      vertical-align: top;
+    }
+    #main {
+      vertical-align: top;
+    }
+
+    /* ── Box style (used for sidebar + content blocks) ── */
+    .box {
+      border: 1px solid #aaaaaa;
+      background-color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .box-title {
+      background-color: #2a5080;
+      background-image: linear-gradient(to bottom, #3a6090 0%, #2a5080 100%);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 5px 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #1a3a5c;
+    }
+    .box-content {
+      padding: 8px;
+    }
+
+    /* ── Login form ── */
+    .login-label {
+      font-size: 11px;
+      color: #555555;
+      display: block;
+      margin-bottom: 2px;
+      margin-top: 6px;
+    }
+    .login-input {
+      width: 100%;
+      font-size: 12px;
+      border: 1px solid #aaaaaa;
+      padding: 3px 4px;
+      background-color: #f8f8f8;
+      box-sizing: border-box;
+    }
+    .login-btn {
+      margin-top: 8px;
+      width: 100%;
+      background-color: #3a6090;
+      background-image: linear-gradient(to bottom, #4a70a0 0%, #2a5080 100%);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: bold;
+      border: 1px solid #1a3a5c;
+      padding: 5px 0;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+    }
+    .login-btn:hover {
+      background-color: #f5a623;
+      background-image: none;
+      color: #1a3a5c;
+    }
+    .forgot-link {
+      font-size: 10px;
+      display: block;
+      margin-top: 5px;
+      text-align: center;
+    }
+    .login-note {
+      font-size: 10px;
+      color: #888888;
+      margin-top: 8px;
+      padding-top: 6px;
+      border-top: 1px dotted #cccccc;
+      line-height: 1.4;
+    }
+
+    /* ── Notice / alert box ── */
+    .notice-box {
+      background-color: #fffbe6;
+      border: 1px solid #f5a623;
+      border-left: 4px solid #f5a623;
+      font-size: 11px;
+      color: #554400;
+      padding: 6px 8px;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    /* ── PDF download table ── */
+    .pdf-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    .pdf-table th {
+      background-color: #e8e8e8;
+      border: 1px solid #cccccc;
+      padding: 5px 8px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 11px;
+      color: #444444;
+      text-transform: uppercase;
+    }
+    .pdf-table td {
+      border: 1px solid #dddddd;
+      padding: 5px 8px;
+      vertical-align: middle;
+    }
+    .pdf-table tr:nth-child(even) td {
+      background-color: #f7f7f7;
+    }
+    .pdf-table tr:hover td {
+      background-color: #eef4ff;
+    }
+    .pdf-icon {
+      color: #cc0000;
+      font-weight: bold;
+      font-size: 10px;
+      background-color: #ffeeee;
+      border: 1px solid #cc0000;
+      padding: 1px 3px;
+      margin-right: 5px;
+      font-family: "Courier New", Courier, monospace;
+    }
+    .pdf-size {
+      color: #888888;
+      font-size: 10px;
+    }
+    .pdf-updated {
+      color: #888888;
+      font-size: 10px;
+      white-space: nowrap;
+    }
+
+    /* ── Updates section ── */
+    .update-entry {
+      border-bottom: 1px dotted #cccccc;
+      padding: 8px 0;
+      overflow: hidden;
+    }
+    .update-entry:last-child {
+      border-bottom: none;
+    }
+    .update-date {
+      float: left;
+      width: 90px;
+      font-size: 10px;
+      color: #888888;
+      font-style: italic;
+      padding-top: 1px;
+    }
+    .update-body {
+      margin-left: 95px;
+    }
+    .update-tag {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 1px 4px;
+      margin-right: 4px;
+      letter-spacing: 0.5px;
+    }
+    .tag-new { background-color: #006600; color: #ffffff; }
+    .tag-updated { background-color: #004488; color: #ffffff; }
+    .tag-important { background-color: #990000; color: #ffffff; }
+    .tag-info { background-color: #555555; color: #ffffff; }
+
+    .update-title {
+      font-weight: bold;
+      font-size: 12px;
+      color: #1a3a5c;
+    }
+    .update-text {
+      font-size: 11px;
+      color: #555555;
+      margin-top: 2px;
+      line-height: 1.5;
+    }
+    .update-text a { font-size: 11px; }
+
+    /* ── Section heading ── */
+    .section-heading {
+      font-size: 14px;
+      font-weight: bold;
+      color: #1a3a5c;
+      border-bottom: 2px solid #2a5080;
+      padding-bottom: 4px;
+      margin: 0 0 10px 0;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    /* ── Footer ── */
+    #footer {
+      background-color: #1a3a5c;
+      color: #99bbdd;
+      font-size: 10px;
+      padding: 8px 16px;
+      margin-top: 12px;
+      border-top: 3px solid #f5a623;
+      text-align: center;
+    }
+    #footer a { color: #aaccff; font-size: 10px; }
+
+    /* ── Ticker / marquee strip ── */
+    #ticker {
+      background-color: #fffbe6;
+      border-top: 1px solid #f5a623;
+      border-bottom: 1px solid #f5a623;
+      font-size: 11px;
+      color: #554400;
+      padding: 3px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    #ticker span {
+      display: inline-block;
+      animation: ticker-scroll 38s linear infinite;
+    }
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(100vw); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* ── Browser warning ── */
+    .browser-warn {
+      background-color: #ffeecc;
+      border: 1px solid #cc8800;
+      font-size: 10px;
+      color: #554400;
+      padding: 3px 8px;
+      text-align: center;
+    }
+
+    /* ── Breadcrumb ── */
+    #breadcrumb {
+      font-size: 11px;
+      color: #666666;
+      padding: 5px 0 8px 0;
+    }
+    #breadcrumb a { font-size: 11px; }
+
+    /* ── Contact sidebar box ── */
+    .contact-line {
+      font-size: 11px;
+      margin-bottom: 4px;
+      line-height: 1.5;
+    }
+    .contact-label {
+      font-weight: bold;
+      color: #333333;
+    }
+
+    /* ── Pending request highlight ── */
+    .pending-email {
+      background-color: #fff8e1;
+      border: 1px dashed #f5a623;
+      padding: 5px 7px;
+      font-size: 11px;
+      margin-top: 6px;
+      color: #554400;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Browser warning (classic IE-era) -->
+<div class="browser-warn">
+  This portal is optimised for Internet Explorer 8 or higher. Some features may not display correctly in other browsers.
+</div>
+
+<!-- Top bar -->
+<div id="topbar">
+  <table width="100%"><tr>
+    <td>Welcome, Dealer User &nbsp;|&nbsp; <a href="#">My Account</a> &nbsp;|&nbsp; <a href="#">Help</a> &nbsp;|&nbsp; <a href="#">Contact Support</a></td>
+    <td style="text-align:right;">Last login: <strong>04 Sep 2024, 09:41</strong> &nbsp;|&nbsp; <a href="#">Log Out</a></td>
+  </tr></table>
+</div>
+
+<!-- Header -->
+<div id="header">
+  <table><tr>
+    <td id="logo-cell">
+      <div id="logo-text">BestRun <span>EV</span></div>
+      <div id="logo-sub">Authorized Dealer Portal</div>
+    </td>
+    <td id="header-right">
+      <div class="tagline">"Powering the Future of Mobility"</div>
+      <div style="margin-top:4px;">Dealer Services Helpdesk: <strong>+49 6227 7 47474</strong><br />Mon&ndash;Fri 08:00&ndash;17:00 CET</div>
+    </td>
+  </tr></table>
+</div>
+
+<!-- Navigation -->
+<div id="navbar">
+  <ul>
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Product Catalogue</a></li>
+    <li><a href="#">Price Lists</a></li>
+    <li><a href="#">Order Forms</a></li>
+    <li><a href="#">Warranty &amp; After-Sales</a></li>
+    <li><a href="#">Training Materials</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+</div>
+
+<!-- Ticker -->
+<div id="ticker">
+  <span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &#9658; NEW: Apex Series pre-order price list now available for download &mdash; see Documents section below &nbsp;&nbsp;&nbsp;&nbsp;
+    &#9658; REMINDER: Q4 2024 dealer margin review &mdash; submit queries to dealersupport@bestrun-ev.example by 30 Nov 2024 &nbsp;&nbsp;&nbsp;&nbsp;
+    &#9658; Portal maintenance scheduled: Saturday 16 Nov 2024, 02:00&ndash;06:00 CET &mdash; portal will be unavailable during this window &nbsp;&nbsp;&nbsp;&nbsp;
+    &#9658; Updated warranty claim form (WC-Rev4) is now the required form &mdash; older versions will not be accepted from 01 Jan 2025 &nbsp;&nbsp;&nbsp;&nbsp;
+  </span>
+</div>
+
+<!-- Main wrapper -->
+<div id="wrapper">
+
+  <!-- Breadcrumb -->
+  <div id="breadcrumb">
+    <a href="#">Home</a> &nbsp;&gt;&nbsp; Dealer Portal Home
+  </div>
+
+  <!-- Notice -->
+  <div class="notice-box">
+    <strong>&#9888; ACTION REQUIRED:</strong> All dealers must re-submit the updated Authorised Dealer Agreement (ADA-Rev7) by <strong>31 December 2024</strong>.
+    The new form is available in the Documents section below. Failure to submit may result in suspension of ordering privileges.
+    Questions? Email <a href="#">dealercontracts@bestrun-ev.example</a>.
+  </div>
+
+  <!-- Two-column layout -->
+  <table id="content-table"><tr>
+
+    <!-- ─────────────────── SIDEBAR ─────────────────── -->
+    <td id="sidebar">
+
+      <!-- Login box -->
+      <div class="box">
+        <div class="box-title">&#128274; Dealer Login</div>
+        <div class="box-content">
+          <form action="#" method="post">
+            <label class="login-label">Dealer ID</label>
+            <input type="text" class="login-input" value="" placeholder="e.g. DE-00142" />
+            <label class="login-label">Password</label>
+            <input type="password" class="login-input" />
+            <button type="submit" class="login-btn">LOG IN &raquo;</button>
+          </form>
+          <a class="forgot-link" href="#">Forgot password?</a>
+          <div class="login-note">
+            New dealers: contact your regional BestRun EV representative to request portal access.
+            Allow 3&ndash;5 business days for account activation.
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div class="box">
+        <div class="box-title">Quick Links</div>
+        <div class="box-content">
+          <ul style="margin:0;padding-left:14px;line-height:2;">
+            <li><a href="#">Order Form (Standard)</a></li>
+            <li><a href="#">Dealer Margin Schedule</a></li>
+            <li><a href="#">Warranty Claim Form</a></li>
+            <li><a href="#">Return &amp; Replacement Policy</a></li>
+            <li><a href="#">Dealer Training Schedule</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="box">
+        <div class="box-title">Your Regional Contact</div>
+        <div class="box-content">
+          <div class="contact-line"><span class="contact-label">Name:</span> Klaus Meierhofer</div>
+          <div class="contact-line"><span class="contact-label">Region:</span> EMEA North</div>
+          <div class="contact-line"><span class="contact-label">Email:</span><br /><a href="#">k.meierhofer@<br />bestrun-ev.example</a></div>
+          <div class="contact-line"><span class="contact-label">Phone:</span> +49 6227 7 39201</div>
+          <div class="contact-line" style="color:#888;font-size:10px;">Response time: 24&ndash;48 hrs</div>
+          <div class="pending-email">
+            &#9993; You have <strong>2 unanswered emails</strong> in your dealer inbox.<br />
+            <a href="#">View inbox &raquo;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- System status -->
+      <div class="box">
+        <div class="box-title">System Status</div>
+        <div class="box-content" style="font-size:11px;line-height:1.8;">
+          <span style="color:#006600;">&#9679;</span> Dealer Portal: <strong>Online</strong><br />
+          <span style="color:#006600;">&#9679;</span> Document Server: <strong>Online</strong><br />
+          <span style="color:#cc0000;">&#9679;</span> Order System: <strong>Under maintenance</strong><br />
+          <span style="color:#cc8800;">&#9679;</span> Training LMS: <strong>Scheduled downtime</strong><br />
+          <div style="margin-top:6px;font-size:10px;color:#888;">Last checked: 03 Oct 2026, 07:00 CET</div>
+        </div>
+      </div>
+
+    </td>
+
+    <!-- ─────────────────── MAIN CONTENT ─────────────────── -->
+    <td id="main">
+
+      <!-- ── Documents / Downloads ── -->
+      <div class="box">
+        <div class="box-title">&#128196; Documents &amp; Downloads</div>
+        <div class="box-content">
+          <p class="section-heading">Product Documents</p>
+          <table class="pdf-table">
+            <thead>
+              <tr>
+                <th>Document</th>
+                <th>Category</th>
+                <th>Rev</th>
+                <th>Updated</th>
+                <th style="text-align:right;">Size</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="pdf-icon">PDF</span><a href="#">Apex Series &mdash; Technical Specification Sheet</a></td>
+                <td>Product</td>
+                <td>1.0</td>
+                <td class="pdf-updated">Sep 2024</td>
+                <td style="text-align:right;" class="pdf-size">1.4 MB</td>
+              </tr>
+              <tr>
+                <td><span class="pdf-icon">PDF</span><a href="#">Apex Pro &mdash; Battery &amp; Drive Technology Guide</a></td>
+                <td>Product</td>
+                <td>1.0</td>
+                <td class="pdf-updated">Sep 2024</td>
+                <td style="text-align:right;" class="pdf-size">2.1 MB</td>
+              </tr>
+              <tr>
+                <td><span class="pdf-icon">PDF</span><a href="#">BestRun EV &mdash; Dealer Commercial Handbook 2024</a></td>
+                <td>Commercial</td>
+                <td>5.2</td>
+                <td class="pdf-updated">Jan 2024</td>
+                <td style="text-align:right;" class="pdf-size">3.8 MB</td>
+              </tr>
+              <tr>
+                <td><span class="pdf-icon">PDF</span><a href="#">Apex Series &mdash; Pre-Order Discount Policy</a></td>
+                <td>Commercial</td>
+                <td>1.0</td>
+                <td class="pdf-updated">Sep 2024</td>
+                <td style="text-align:right;" class="pdf-size">0.6 MB</td>
+              </tr>
+              <tr>
+                <td><span class="pdf-icon">PDF</span><a href="#">BestRun EV &mdash; After-Sales &amp; Warranty Guide 2024</a></td>
+                <td>After-Sales</td>
+                <td>3.1</td>
+                <td class="pdf-updated">Mar 2024</td>
+                <td style="text-align:right;" class="pdf-size">1.9 MB</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="section-heading" style="margin-top:16px;">Order &amp; Contract Forms</p>
+          <table class="pdf-table">
+            <thead>
+              <tr>
+                <th>Form</th>
+                <th>Category</th>
+                <th>Rev</th>
+                <th>Updated</th>
+                <th style="text-align:right;">Size</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="pdf-icon">PDF</span><a href="#">Standard Order Form &mdash; Ebikes &amp; Scooters</a></td>
+                <td>Orders</td>
+                <td>8.0</td>
+                <td class="pdf-updated">Jan 2024</td>
+                <td style="text-align:right;" class="pdf-size">0.3 MB</td>
+              </tr>
+              <tr>
+                <td><span class="pdf-icon">PDF</span><a href="#">Apex Series Pre-Order Form (2024&ndash;2025)</a> <span style="color:#cc0000;font-size:10px;font-weight:bold;">NEW</span></td>
+                <td>Orders</td>
+                <td>1.0</td>
+                <td class="pdf-updated">Sep 2024</td>
+                <td style="text-align:right;" class="pdf-size">0.4 MB</td>
+              </tr>
+              <tr>
+                <td><span class="pdf-icon">PDF</span><a href="#">Authorised Dealer Agreement (ADA-Rev7)</a> <span style="color:#cc0000;font-size:10px;font-weight:bold;">ACTION REQUIRED</span></td>
+                <td>Contracts</td>
+                <td>7.0</td>
+                <td class="pdf-updated">Aug 2024</td>
+                <td style="text-align:right;" class="pdf-size">1.1 MB</td>
+              </tr>
+              <tr>
+                <td><span class="pdf-icon">PDF</span><a href="#">Warranty Claim Form (WC-Rev4)</a></td>
+                <td>After-Sales</td>
+                <td>4.0</td>
+                <td class="pdf-updated">Jun 2024</td>
+                <td style="text-align:right;" class="pdf-size">0.2 MB</td>
+              </tr>
+              <tr>
+                <td><span class="pdf-icon">PDF</span><a href="#">Dealer Return &amp; Replacement Request Form</a></td>
+                <td>After-Sales</td>
+                <td>2.3</td>
+                <td class="pdf-updated">Nov 2022</td>
+                <td style="text-align:right;" class="pdf-size">0.2 MB</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p style="font-size:10px;color:#888;margin-top:8px;">
+            &#8505; Documents are updated periodically. Always download the latest version before submitting.
+            For documents not listed here, email <a href="#">dealerdocs@bestrun-ev.example</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- ── Updates / News ── -->
+      <div class="box">
+        <div class="box-title">&#128240; Portal Updates &amp; Announcements</div>
+        <div class="box-content">
+
+          <!-- 2024 -->
+          <div style="font-size:10px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">2024</div>
+
+          <div class="update-entry">
+            <div class="update-date">12 Sep 2024</div>
+            <div class="update-body">
+              <span class="update-tag tag-new">NEW</span>
+              <span class="update-title">Apex Series Pre-Order Now Open</span>
+              <div class="update-text">
+                The Apex City, Apex Trail, and Apex Pro are now available for pre-order. Download the
+                <a href="#">Apex Series Pre-Order Form</a> and <a href="#">Pre-Order Discount Policy</a> from the Documents section above.
+                For discount queries, contact your regional representative. Please allow <strong>2 business days</strong> for quote confirmation.
+              </div>
+            </div>
+          </div>
+
+          <div class="update-entry">
+            <div class="update-date">22 Aug 2024</div>
+            <div class="update-body">
+              <span class="update-tag tag-important">IMPORTANT</span>
+              <span class="update-title">New Authorised Dealer Agreement &mdash; Action Required by 31 Dec 2024</span>
+              <div class="update-text">
+                BestRun EV Legal has issued an updated Authorised Dealer Agreement (ADA-Rev7) reflecting new EU EV distribution regulations effective January 2025.
+                All active dealers must sign and return the new agreement. Download from Documents section above.
+              </div>
+            </div>
+          </div>
+
+          <div class="update-entry">
+            <div class="update-date">15 Jun 2024</div>
+            <div class="update-body">
+              <span class="update-tag tag-updated">UPDATED</span>
+              <span class="update-title">Warranty Claim Form Updated to Rev4</span>
+              <div class="update-text">
+                The warranty claim process has been updated. <strong>Form WC-Rev3 is no longer accepted.</strong>
+                Please download and use <a href="#">WC-Rev4</a> for all warranty submissions from 01 July 2024 onwards.
+                Key change: dealers must now include PDI (Pre-Delivery Inspection) checklist reference number in all claims.
+              </div>
+            </div>
+          </div>
+
+          <div class="update-entry">
+            <div class="update-date">10 Jan 2024</div>
+            <div class="update-body">
+              <span class="update-tag tag-updated">UPDATED</span>
+              <span class="update-title">Dealer Commercial Handbook 2024 (Rev 5.2)</span>
+              <div class="update-text">
+                Updated handbook includes revised dealer margin schedule, updated payment terms (Net-30 / Net-60 options),
+                and new quarterly volume bonus thresholds. Supersedes all previous versions.
+                <a href="#">Download Dealer Commercial Handbook 2024 &raquo;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2023 -->
+          <div style="font-size:10px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;margin-top:12px;">2023</div>
+
+          <div class="update-entry">
+            <div class="update-date">03 Nov 2023</div>
+            <div class="update-body">
+              <span class="update-tag tag-info">INFO</span>
+              <span class="update-title">Portal Downtime &mdash; Infrastructure Migration</span>
+              <div class="update-text">
+                The dealer portal was unavailable from 03&ndash;05 November 2023 due to server migration.
+                All document downloads and order submissions have been restored. If you submitted an order during this window and have not received confirmation, please resubmit or contact support.
+              </div>
+            </div>
+          </div>
+
+          <div class="update-entry">
+            <div class="update-date">17 Jul 2023</div>
+            <div class="update-body">
+              <span class="update-tag tag-updated">UPDATED</span>
+              <span class="update-title">EU EV Compliance Documentation Package Added</span>
+              <div class="update-text">
+                In response to updated EU regulation (EU 2023/858), BestRun EV has added a compliance documentation set for dealers
+                operating in Germany, France, Netherlands, and Nordics. Package includes CE declarations, battery disposal instructions,
+                and type approval certificates. Available on request from <a href="#">compliance@bestrun-ev.example</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="update-entry">
+            <div class="update-date">02 Mar 2023</div>
+            <div class="update-body">
+              <span class="update-tag tag-updated">UPDATED</span>
+              <span class="update-title">Order Form Rev 8.0 &mdash; Replaces Rev 7.x</span>
+              <div class="update-text">
+                The standard order form has been revised (Rev 8.0) to support the new 4-digit dealer code format.
+                Orders submitted on Rev 7.x forms will be rejected from 01 April 2023. Download the new form from the Documents section.
+              </div>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div style="font-size:10px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;margin-top:12px;">2022</div>
+
+          <div class="update-entry">
+            <div class="update-date">14 Dec 2022</div>
+            <div class="update-body">
+              <span class="update-tag tag-updated">UPDATED</span>
+              <span class="update-title">Dealer Commercial Handbook 2023 Preview Available</span>
+              <div class="update-text">
+                A preview of the 2023 Dealer Commercial Handbook is available for download.
+                Key changes: updated minimum order quantities for eScooter category, new spare parts margin schedule.
+                Final version will be published 10 January 2023.
+              </div>
+            </div>
+          </div>
+
+          <div class="update-entry">
+            <div class="update-date">18 May 2022</div>
+            <div class="update-body">
+              <span class="update-tag tag-info">INFO</span>
+              <span class="update-title">EMEA Dealer Conference 2022 &mdash; Presentations Available</span>
+              <div class="update-text">
+                Presentations from the EMEA Dealer Conference (Berlin, April 2022) are now available for download.
+                Includes the product roadmap overview, Q&amp;A transcript, and updated training materials.
+                Access via the <a href="#">Training Materials</a> section (login required).
+              </div>
+            </div>
+          </div>
+
+          <div class="update-entry">
+            <div class="update-date">07 Feb 2022</div>
+            <div class="update-body">
+              <span class="update-tag tag-updated">UPDATED</span>
+              <span class="update-title">Return &amp; Replacement Policy Updated (Rev 2.3)</span>
+              <div class="update-text">
+                The dealer return and replacement policy has been updated to reflect new logistics partner arrangements.
+                Return window for defective units extended from 14 to 30 days. Updated RMA form available in Documents section.
+              </div>
+            </div>
+          </div>
+
+          <!-- 2021 -->
+          <div style="font-size:10px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;margin-top:12px;">2021</div>
+
+          <div class="update-entry">
+            <div class="update-date">09 Nov 2021</div>
+            <div class="update-body">
+              <span class="update-tag tag-updated">UPDATED</span>
+              <span class="update-title">Q4 2021 Price List &mdash; EUR and GBP Updated</span>
+              <div class="update-text">
+                Revised dealer price list effective 01 December 2021. EUR prices unchanged; GBP prices adjusted +3.2% to reflect currency fluctuation.
+                Dealer margin schedule remains unchanged. Download from <a href="#">Price Lists</a> section.
+              </div>
+            </div>
+          </div>
+
+          <div class="update-entry">
+            <div class="update-date">22 Mar 2021</div>
+            <div class="update-body">
+              <span class="update-tag tag-info">INFO</span>
+              <span class="update-title">COVID-19 Supply Chain Notice &mdash; Delivery Lead Times Extended</span>
+              <div class="update-text">
+                Due to ongoing global supply chain disruptions, delivery lead times for all EV models are currently
+                <strong>14&ndash;18 weeks</strong> (previously 8&ndash;10 weeks). BestRun EV will update this notice as conditions improve.
+                We apologise for the inconvenience and appreciate your continued partnership.
+              </div>
+            </div>
+          </div>
+
+          <!-- 2020 -->
+          <div style="font-size:10px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;margin-top:12px;">2020</div>
+
+          <div class="update-entry">
+            <div class="update-date">01 Oct 2020</div>
+            <div class="update-body">
+              <span class="update-tag tag-new">NEW</span>
+              <span class="update-title">Dealer Portal Launched</span>
+              <div class="update-text">
+                Welcome to the new BestRun EV Authorized Dealer Portal. This portal replaces the previous email-based document distribution system.
+                All dealers have been migrated to the new system. Please reset your password on first login.
+                For access issues, contact <a href="#">dealersupport@bestrun-ev.example</a> or call the helpdesk.
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /box-content -->
+      </div><!-- /box -->
+
+    </td>
+    <!-- ─────────────────── END MAIN ─────────────────── -->
+
+  </tr></table>
+</div><!-- /wrapper -->
+
+<!-- Footer -->
+<div id="footer">
+  &copy; 2024 BestRun EV GmbH &amp; Co. KG. All rights reserved. &nbsp;|&nbsp;
+  <a href="#">Imprint</a> &nbsp;|&nbsp;
+  <a href="#">Data Protection Notice</a> &nbsp;|&nbsp;
+  <a href="#">Terms of Use</a> &nbsp;|&nbsp;
+  <a href="#">Contact</a>
+  <br /><br />
+  <span style="color:#7799bb;">
+    This portal is intended exclusively for authorised BestRun EV dealers.
+    Unauthorised access is prohibited. All document downloads are logged.
+  </span>
+  <br />
+  <span style="color:#556677;font-size:9px;">
+    Portal version 4.1.3 &nbsp;|&nbsp; Server: DP-PROD-02 &nbsp;|&nbsp; Page rendered in 0.84s &nbsp;|&nbsp; Best viewed at 1024&times;768
+  </span>
+</div>
+
+</body>
+</html>
