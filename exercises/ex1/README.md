@@ -4,9 +4,9 @@ In this exercise, you take on the role of the **Digital Experience Manager at Be
 
 By the end of this exercise, you will have a live workspace ready to receive content.
 
-## Exercise 1.1 Open Joule and Access SAP Build Work Zone
+## Exercise 1.1 Log In and Open Joule
 
-Joule is available directly within SAP Build Work Zone — no BTP cockpit access is needed. You will log in to the Work Zone site, open Joule, and navigate to the workspace administration console.
+Joule is available directly within SAP Build Work Zone — no BTP cockpit access is needed. You will log in to the Work Zone site and open Joule from the top menu bar.
 
 1. Open the following URL in your browser and log in with your participant credentials:
 
@@ -15,21 +15,10 @@ Joule is available directly within SAP Build Work Zone — no BTP cockpit access
     ![SAP Build Work Zone site home screen after login](images/01_01_0010.png)
     > *📸 Capture: The SAP Build Work Zone home screen as it appears immediately after participant login — showing the site launchpad or home page.*
 
-2. Click the **Joule** icon in the Work Zone interface to open the Joule panel.
+2. In the top menu bar, click the **<img src="images/JouleIcon.png" width="16" height="16"> Joule icon** to open the Joule panel.
 
-    > [!IMPORTANT]
-    > **TODO:** Confirm the exact location of the Joule entry point within SAP Build Work Zone (e.g., top navigation bar icon, floating button, or menu item).
-
-    ![Joule panel open within SAP Build Work Zone](images/01_01_0020.png)
-    > *📸 Capture: The Joule side panel open within SAP Build Work Zone — showing the chat interface and a welcome/greeting prompt. The Work Zone page should be visible behind the panel.*
-
-3. Navigate to the **Administration Console** of SAP Build Work Zone.
-
-    > [!IMPORTANT]
-    > **TODO:** Confirm the navigation path to the Administration Console from the Work Zone home screen (e.g., user menu → Administration Console, or a direct tile/link on the home page).
-
-    ![SAP Build Work Zone Administration Console home screen](images/01_01_0030.png)
-    > *📸 Capture: The SAP Build Work Zone Administration Console — showing the main admin dashboard. This is the starting point for workspace creation in the next step.*
+    ![Joule icon in the SAP Build Work Zone top menu bar](images/01_01_0020.png)
+    > *📸 Capture: The SAP Build Work Zone top menu bar with the Joule diamond icon highlighted. The Joule side panel should be visible opening on the right side of the screen.*
 
 ### Summary
 
@@ -39,38 +28,81 @@ You are logged in to SAP Build Work Zone and the Joule panel is open. Continue t
 
 ## Exercise 1.2 Create the BestRun EV Dealer Portal Workspace
 
-You will now use Joule to create a new workspace for the BestRun EV dealer network. Using a natural language prompt, Joule will guide you through the workspace creation process.
+There are two ways to create a workspace in SAP Build Work Zone — using Joule with a natural language prompt, or through the classical workspace creation UI. Both lead to the same result.
+
+> [!NOTE]
+> Replace `XXX` in the workspace name with your assigned participant number (e.g. **005** for participant AD166-005).
+
+---
+
+<details open>
+<summary><strong>Option A — Create with Joule (recommended)</strong></summary>
 
 1. With the Joule panel open, type the following prompt:
 
     ```
-    Create a new workspace called BestRun EV Dealer Portal
+    Create a new private workspace called "BestRun EV Dealer Portal XXX"
     ```
 
-    ![Joule responding with workspace creation options or a confirmation card](images/01_02_0010.png)
-    > *📸 Capture: Joule's response after the create workspace prompt — showing a confirmation card, workspace template selection, or creation form pre-filled with the name.*
+    ![Joule responding to the create workspace prompt](images/01_02_0010.png)
+    > *📸 Capture: Joule's response after entering the prompt — showing Joule processing the request or presenting a template selection.*
 
-2. Joule presents workspace template options. Select the **External Portal** template (or the template most suited to a B2B dealer portal).
+2. Joule may ask you to select a workspace template. If prompted, select **External Portal Template** from the list.
+
+    > [!NOTE]
+    > Joule may skip this step if it selects the template automatically based on your prompt. If no template selection appears, continue to the next step.
+
+    ![Joule template selection showing External Portal Template highlighted](images/01_02_0020.png)
+    > *📸 Capture: Joule's template selection list with "External Portal Template" highlighted or selected.*
+
+3. Joule creates the workspace. Once complete, a **notification appears on the Work Zone home page** with a link to the new workspace. Click the notification link to open **BestRun EV Dealer Portal XXX** in the same tab — this keeps Joule accessible on the right side.
+
+    > [!TIP]
+    > Prefer the **notification link** over the link inside the Joule chat panel. The notification opens the workspace in the same tab, keeping the Joule panel visible. The Joule chat link opens a new tab, which closes the panel.
+
+    ![Work Zone home page showing the workspace creation notification with a link](images/01_02_0030.png)
+    > *📸 Capture: The Work Zone home page with a notification banner or card indicating the new workspace "BestRun EV Dealer Portal XXX" was created, including a clickable link.*
+
+    > [!NOTE]
+    > If no notification appears on the home page, open the **Workspaces** menu in the top navigation and browse to **BestRun EV Dealer Portal XXX** from the list of your workspaces.
+
+4. Once inside the workspace, check that it is set to **Private** visibility. Open **Edit Workspace** (workspace settings or the edit icon in the header) and confirm the visibility setting. If it is not Private, update it and save.
+
+    ![Workspace settings showing the Private visibility option](images/01_02_0040.png)
+    > *📸 Capture: The Edit Workspace panel showing the visibility/privacy setting. The Private option should be selected.*
+
+</details>
+
+---
+
+<details>
+<summary><strong>Option B — Create via the Workspaces menu (standard UI)</strong></summary>
+
+1. In the SAP Build Work Zone top navigation, click **Workspaces** and select **New Workspace**.
+
+    ![Workspaces menu with New Workspace option highlighted](images/01_02_B_0010.png)
+    > *📸 Capture: The Workspaces dropdown menu open, with the New Workspace option visible.*
+
+2. In the workspace creation dialog, enter the name **BestRun EV Dealer Portal XXX** and set the visibility to **Private**.
 
     > [!IMPORTANT]
-    > **TODO:** Confirm the exact template name available for external-facing workspaces in the landscape. Update the template name above and the screenshot description accordingly.
+    > **TODO:** Confirm the exact fields in the classical workspace creation dialog for this version of SAP Build Work Zone advanced edition.
 
-    ![Template selection screen showing available workspace templates](images/01_02_0020.png)
-    > *📸 Capture: The workspace template selection screen or Joule's prompt for template choice, with the external/portal template option highlighted.*
+    ![Workspace creation dialog with name and settings filled in](images/01_02_B_0020.png)
+    > *📸 Capture: The workspace creation form showing the name field and the Private visibility option selected.*
 
-3. Confirm the workspace name **BestRun EV Dealer Portal XXX** (replace `XXX` with your participant number) and click **Create** or confirm via Joule.
+3. Click **Create**. After a few seconds, the new workspace opens.
 
-    ![Workspace creation confirmation screen showing the workspace name and settings](images/01_02_0030.png)
-    > *📸 Capture: The final creation confirmation step — workspace name field pre-filled, template confirmed, ready to create.*
+    ![Newly created workspace open in the classical UI flow](images/01_02_B_0030.png)
+    > *📸 Capture: The newly created workspace as it appears after classical UI creation.*
 
-4. After a few seconds, the new workspace opens. Verify the workspace name appears correctly in the header.
+</details>
 
-    ![Newly created BestRun EV Dealer Portal workspace, empty, ready to be configured](images/01_02_0040.png)
-    > *📸 Capture: The newly created workspace in its initial state — empty pages, no content yet. The workspace name "BestRun EV Dealer Portal XXX" should be visible in the header.*
+---
 
 ### Summary
 
-Your workspace is created. Next, you will add your team members.
+Your workspace **BestRun EV Dealer Portal XXX** is created. Next, you will add your team members.
 
 ---
 
