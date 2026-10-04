@@ -1,159 +1,226 @@
-# Exercise 2 - Build the Apex Series Launch Content with AI
+# Exercise 2 - Personalize the Portal and Launch the Apex Series
 
-In this exercise, you build the core content of the dealer portal. You will create the Apex Series landing page, use AI-assisted text generation to draft a launch announcement, and add individual model overview sections — all without leaving the workspace editor.
+In this exercise, you take the workspace created from the External Portal Template and make it your own. Using Joule, you will update the Hero section, generate dealer-facing content for the Key Highlights, add a Featured section introducing the Apex product line, and create a dedicated Apex Series product announcement page.
 
-By the end of this exercise, the portal will have a complete, dealer-ready Apex Series presentation page.
+By the end of this exercise, the BestRun EV Dealer Portal will have a compelling first impression and a full product launch page for the Apex Series.
 
-## Exercise 2.1 Create the Apex Series Landing Page
+## Exercise 2.1 Update the Hero Title and Tagline with Joule
 
-You will add a new page to the workspace and set it up as the main entry point for Apex Series content.
+The External Portal Template comes with a placeholder hero image and generic title text. Your first task is to replace these with copy that immediately communicates what this portal is about and what is launching.
 
-1. In the **BestRun EV Dealer Portal XXX** workspace, open the page management view.
+1. Open **BestRun EV Dealer Portal XXX** and enter the page editor. Look for the **Edit** button in the workspace header or the pencil icon on the Overview page.
 
-    > [!IMPORTANT]
-    > **TODO:** Confirm the navigation path to add a new page in the workspace (e.g., via the page editor, workspace admin, or a + button in the navigation).
+    ![Workspace Overview page in view mode with the Edit button visible in the toolbar](images/02_01_0010.png)
+    > *📸 Capture: The Overview page of the workspace with the edit mode button clearly visible — either as a toolbar button or a floating pencil icon on the page.*
 
-    ![Workspace page management view showing the option to add a new page](images/02_01_0010.png)
-    > *📸 Capture: The workspace editor or admin view showing the current pages list and a clearly visible option to add a new page.*
+2. Click on the **Hero widget** at the top of the page. The widget should show an edit overlay or a toolbar with title and subtitle fields.
 
-2. Click **Add Page** (or the equivalent action) and name the page **Apex Series**.
+    ![Hero widget selected in edit mode, showing title and subtitle text fields](images/02_01_0020.png)
+    > *📸 Capture: The Hero widget in edit state — showing the image overlay with the title and tagline text fields available for editing. The placeholder text from the template should be visible.*
 
-    ![New page creation dialog with "Apex Series" entered as the page name](images/02_01_0020.png)
-    > *📸 Capture: The new page dialog or inline editor showing the page name field filled with "Apex Series".*
+3. With the Joule panel open, enter the following prompt to get copy suggestions for the hero:
 
-3. Set the page layout to a **full-width** or **hero** layout suitable for a product launch page.
+    ```
+    Suggest a short headline and tagline for the hero section of the BestRun EV dealer portal, 
+    introducing the Apex Series launch. The headline should be under 8 words and energize 
+    dealers. The tagline should be one sentence that sets up the pre-order opportunity.
+    ```
 
-    > [!IMPORTANT]
-    > **TODO:** Confirm the available page layout options and the recommended layout for a product content page. Update step text with the exact layout name.
+    ![Joule panel with the hero copy prompt entered](images/02_01_0030.png)
+    > *📸 Capture: The Joule panel alongside the page editor, with the prompt text entered and Joule returning suggested headline and tagline options.*
 
-    ![Page layout selection screen with the recommended layout highlighted](images/02_01_0030.png)
-    > *📸 Capture: The page layout picker showing available layout options. The recommended full-width or hero layout option should be visible.*
+4. Copy Joule's suggested headline into the Hero widget's **title field** and the tagline into the **subtitle field**. Save the hero widget.
 
-4. Add the **Apex Series hero image** to the page header.
+    > [!TIP]
+    > You can ask Joule to refine the suggestion if the first output is too long or not quite the right tone. Try: *"Make the headline punchier and under 6 words."*
 
-    > [!IMPORTANT]
-    > **TODO:** Confirm where the hero images are stored (shared content library, image upload, or pre-loaded in the landscape). Update this step with the exact path to upload or select the BestRun EV hero image.
-
-    ![Page header with the Apex Series hero image applied — ebike product shot on a scenic background](images/02_01_0040.png)
-    > *📸 Capture: The page header area with the hero image applied. The image should show the Apex Pro model against a mountain or outdoor backdrop.*
+    ![Hero widget with the updated title and tagline applied, showing the new copy over the image](images/02_01_0040.png)
+    > *📸 Capture: The Hero widget in the page editor with the Joule-generated title and tagline applied. The updated text should be visible over the hero background image.*
 
 ### Summary
 
-The Apex Series page is created with a visual header. Next you will populate it with AI-generated launch content.
+The Hero section now reflects the Apex Series launch. Next you will update the Key Highlights cards with AI-generated content.
 
 ---
 
-## Exercise 2.2 Use AI to Draft the Launch Announcement
+## Exercise 2.2 Update the Key Highlights with Joule
 
-You will use the built-in AI text generation feature to draft a professional dealer-facing launch announcement for the Apex Series.
+The Key Highlights section contains three text template cards — **Who & What?**, **Why?**, and **How?** — that explain the purpose and value of the portal to incoming dealers. You will use Joule to generate the body copy for each card.
 
-1. In the page editor, add a **Text** widget or **Rich Text** section below the page header.
+1. In the page editor, click on the **Key Highlights widget** to enter its edit view.
 
-    ![Page editor with a new text section added below the hero image](images/02_02_0010.png)
-    > *📸 Capture: The page editor showing the hero image above and a new empty text section below it, ready for content.*
+    ![Key Highlights widget selected in edit mode, showing three card placeholders](images/02_02_0010.png)
+    > *📸 Capture: The Key Highlights section selected for editing, showing the three cards (Who & What? / Why? / How?) with their placeholder or existing body text visible.*
 
-2. Click the **AI Assist** or **Generate with AI** option within the text editor.
-
-    > [!IMPORTANT]
-    > **TODO:** Confirm the exact name and location of the AI text generation entry point within the SAP Build Work Zone page editor (button label, toolbar option, or context menu item).
-
-    ![AI text generation button or option visible in the text editor toolbar](images/02_02_0020.png)
-    > *📸 Capture: The text editor toolbar with the AI generation option highlighted — showing how the AI assist feature is accessed from within the editor.*
-
-3. In the AI generation panel, enter the following prompt:
+2. Open the Joule panel and use the following prompt to generate the body text for the first card:
 
     ```
-    Write a professional announcement for our authorized dealer network introducing the BestRun EV Apex Series — our new line of premium electric bikes and scooters. The announcement should cover the three new models (Apex City, Apex Trail, Apex Pro), highlight the key innovation of the Apex Pro's new LFP battery system, and invite dealers to explore the portal for full specifications and pre-order information. Tone: confident, premium, B2B.
+    Write 2 short sentences for a portal welcome card titled "Who & What?". 
+    The card is on the BestRun EV authorized dealer portal for the Apex Series launch. 
+    It should briefly describe who the portal is for (authorized BestRun EV dealers) 
+    and what they can do here (explore Apex Series specs, register pre-orders, 
+    access marketing assets). Maximum 30 words total.
     ```
 
-    ![AI generation panel with the prompt entered](images/02_02_0030.png)
-    > *📸 Capture: The AI generation panel or dialog with the prompt text entered and ready to submit.*
+    ![Joule panel returning suggested body text for the Who & What card](images/02_02_0020.png)
+    > *📸 Capture: The Joule panel showing the generated body text for the "Who & What?" card. The text should be visible in the Joule response area.*
 
-4. Click **Generate** and review the output.
+3. Copy the generated text into the body field of the **Who & What?** card.
 
-    ![AI-generated launch announcement text displayed in the panel for review](images/02_02_0040.png)
-    > *📸 Capture: The AI-generated announcement text in the preview panel. The text should be a professional, multi-paragraph dealer announcement covering the three models.*
+4. Repeat using Joule for the **Why?** card:
 
-5. If the output is satisfactory, click **Insert** (or **Accept**) to add the text to the page. If needed, regenerate or edit the text inline.
+    ```
+    Write 2 short sentences for a portal welcome card titled "Why?". 
+    The card is on the BestRun EV authorized dealer portal. 
+    It should explain why dealers should visit regularly — early access to Apex Series 
+    pre-order information, live inventory data, and direct support from BestRun EV. 
+    Maximum 30 words total.
+    ```
 
-    ![Announcement text inserted into the page, visible in the editor](images/02_02_0050.png)
-    > *📸 Capture: The page editor showing the AI-generated announcement text now placed in the text section below the hero image.*
+5. Repeat for the **How?** card:
+
+    ```
+    Write 2 short sentences for a portal welcome card titled "How?". 
+    The card is on the BestRun EV authorized dealer portal. 
+    It should briefly explain how to navigate the portal — use the tabs for content and 
+    forums, click the tiles for quick access, and use search to find specific documents. 
+    Maximum 30 words total.
+    ```
+
+    ![All three Key Highlights cards updated with Joule-generated body text in the editor](images/02_02_0030.png)
+    > *📸 Capture: The three Key Highlights cards in edit mode with the Joule-generated body text entered in each card. All three cards should have non-placeholder content.*
+
+6. Save the Key Highlights widget.
+
+    ![Key Highlights section in the live page view showing the three completed cards](images/02_02_0040.png)
+    > *📸 Capture: The Key Highlights section as it appears in the published/preview view — three cards (Who & What? / Why? / How?) with their illustrated icons at the top and the Joule-generated body text.*
 
 ### Summary
 
-The launch announcement is in place. Next you will add individual sections for each Apex Series model.
+The Key Highlights section is complete. Next you will add a Featured section to introduce the Apex product line visually.
 
 ---
 
-## Exercise 2.3 Add Model Overview Sections
+## Exercise 2.3 Add a Featured Section for the Apex Product Line
 
-Each Apex model gets its own section on the page. You will add a card or section per model with a product image and space for the AI-generated overview copy.
+The Featured section sits below the Key Highlights and gives the portal a visual showcase for a specific product or campaign. You will add two widgets side by side — a product image on the left and a descriptive text block on the right — to spotlight the Apex Series launch.
 
-1. Below the launch announcement, add a new **three-column** or **card grid** layout section.
-
-    > [!IMPORTANT]
-    > **TODO:** Confirm the exact widget or section type used for the model overview cards (e.g., Image + Text card, Tile widget, Image card widget). Update this step with the correct widget name.
-
-    ![Page editor showing the layout section selection for a multi-column card grid](images/02_03_0010.png)
-    > *📸 Capture: The section/widget picker open in the editor, showing available layout options. A three-column or card grid option should be visible.*
-
-2. Add the **Apex City** model image to the first card and set the card title to **Apex City**.
+1. In the page editor, scroll below the Key Highlights section. Add a new **two-column row** or insert a **Featured** widget from the widget palette.
 
     > [!IMPORTANT]
-    > **TODO:** Confirm where model product images are stored in the landscape (content library or upload path). Add the image filenames once assets are ready.
+    > **TODO:** Confirm the exact method to add a two-column section or featured widget in this version of SAP Build Work Zone advanced edition (e.g., via the + icon between sections, or from the widget library).
 
-    ![First model card with Apex City product image and title applied](images/02_03_0020.png)
-    > *📸 Capture: The first model card showing the Apex City product image (urban commuter scooter on a city street) with the "Apex City" title label.*
+    ![Page editor showing the section below Key Highlights, with the add widget/row option visible](images/02_03_0010.png)
+    > *📸 Capture: The page editor with the Key Highlights section above and the row/section insertion control visible below — showing where the new Featured section will be placed.*
 
-3. Repeat for **Apex Trail** and **Apex Pro**, adding their respective product images and titles.
+2. In the **left column**, add an **Image widget**. Upload or select the Apex Series product image provided in the session materials.
 
-    ![All three model cards in the page editor — Apex City, Apex Trail, Apex Pro — with product images](images/02_03_0030.png)
-    > *📸 Capture: All three model cards side by side in the editor — Apex City, Apex Trail, Apex Pro — each with a product image and title. Apex Pro should use the mountain/terrain image.*
+    > [!IMPORTANT]
+    > **TODO:** Confirm the source location for the Apex Series product image (shared content library, session materials upload, or pre-loaded asset). Add the exact filename and path once confirmed.
+
+    ![Left column of the Featured row with the Apex Series product image inserted](images/02_03_0020.png)
+    > *📸 Capture: The left column of the new Featured section showing the Apex Series product image displayed — an e-bike or product line image provided for the session.*
+
+3. In the **right column**, add a **Text widget**. Open the Joule panel and generate the featured copy:
+
+    ```
+    Write a short 3–4 sentence featured section description for the BestRun EV Apex Series 
+    dealer portal. This text appears next to the Apex Series product image. 
+    It should introduce the three new models (Apex City, Apex Trail, Apex Pro), 
+    mention the Apex Pro's new LFP battery as the headline innovation, 
+    and end with a call to action inviting dealers to explore the full Apex Series page.
+    Tone: confident, premium, B2B.
+    ```
+
+    ![Right column text widget with the Joule-generated Apex Series featured description](images/02_03_0030.png)
+    > *📸 Capture: The right column of the Featured section showing the Joule-generated text — a professional introduction to the Apex Series with a clear call to action at the end.*
+
+4. Accept the generated text, then save the Featured section.
+
+    ![Featured section in the page preview — Apex image on the left, descriptive text on the right](images/02_03_0040.png)
+    > *📸 Capture: The complete Featured section as it appears in the page preview or live view — product image on the left half, Apex Series text on the right half, both visually balanced.*
 
 ### Summary
 
-The three model cards are in place. Next you will generate the overview copy for each model using AI.
+The Overview page now has a complete visual introduction to the Apex Series. Next you will create a dedicated product announcement page with full model details.
 
 ---
 
-## Exercise 2.4 Generate Model Copy with AI
+## Exercise 2.4 Create the Apex Series Product Announcement Page
 
-You will use AI text generation for each model card to produce consistent, professionally worded dealer-facing overviews.
+The Overview page introduces the portal and the product line at a glance. Now you will build a dedicated **Apex Series** page where dealers can find the full launch announcement and detailed content for each model.
 
-1. Open the text field within the **Apex City** card and use AI Assist to generate the following:
+1. In the workspace navigation, open the **Pages** or **Site Map** management view and add a new page.
 
-    ```
-    Write a short dealer-facing product overview for the Apex City — a lightweight urban electric commuter scooter by BestRun EV. Highlight: city-optimized design, ease of use, low maintenance, and ideal customer profile (urban commuters, last-mile delivery). Keep it under 80 words. Tone: clear, practical, professional.
-    ```
+    > [!IMPORTANT]
+    > **TODO:** Confirm the navigation path to create a new workspace page in this version of SAP Build Work Zone advanced edition — e.g., via the workspace admin, a page manager tab, or an inline + button in the navigation bar.
 
-    ![AI-generated Apex City overview text in the card text field](images/02_04_0010.png)
-    > *📸 Capture: The Apex City card with the AI-generated product overview text inserted. The text should be a concise paragraph visible below the product image.*
+    ![Page management view with the option to add a new page visible](images/02_04_0010.png)
+    > *📸 Capture: The workspace admin or page management view showing the current page list and a clearly visible button or option to create a new page.*
 
-2. Accept the generated text and repeat for the **Apex Trail** card:
+2. Name the new page **Apex Series** and save.
 
-    ```
-    Write a short dealer-facing product overview for the Apex Trail — a mid-range adventure electric bike by BestRun EV. Highlight: 140 km range, all-terrain capability, aluminum frame, and ideal customer profile (outdoor enthusiasts, weekend riders). Keep it under 80 words. Tone: energetic, performance-focused, professional.
-    ```
+    ![New page dialog with "Apex Series" entered as the page name](images/02_04_0020.png)
+    > *📸 Capture: The new page creation dialog showing the page name field filled with "Apex Series".*
 
-    ![AI-generated Apex Trail overview text in the card text field](images/02_04_0020.png)
-    > *📸 Capture: The Apex Trail card with the AI-generated overview text inserted. The card should show the trail/forest product image above the text.*
-
-3. Accept the generated text and repeat for the **Apex Pro** card:
+3. Enter the editor for the new **Apex Series** page and add a **Text widget** at the top. Open the Joule panel and generate the launch announcement:
 
     ```
-    Write a short dealer-facing product overview for the Apex Pro — the flagship performance electric bike by BestRun EV. Highlight: 200 km range, new LFP battery system, off-road capability, and positioning as BestRun EV's most advanced model to date. Keep it under 80 words. Tone: premium, innovation-focused, professional.
+    Write a professional launch announcement for the BestRun EV authorized dealer portal 
+    introducing the Apex Series — our new premium electric bike and scooter product line. 
+    The announcement should:
+    - Open with a brief introduction to the Apex Series and why it matters to dealers
+    - Describe the three new models: Apex City (urban commuter), Apex Trail (adventure bike), 
+      Apex Pro (flagship with 200 km range and new LFP battery system)
+    - Highlight the pre-order opportunity and the 90-day launch timeline
+    - Close with an invitation to explore the full portal and register interest
+    Tone: confident, premium, B2B. Length: 150–200 words.
     ```
 
-    ![AI-generated Apex Pro overview text in the card text field](images/02_04_0030.png)
-    > *📸 Capture: The Apex Pro card with the AI-generated overview text inserted. This card should visually feel more premium — use the mountain/outdoor hero image for Apex Pro.*
+    ![Joule panel alongside the Apex Series page editor, with the launch announcement prompt entered](images/02_04_0030.png)
+    > *📸 Capture: The Joule panel next to the Apex Series page, showing the prompt entered and Joule generating the launch announcement text.*
 
-4. **Save** the page and use the **Preview** option to review the full Apex Series page as a dealer would see it.
+4. Insert the generated announcement text into the **Text widget** at the top of the Apex Series page.
 
-    ![Preview of the completed Apex Series page showing hero image, launch announcement, and three model cards](images/02_04_0040.png)
-    > *📸 Capture: The full-page preview of the Apex Series landing page — hero image at top, launch announcement below, three model cards (City / Trail / Pro) in a grid at the bottom. This is the "wow" view of the portal content.*
+    ![Apex Series page with the launch announcement text widget added and filled with the Joule-generated content](images/02_04_0040.png)
+    > *📸 Capture: The Apex Series page editor showing the announcement text widget with the Joule-generated content — a professional, multi-paragraph dealer announcement.*
+
+5. Below the announcement, add a **three-column card section** or three separate widgets for the individual model overviews. Use the Joule panel to generate copy for each:
+
+    **Apex City:**
+    ```
+    Write a short dealer-facing product overview for the Apex City — a lightweight urban 
+    electric commuter scooter by BestRun EV. Highlight city-optimized design, ease of use, 
+    low maintenance, and ideal customer profile (urban commuters, last-mile delivery). 
+    Under 60 words. Tone: clear, practical, professional.
+    ```
+
+    **Apex Trail:**
+    ```
+    Write a short dealer-facing product overview for the Apex Trail — a mid-range adventure 
+    electric bike by BestRun EV. Highlight 140 km range, all-terrain capability, aluminum 
+    frame, and ideal customer profile (outdoor enthusiasts, weekend riders). 
+    Under 60 words. Tone: energetic, performance-focused, professional.
+    ```
+
+    **Apex Pro:**
+    ```
+    Write a short dealer-facing product overview for the Apex Pro — the flagship performance 
+    electric bike by BestRun EV. Highlight 200 km range, new LFP battery system, 
+    off-road capability, and positioning as BestRun EV's most advanced model to date. 
+    Under 60 words. Tone: premium, innovation-focused, professional.
+    ```
+
+    ![Three model overview sections on the Apex Series page — Apex City, Apex Trail, Apex Pro — each with Joule-generated copy](images/02_04_0050.png)
+    > *📸 Capture: The Apex Series page editor showing three model overview sections (Apex City / Apex Trail / Apex Pro), each with a title and the Joule-generated product description.*
+
+6. **Save** the Apex Series page and use **Preview** to review the full page as a dealer would see it.
+
+    ![Preview of the complete Apex Series page — announcement at top, three model sections below](images/02_04_0060.png)
+    > *📸 Capture: The full-page preview of the Apex Series landing page — the launch announcement at the top, followed by the three model overview sections (City / Trail / Pro). This is the "wow" view of the launch content.*
 
 ### Summary
 
-The Apex Series landing page is complete with AI-generated content throughout. You have used AI text generation to produce dealer-facing copy at professional quality — quickly and consistently across all three models.
+The Apex Series product announcement page is complete with a full launch announcement and AI-generated model overviews for all three models. You used Joule to produce professional dealer-facing copy at scale — in minutes.
 
 Continue to — [Exercise 3 - Enable Document Grounding](../ex3/README.md)
