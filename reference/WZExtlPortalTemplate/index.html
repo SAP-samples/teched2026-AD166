@@ -1069,9 +1069,9 @@
 
       <!-- ── TEMPLATE NOTE ───────────────────────────────────── -->
       <div class="template-note">
-        <strong>Template Reference</strong> — External Portal Template default layout in SAP Build Work Zone, advanced edition.
-        Sections <strong>1–6</strong> are pre-configured by the template: Hero Image · Application Tiles · Forum Activity · Content List · People (Point of Contact) · Events.
-        Sections <strong>7–8</strong> are Text Template widgets to add: <strong>Key Highlights (×3)</strong> and <strong>Featured</strong>.
+        <strong>Template Reference</strong> — External Portal Template layout in SAP Build Work Zone, advanced edition.
+        Sections <strong>1, 4–8</strong> are pre-configured by the template: Hero Image · Application Tiles · Forum Activity · Content List · People (Point of Contact) · Events.
+        Sections <strong>2–3</strong> are Text Template widgets to add early in the page: <strong>Key Highlights (×3)</strong> and <strong>Featured</strong>.
         Section <strong>9</strong> is a plain <strong>Text widget</strong> used as the page footer.
       </div>
 
@@ -1094,7 +1094,79 @@
         </div>
       </div>
 
-      <!-- ── WIDGET 2: APPLICATION TILES (3×2) ───────────────── -->
+      <!-- ── WIDGET 2: KEY HIGHLIGHTS (Text Template, 3-col) ─── -->
+      <!-- Add this widget: Text Template card (×3).              -->
+      <!-- Use icon + title + 2–3 sentence description.           -->
+      <div class="wz-widget">
+        <div class="section-header">
+          <span class="section-title">Key Highlights</span>
+          <a class="section-link" href="#">View all →</a>
+        </div>
+        <div class="card-grid-3">
+
+          <div class="highlight-card">
+            <div class="highlight-card-icon">📦</div>
+            <div class="highlight-card-title">Highlight Title 1</div>
+            <div class="highlight-card-body">
+              Two to three sentences describing this highlight. What value does
+              this area offer to the partner? Keep it concise.
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-card-icon">🛒</div>
+            <div class="highlight-card-title">Highlight Title 2</div>
+            <div class="highlight-card-body">
+              Two to three sentences describing this highlight. What value does
+              this area offer to the partner? Keep it concise.
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-card-icon">📋</div>
+            <div class="highlight-card-title">Highlight Title 3</div>
+            <div class="highlight-card-body">
+              Two to three sentences describing this highlight. What value does
+              this area offer to the partner? Keep it concise.
+            </div>
+          </div>
+
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+        </div>
+      </div>
+
+      <!-- ── WIDGET 3: FEATURED (Text Template, 2-col) ─────────── -->
+      <!-- Add this widget: Text Template (image left, text right). -->
+      <!-- Use a workspace image on the left and copy on the right. -->
+      <div class="wz-widget">
+        <div class="section-header">
+          <span class="section-title">Featured</span>
+        </div>
+        <div class="featured-section">
+          <div class="featured-image">
+            <span class="featured-img-label">Featured image (850 × 400 px)</span>
+          </div>
+          <div class="featured-content">
+            <span class="featured-tag">Featured</span>
+            <h2 class="featured-title">Featured Story or<br>Announcement Title</h2>
+            <p class="featured-body">
+              Supporting paragraph that gives context. Two to three sentences
+              describing the featured item — a product launch, a key update,
+              or a campaign. Keep it concise and action-oriented.
+            </p>
+            <button class="btn-action">Learn more →</button>
+          </div>
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+        </div>
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- ── WIDGET 4: APPLICATION TILES (3×2) ───────────────── -->
       <!-- Pre-configured by the External Portal Template.        -->
       <!-- Shows workspace navigation shortcuts.                  -->
       <div class="wz-widget">
@@ -1148,7 +1220,7 @@
         </div>
       </div>
 
-      <!-- ── WIDGETS 3–6: BUILT-IN TEMPLATE WIDGETS (2-col row) ─ -->
+      <!-- ── WIDGETS 5–8: BUILT-IN TEMPLATE WIDGETS (2-col row) ─ -->
       <!-- Pre-configured by the External Portal Template.         -->
       <!-- Left column: Forum Activity + Content list              -->
       <!-- Right column: People (Point of Contact) + Events        -->
@@ -1298,79 +1370,7 @@
         </div><!-- /right col -->
       </div><!-- /two-col-layout -->
 
-      <hr class="section-divider" />
-
-      <!-- ── WIDGET 3: KEY HIGHLIGHTS (Text Template, 3-col) ─── -->
-      <!-- Add this widget: Text Template card (×3).              -->
-      <!-- Use icon + title + 2–3 sentence description.           -->
-      <div class="wz-widget">
-        <div class="section-header">
-          <span class="section-title">Key Highlights</span>
-          <a class="section-link" href="#">View all →</a>
-        </div>
-        <div class="card-grid-3">
-
-          <div class="highlight-card">
-            <div class="highlight-card-icon">📦</div>
-            <div class="highlight-card-title">Highlight Title 1</div>
-            <div class="highlight-card-body">
-              Two to three sentences describing this highlight. What value does
-              this area offer to the partner? Keep it concise.
-            </div>
-          </div>
-
-          <div class="highlight-card">
-            <div class="highlight-card-icon">🛒</div>
-            <div class="highlight-card-title">Highlight Title 2</div>
-            <div class="highlight-card-body">
-              Two to three sentences describing this highlight. What value does
-              this area offer to the partner? Keep it concise.
-            </div>
-          </div>
-
-          <div class="highlight-card">
-            <div class="highlight-card-icon">📋</div>
-            <div class="highlight-card-title">Highlight Title 3</div>
-            <div class="highlight-card-body">
-              Two to three sentences describing this highlight. What value does
-              this area offer to the partner? Keep it concise.
-            </div>
-          </div>
-
-        </div>
-        <div class="wz-edit-bar">
-          <div class="wz-edit-icon" title="Edit widget">✎</div>
-        </div>
-      </div>
-
-      <!-- ── WIDGET 4: FEATURED (Text Template, 2-col) ─────────── -->
-      <!-- Add this widget: Text Template (image left, text right). -->
-      <!-- Use a workspace image on the left and copy on the right. -->
-      <div class="wz-widget">
-        <div class="section-header">
-          <span class="section-title">Featured</span>
-        </div>
-        <div class="featured-section">
-          <div class="featured-image">
-            <span class="featured-img-label">Featured image (850 × 400 px)</span>
-          </div>
-          <div class="featured-content">
-            <span class="featured-tag">Featured</span>
-            <h2 class="featured-title">Featured Story or<br>Announcement Title</h2>
-            <p class="featured-body">
-              Supporting paragraph that gives context. Two to three sentences
-              describing the featured item — a product launch, a key update,
-              or a campaign. Keep it concise and action-oriented.
-            </p>
-            <button class="btn-action">Learn more →</button>
-          </div>
-        </div>
-        <div class="wz-edit-bar">
-          <div class="wz-edit-icon" title="Edit widget">✎</div>
-        </div>
-      </div>
-
-      <!-- ── WIDGET 7: FOOTER (plain text widget) ─────────────── -->
+      <!-- ── WIDGET 9: FOOTER (plain text widget) ─────────────── -->
       <!-- Add a Text widget at the bottom of the page.           -->
       <!-- Use it for copyright notice and footer navigation links.-->
       <div class="wz-widget">
