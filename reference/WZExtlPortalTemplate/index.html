@@ -638,6 +638,331 @@
     }
     .template-note strong { color: #3E2723; }
 
+    /* ─── 2-column layout (built-in widgets row) ────────────── */
+    .two-col-layout {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .col-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* ─── Widget: Forum Activity ─────────────────────────────── */
+    .forum-widget {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .forum-widget-header {
+      padding: 12px 16px 10px;
+      border-bottom: 1px solid var(--sap-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .forum-type-tabs {
+      display: flex;
+      gap: 0;
+    }
+    .forum-type-tab {
+      font-size: 12px;
+      padding: 4px 12px;
+      border: 1px solid var(--sap-border);
+      cursor: pointer;
+      color: var(--sap-mid);
+      background: var(--sap-bg);
+    }
+    .forum-type-tab:first-child { border-radius: 4px 0 0 4px; }
+    .forum-type-tab:last-child  { border-radius: 0 4px 4px 0; border-left: none; }
+    .forum-type-tab.active {
+      background: var(--sap-white);
+      color: var(--sap-blue);
+      font-weight: 600;
+    }
+    .forum-empty {
+      padding: 32px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .forum-empty-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--sap-bg);
+      border: 1px solid var(--sap-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sap-muted);
+    }
+    .forum-empty-text {
+      font-size: 13px;
+      color: var(--sap-mid);
+    }
+    .btn-outline {
+      border: 1px solid var(--sap-blue);
+      color: var(--sap-blue);
+      background: transparent;
+      border-radius: var(--radius-btn);
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-outline:hover { background: var(--sap-blue-light); }
+
+    /* ─── Widget: Content List ──────────────────────────────── */
+    .content-widget {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .content-widget-header {
+      padding: 12px 16px 10px;
+      border-bottom: 1px solid var(--sap-border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .content-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--sap-border);
+      cursor: pointer;
+    }
+    .content-item:last-child { border-bottom: none; }
+    .content-item:hover { background: var(--sap-bg); }
+    .content-item-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--sap-blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .content-item-body { flex: 1; min-width: 0; }
+    .content-item-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-blue);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .content-item-meta {
+      font-size: 11px;
+      color: var(--sap-muted);
+      margin-top: 2px;
+    }
+    .content-item-stats {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--sap-muted);
+      flex-shrink: 0;
+    }
+
+    /* ─── Widget: People / Point of Contact ─────────────────── */
+    .people-widget {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .people-widget-header {
+      padding: 12px 16px 10px;
+      border-bottom: 1px solid var(--sap-border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+    }
+    .people-profile {
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+    }
+    .people-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--sap-blue);
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .people-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sap-dark);
+    }
+    .people-contributions {
+      font-size: 11px;
+      color: var(--sap-muted);
+    }
+    .people-actions {
+      width: 100%;
+      border-top: 1px solid var(--sap-border);
+      padding: 8px 0 4px;
+    }
+    .people-action-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      font-size: 13px;
+      color: var(--sap-blue);
+      cursor: pointer;
+    }
+    .people-action-item:hover { background: var(--sap-bg); }
+    .people-action-icon {
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sap-mid);
+      font-size: 14px;
+    }
+
+    /* ─── Widget: Events ────────────────────────────────────── */
+    .events-widget {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .events-widget-header {
+      padding: 12px 16px 10px;
+      border-bottom: 1px solid var(--sap-border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .event-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--sap-border);
+      cursor: pointer;
+    }
+    .event-item:last-child { border-bottom: none; }
+    .event-item:hover { background: var(--sap-bg); }
+    .event-date-badge {
+      width: 40px;
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+      text-align: center;
+      border: 1px solid var(--sap-border);
+    }
+    .event-date-month {
+      background: var(--sap-blue);
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 0;
+    }
+    .event-date-day {
+      background: var(--sap-white);
+      color: var(--sap-dark);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 2px 0 3px;
+    }
+    .event-body { flex: 1; min-width: 0; }
+    .event-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+    }
+    .event-meta {
+      font-size: 11px;
+      color: var(--sap-muted);
+      margin-top: 2px;
+    }
+    .events-empty {
+      padding: 24px 16px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--sap-muted);
+    }
+
+    /* ─── Widget: Footer (plain text widget) ────────────────── */
+    .footer-widget {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      padding: 20px 28px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-brand {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+    }
+    .footer-brand span {
+      font-weight: 400;
+      color: var(--sap-muted);
+      margin-left: 8px;
+      font-size: 12px;
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-link {
+      font-size: 12px;
+      color: var(--sap-blue);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .footer-link:hover { text-decoration: underline; }
+    .footer-copy {
+      font-size: 11px;
+      color: var(--sap-muted);
+      text-align: right;
+      flex-basis: 100%;
+    }
+
     /* ─── Separator between template sections ───────────────── */
     .section-divider {
       border: none;
@@ -745,9 +1070,9 @@
       <!-- ── TEMPLATE NOTE ───────────────────────────────────── -->
       <div class="template-note">
         <strong>Template Reference</strong> — External Portal Template default layout in SAP Build Work Zone, advanced edition.
-        The first two sections (Hero Image, Application Tiles) are pre-configured by the template.
-        The <strong>Key Highlights</strong> and <strong>Featured</strong> sections below are Text Template widgets
-        to be added and populated with portal-specific content.
+        Sections <strong>1–6</strong> are pre-configured by the template: Hero Image · Application Tiles · Forum Activity · Content List · People (Point of Contact) · Events.
+        Sections <strong>7–8</strong> are Text Template widgets to add: <strong>Key Highlights (×3)</strong> and <strong>Featured</strong>.
+        Section <strong>9</strong> is a plain <strong>Text widget</strong> used as the page footer.
       </div>
 
       <!-- ── WIDGET 1: HERO IMAGE + TEXT OVERLAY ─────────────── -->
@@ -823,6 +1148,156 @@
         </div>
       </div>
 
+      <!-- ── WIDGETS 3–6: BUILT-IN TEMPLATE WIDGETS (2-col row) ─ -->
+      <!-- Pre-configured by the External Portal Template.         -->
+      <!-- Left column: Forum Activity + Content list              -->
+      <!-- Right column: People (Point of Contact) + Events        -->
+      <div class="two-col-layout">
+
+        <!-- Left column -->
+        <div class="col-stack">
+
+          <!-- Forum Activity Widget -->
+          <div class="wz-widget">
+            <div class="forum-widget">
+              <div class="forum-widget-header">
+                <div class="forum-type-tabs">
+                  <div class="forum-type-tab active">All Types</div>
+                  <div class="forum-type-tab">Questions</div>
+                  <div class="forum-type-tab">Discussions</div>
+                </div>
+                <a class="section-link" href="#">View all →</a>
+              </div>
+              <div class="forum-empty">
+                <div class="forum-empty-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <div class="forum-empty-text">No forum activities yet</div>
+                <button class="btn-outline">Engage with workspace members</button>
+              </div>
+            </div>
+            <div class="wz-edit-bar">
+              <div class="wz-edit-icon" title="Widget settings">⚙</div>
+            </div>
+          </div>
+
+          <!-- Content Widget -->
+          <div class="wz-widget">
+            <div class="content-widget">
+              <div class="content-widget-header">
+                <span>Content</span>
+                <a class="section-link" href="#">View all →</a>
+              </div>
+              <div class="content-item">
+                <div class="content-item-icon">📄</div>
+                <div class="content-item-body">
+                  <div class="content-item-title">Overview</div>
+                  <div class="content-item-meta">Workspace Owner · 14 minutes ago</div>
+                </div>
+                <div class="content-item-stats">
+                  <span>👍 0</span>
+                  <span>👁 8</span>
+                  <span>💬 0</span>
+                </div>
+              </div>
+              <div class="content-item">
+                <div class="content-item-icon">📄</div>
+                <div class="content-item-body">
+                  <div class="content-item-title">Page Title Placeholder</div>
+                  <div class="content-item-meta">Workspace Owner · DD Mon YYYY</div>
+                </div>
+                <div class="content-item-stats">
+                  <span>👍 0</span>
+                  <span>👁 0</span>
+                  <span>💬 0</span>
+                </div>
+              </div>
+            </div>
+            <div class="wz-edit-bar">
+              <div class="wz-edit-icon" title="Widget settings">⚙</div>
+            </div>
+          </div>
+
+        </div><!-- /left col -->
+
+        <!-- Right column -->
+        <div class="col-stack">
+
+          <!-- People Widget (Your Single Point of Contact) -->
+          <div class="wz-widget">
+            <div class="people-widget">
+              <div class="people-widget-header">Your Single Point of Contact</div>
+              <div class="people-profile">
+                <div class="people-avatar">AU</div>
+                <div class="people-name">Workspace Admin</div>
+                <div class="people-contributions">2 contributions</div>
+              </div>
+              <div class="people-actions">
+                <div class="people-action-item">
+                  <div class="people-action-icon">?</div>
+                  <span>Ask a Question</span>
+                </div>
+                <div class="people-action-item">
+                  <div class="people-action-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <span>Add a Discussion</span>
+                </div>
+                <div class="people-action-item">
+                  <div class="people-action-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  </div>
+                  <span>Upload a File</span>
+                </div>
+                <div class="people-action-item">
+                  <div class="people-action-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  </div>
+                  <span>Create an Event</span>
+                </div>
+              </div>
+            </div>
+            <div class="wz-edit-bar">
+              <div class="wz-edit-icon" title="Widget settings">⚙</div>
+            </div>
+          </div>
+
+          <!-- Events Widget -->
+          <div class="wz-widget">
+            <div class="events-widget">
+              <div class="events-widget-header">
+                <span>Upcoming Events</span>
+                <a class="section-link" href="#">View all →</a>
+              </div>
+              <div class="event-item">
+                <div class="event-date-badge">
+                  <div class="event-date-month">Nov</div>
+                  <div class="event-date-day">12</div>
+                </div>
+                <div class="event-body">
+                  <div class="event-title">Event Title Placeholder</div>
+                  <div class="event-meta">10:00 AM · Online</div>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-date-badge">
+                  <div class="event-date-month">Dec</div>
+                  <div class="event-date-day">05</div>
+                </div>
+                <div class="event-body">
+                  <div class="event-title">Event Title Placeholder</div>
+                  <div class="event-meta">2:00 PM · Room / Location</div>
+                </div>
+              </div>
+            </div>
+            <div class="wz-edit-bar">
+              <div class="wz-edit-icon" title="Widget settings">⚙</div>
+            </div>
+          </div>
+
+        </div><!-- /right col -->
+      </div><!-- /two-col-layout -->
+
       <hr class="section-divider" />
 
       <!-- ── WIDGET 3: KEY HIGHLIGHTS (Text Template, 3-col) ─── -->
@@ -888,6 +1363,27 @@
               or a campaign. Keep it concise and action-oriented.
             </p>
             <button class="btn-action">Learn more →</button>
+          </div>
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+        </div>
+      </div>
+
+      <!-- ── WIDGET 7: FOOTER (plain text widget) ─────────────── -->
+      <!-- Add a Text widget at the bottom of the page.           -->
+      <!-- Use it for copyright notice and footer navigation links.-->
+      <div class="wz-widget">
+        <div class="footer-widget">
+          <div class="footer-brand">
+            Partner Portal
+            <span>© 2026 Your Company Name. All rights reserved.</span>
+          </div>
+          <div class="footer-links">
+            <a class="footer-link" href="#">Privacy Policy</a>
+            <a class="footer-link" href="#">Terms of Use</a>
+            <a class="footer-link" href="#">Contact Us</a>
+            <a class="footer-link" href="#">Accessibility</a>
           </div>
         </div>
         <div class="wz-edit-bar">
