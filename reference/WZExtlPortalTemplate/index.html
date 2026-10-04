@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>External Portal Template — SAP Build Work Zone</title>
+  <style>
+
+    /* ─── Tokens ───────────────────────────────────────────── */
+    :root {
+      --sap-blue:       #0070F2;
+      --sap-blue-dark:  #0040B0;
+      --sap-blue-light: #EBF5FE;
+      --sap-dark:       #1C2B38;
+      --sap-mid:        #506070;
+      --sap-muted:      #8696A7;
+      --sap-border:     #D9E0E7;
+      --sap-bg:         #F5F6FA;
+      --sap-white:      #FFFFFF;
+      --sap-green:      #107E3E;
+      --sap-orange:     #E76500;
+      --radius-card:    10px;
+      --radius-btn:     6px;
+      --shadow-card:    0 2px 10px rgba(0,0,0,0.07);
+      --shadow-hover:   0 6px 20px rgba(0,0,0,0.12);
+      --font:           "72", "SAP72", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      font-size: 14px;
+      color: var(--sap-dark);
+      background: var(--sap-bg);
+      line-height: 1.5;
+    }
+
+    /* ─── WZ Top Navigation Bar ────────────────────────────── */
+    .wz-topbar {
+      height: 44px;
+      background: var(--sap-white);
+      border-bottom: 1px solid var(--sap-border);
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 8px;
+      gap: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .wz-topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+      text-decoration: none;
+      padding: 0 12px 0 4px;
+      white-space: nowrap;
+    }
+    .wz-topbar-brand .sap-logo {
+      width: 32px;
+      height: 20px;
+      background: #007DB8;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .wz-breadcrumb {
+      font-size: 13px;
+      color: var(--sap-mid);
+      padding: 0 16px;
+      border-left: 1px solid var(--sap-border);
+      height: 44px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .wz-breadcrumb strong { color: var(--sap-dark); }
+    .wz-context-dropdown {
+      height: 28px;
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-btn);
+      background: var(--sap-bg);
+      padding: 0 10px 0 10px;
+      font-size: 12px;
+      color: var(--sap-mid);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .wz-context-dropdown:hover { background: var(--sap-border); }
+    .wz-search {
+      flex: 1;
+      max-width: 320px;
+      margin-left: 12px;
+      height: 30px;
+      border: 1px solid var(--sap-border);
+      border-radius: 15px;
+      padding: 0 14px 0 32px;
+      font-size: 13px;
+      color: var(--sap-mid);
+      background: var(--sap-bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238696A7' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") no-repeat 10px center;
+      outline: none;
+    }
+    .wz-topbar-actions {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      padding-right: 8px;
+    }
+    .wz-icon-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sap-mid);
+      font-size: 15px;
+    }
+    .wz-icon-btn:hover { background: var(--sap-bg); }
+    .wz-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--sap-blue);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* ─── WZ Left Sidebar ───────────────────────────────────── */
+    .wz-layout {
+      display: flex;
+      min-height: calc(100vh - 44px);
+    }
+    .wz-sidebar {
+      width: 44px;
+      background: var(--sap-white);
+      border-right: 1px solid var(--sap-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 12px 0;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .wz-sidebar-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sap-mid);
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .wz-sidebar-icon:hover { background: var(--sap-bg); color: var(--sap-blue); }
+    .wz-sidebar-icon.active { background: var(--sap-blue-light); color: var(--sap-blue); }
+
+    /* ─── WZ Main Content Area ──────────────────────────────── */
+    .wz-main { flex: 1; overflow: hidden; }
+
+    /* ─── Workspace Header ──────────────────────────────────── */
+    .ws-header {
+      background: var(--sap-white);
+      border-bottom: 1px solid var(--sap-border);
+    }
+    .ws-banner {
+      height: 200px;
+      background: linear-gradient(160deg, #0d2c4a 0%, #0f4c81 40%, #1a7db8 70%, #2aa5c8 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    /* decorative circles to suggest a photo image */
+    .ws-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(100,200,255,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 95% 80%, rgba(0,80,160,0.35) 0%, transparent 60%);
+    }
+    .ws-banner-label {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 10px;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+    /* workspace edit pencil (top-left, simulated) */
+    .ws-banner-edit {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      cursor: pointer;
+      color: white;
+    }
+    .ws-identity {
+      display: flex;
+      align-items: flex-end;
+      gap: 14px;
+      padding: 0 20px 10px;
+      position: relative;
+    }
+    .ws-avatar-wrap {
+      margin-top: -28px;
+      flex-shrink: 0;
+    }
+    .ws-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      background: #1a3a5c;
+      border: 3px solid var(--sap-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+    /* SVG bike icon inside avatar */
+    .ws-avatar svg { width: 36px; height: 36px; }
+    .ws-meta { padding-bottom: 2px; min-width: 0; }
+    .ws-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--sap-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ws-name-star { color: var(--sap-muted); cursor: pointer; font-size: 14px; }
+    .ws-desc { font-size: 12px; color: var(--sap-mid); margin-top: 2px; }
+    .ws-badges {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 5px;
+    }
+    .ws-badge {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: var(--sap-mid);
+    }
+    .ws-badge-public { color: var(--sap-green); font-weight: 500; }
+    .ws-badge-external { color: var(--sap-orange); font-weight: 500; }
+    .ws-header-actions {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-bottom: 8px;
+    }
+    .btn-invite {
+      background: var(--sap-blue);
+      color: white;
+      border: none;
+      border-radius: var(--radius-btn);
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .btn-invite:hover { background: var(--sap-blue-dark); }
+    .btn-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: var(--radius-btn);
+      border: 1px solid var(--sap-border);
+      background: var(--sap-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--sap-mid);
+      font-size: 14px;
+    }
+    .btn-icon:hover { background: var(--sap-bg); }
+
+    /* ─── Page Tab Bar ──────────────────────────────────────── */
+    .ws-tabs {
+      display: flex;
+      align-items: center;
+      border-top: 1px solid var(--sap-border);
+      padding: 0 20px;
+      background: var(--sap-white);
+      gap: 0;
+    }
+    .ws-tab {
+      padding: 10px 16px;
+      font-size: 13px;
+      color: var(--sap-mid);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+    }
+    .ws-tab:hover { color: var(--sap-blue); }
+    .ws-tab.active {
+      color: var(--sap-blue);
+      border-bottom-color: var(--sap-blue);
+      font-weight: 600;
+    }
+    .ws-tabs-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .ws-tabs-icon {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sap-muted);
+      cursor: pointer;
+      font-size: 15px;
+      border-radius: 4px;
+    }
+    .ws-tabs-icon:hover { background: var(--sap-bg); color: var(--sap-blue); }
+
+    /* ─── Page Content ──────────────────────────────────────── */
+    .page-content {
+      padding: 20px 24px 32px;
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* ─── Widget wrapper (hover reveals edit controls) ──────── */
+    .wz-widget { position: relative; }
+    .wz-edit-bar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: none;
+      gap: 6px;
+      z-index: 10;
+    }
+    .wz-widget:hover .wz-edit-bar { display: flex; }
+    .wz-edit-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+    }
+
+    /* ─── Widget: Hero Image + Text Overlay ─────────────────── */
+    .widget-hero {
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      position: relative;
+      height: 340px;
+      background: linear-gradient(160deg, #0d2c4a 0%, #0f4c81 40%, #1a7db8 70%, #2aa5c8 100%);
+    }
+    .widget-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 80% at 75% 50%, rgba(120,210,255,0.15) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 70% at 95% 90%, rgba(0,60,140,0.3) 0%, transparent 55%);
+    }
+    .hero-img-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-style: italic;
+      text-align: center;
+      pointer-events: none;
+    }
+    .hero-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px 28px;
+      background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%);
+    }
+    .hero-text-box {
+      display: inline-block;
+      background: rgba(255,255,255,0.92);
+      border-radius: 6px;
+      padding: 10px 18px;
+    }
+    .hero-text-box h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--sap-dark);
+      line-height: 1.2;
+    }
+    .hero-text-box p {
+      font-size: 13px;
+      color: var(--sap-mid);
+      margin-top: 4px;
+    }
+
+    /* ─── Widget: Application Tiles (3×2 grid) ──────────────── */
+    .app-tiles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .app-tile {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      padding: 20px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow .18s, transform .18s;
+    }
+    .app-tile:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+    .app-tile-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--sap-bg);
+      border: 1px solid var(--sap-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: var(--sap-mid);
+    }
+    .app-tile-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+    }
+
+    /* ─── Section header ─────────────────────────────────────── */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sap-dark);
+    }
+    .section-link {
+      font-size: 13px;
+      color: var(--sap-blue);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .section-link:hover { text-decoration: underline; }
+
+    /* ─── Widget: Key Highlights — 3-col text template ──────── */
+    .card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+    .highlight-card {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      padding: 0 0 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+    .highlight-card-img {
+      width: 100%;
+      height: 120px;
+      background: var(--sap-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--sap-border);
+      margin-bottom: 16px;
+    }
+    .highlight-card-img svg { width: 72px; height: 72px; opacity: 0.5; }
+    .highlight-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--sap-dark);
+      padding: 0 20px;
+      margin-bottom: 8px;
+    }
+    .highlight-card-body {
+      font-size: 13px;
+      color: var(--sap-mid);
+      line-height: 1.55;
+      padding: 0 20px;
+    }
+    /* no CTA link — text template only, no navigation action */
+
+    /* ─── Section label widget (plain text used as divider/label) */
+    .section-label-widget {
+      padding: 4px 0 2px;
+    }
+    .section-label-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sap-dark);
+      margin-bottom: 14px;
+    }
+
+    /* ─── Widget: Featured Content — 2-col text template ────── */
+    .featured-section {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 240px;
+    }
+    .featured-image {
+      background: linear-gradient(160deg, #0d2c4a 0%, #1a5f8a 60%, #2398c0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 240px;
+    }
+    .featured-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 70% 40%, rgba(100,200,255,0.15) 0%, transparent 65%);
+    }
+    .featured-img-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-style: italic;
+      position: relative;
+    }
+    .featured-content {
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+    }
+    .featured-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--sap-blue);
+      background: var(--sap-blue-light);
+      padding: 3px 8px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+    .featured-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--sap-dark);
+      line-height: 1.25;
+    }
+    .featured-body {
+      font-size: 13px;
+      color: var(--sap-mid);
+      line-height: 1.65;
+    }
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--sap-blue);
+      color: white;
+      border: none;
+      border-radius: var(--radius-btn);
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      width: fit-content;
+      margin-top: 4px;
+    }
+    .btn-action:hover { background: var(--sap-blue-dark); }
+
+    /* ─── Template note callout ─────────────────────────────── */
+    .template-note {
+      background: #FFF8E1;
+      border: 1px solid #FFD54F;
+      border-left: 4px solid #FFB300;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 12px;
+      color: #5D4037;
+      line-height: 1.6;
+    }
+    .template-note strong { color: #3E2723; }
+
+    /* ─── 2-column layout (built-in widgets row) ────────────── */
+    .two-col-layout {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .col-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* ─── Widget: Forum Activity ─────────────────────────────── */
+    .forum-widget {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .forum-widget-header {
+      padding: 12px 16px 10px;
+      border-bottom: 1px solid var(--sap-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .forum-type-tabs {
+      display: flex;
+      gap: 0;
+    }
+    .forum-type-tab {
+      font-size: 12px;
+      padding: 4px 12px;
+      border: 1px solid var(--sap-border);
+      cursor: pointer;
+      color: var(--sap-mid);
+      background: var(--sap-bg);
+    }
+    .forum-type-tab:first-child { border-radius: 4px 0 0 4px; }
+    .forum-type-tab:last-child  { border-radius: 0 4px 4px 0; border-left: none; }
+    .forum-type-tab.active {
+      background: var(--sap-white);
+      color: var(--sap-blue);
+      font-weight: 600;
+    }
+    .forum-empty {
+      padding: 32px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .forum-empty-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--sap-bg);
+      border: 1px solid var(--sap-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sap-muted);
+    }
+    .forum-empty-text {
+      font-size: 13px;
+      color: var(--sap-mid);
+    }
+    .btn-outline {
+      border: 1px solid var(--sap-blue);
+      color: var(--sap-blue);
+      background: transparent;
+      border-radius: var(--radius-btn);
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-outline:hover { background: var(--sap-blue-light); }
+
+    /* ─── Widget: Content List ──────────────────────────────── */
+    .content-widget {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .content-widget-header {
+      padding: 12px 16px 10px;
+      border-bottom: 1px solid var(--sap-border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .content-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--sap-border);
+      cursor: pointer;
+    }
+    .content-item:last-child { border-bottom: none; }
+    .content-item:hover { background: var(--sap-bg); }
+    .content-item-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--sap-blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .content-item-body { flex: 1; min-width: 0; }
+    .content-item-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-blue);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .content-item-meta {
+      font-size: 11px;
+      color: var(--sap-muted);
+      margin-top: 2px;
+    }
+    .content-item-stats {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--sap-muted);
+      flex-shrink: 0;
+    }
+
+    /* ─── Widget: People / Point of Contact ─────────────────── */
+    .people-widget {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .people-widget-header {
+      padding: 12px 16px 10px;
+      border-bottom: 1px solid var(--sap-border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+    }
+    .people-profile {
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+    }
+    .people-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--sap-blue);
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .people-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sap-dark);
+    }
+    .people-contributions {
+      font-size: 11px;
+      color: var(--sap-muted);
+    }
+    .people-actions {
+      width: 100%;
+      border-top: 1px solid var(--sap-border);
+      padding: 8px 0 4px;
+    }
+    .people-action-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      font-size: 13px;
+      color: var(--sap-blue);
+      cursor: pointer;
+    }
+    .people-action-item:hover { background: var(--sap-bg); }
+    .people-action-icon {
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sap-mid);
+      font-size: 14px;
+    }
+
+    /* ─── Widget: Events ────────────────────────────────────── */
+    .events-widget {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .events-widget-header {
+      padding: 12px 16px 10px;
+      border-bottom: 1px solid var(--sap-border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .event-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--sap-border);
+      cursor: pointer;
+    }
+    .event-item:last-child { border-bottom: none; }
+    .event-item:hover { background: var(--sap-bg); }
+    .event-date-badge {
+      width: 40px;
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+      text-align: center;
+      border: 1px solid var(--sap-border);
+    }
+    .event-date-month {
+      background: var(--sap-blue);
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 0;
+    }
+    .event-date-day {
+      background: var(--sap-white);
+      color: var(--sap-dark);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 2px 0 3px;
+    }
+    .event-body { flex: 1; min-width: 0; }
+    .event-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+    }
+    .event-meta {
+      font-size: 11px;
+      color: var(--sap-muted);
+      margin-top: 2px;
+    }
+    .events-empty {
+      padding: 24px 16px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--sap-muted);
+    }
+
+    /* ─── Widget: Footer (plain text widget) ────────────────── */
+    .footer-widget {
+      background: var(--sap-white);
+      border: 1px solid var(--sap-border);
+      border-radius: var(--radius-card);
+      padding: 20px 28px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-brand {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sap-dark);
+    }
+    .footer-brand span {
+      font-weight: 400;
+      color: var(--sap-muted);
+      margin-left: 8px;
+      font-size: 12px;
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-link {
+      font-size: 12px;
+      color: var(--sap-blue);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .footer-link:hover { text-decoration: underline; }
+    .footer-copy {
+      font-size: 11px;
+      color: var(--sap-muted);
+      text-align: right;
+      flex-basis: 100%;
+    }
+
+    /* ─── Separator between template sections ───────────────── */
+    .section-divider {
+      border: none;
+      border-top: 1px dashed var(--sap-border);
+      margin: 0;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  WZ TOP NAVIGATION BAR                                    -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="wz-topbar">
+  <a class="wz-topbar-brand" href="#">
+    <div class="sap-logo">SAP</div>
+    <span>SAP Build Work Zone</span>
+  </a>
+  <div class="wz-breadcrumb">
+    <strong>Partner Portal</strong> - Overview
+  </div>
+  <div class="wz-context-dropdown">This Works… ▾</div>
+  <input class="wz-search" type="text" placeholder="Search in this workspace…" readonly />
+  <div class="wz-topbar-actions">
+    <button class="wz-icon-btn" title="Bookmarks">🔖</button>
+    <button class="wz-icon-btn" title="Share">🔗</button>
+    <button class="wz-icon-btn" title="Notifications">🔔</button>
+    <div class="wz-avatar" title="AU">AU</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  LAYOUT: SIDEBAR + MAIN                                   -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="wz-layout">
+
+  <!-- Left sidebar icons -->
+  <div class="wz-sidebar">
+    <div class="wz-sidebar-icon" title="Home">⌂</div>
+    <div class="wz-sidebar-icon active" title="Workspaces">⊞</div>
+    <div class="wz-sidebar-icon" title="Navigation">☰</div>
+  </div>
+
+  <!-- Main content area -->
+  <div class="wz-main">
+
+    <!-- Workspace header -->
+    <div class="ws-header">
+      <!-- Banner image (200px, gradient placeholder) -->
+      <div class="ws-banner">
+        <div class="ws-banner-edit" title="Edit banner">✎</div>
+        <span class="ws-banner-label">Banner image (850 × 200 px)</span>
+      </div>
+      <!-- Identity row: avatar + name + badges + actions -->
+      <div class="ws-identity">
+        <div class="ws-avatar-wrap">
+          <div class="ws-avatar">
+            <!-- simplified bicycle/portal icon in SVG -->
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="10" cy="24" r="6" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+              <circle cx="26" cy="24" r="6" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+              <path d="M10 24 L16 12 L22 18 M16 12 L22 12 M22 12 L26 24" stroke="rgba(255,255,255,0.8)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="ws-meta">
+          <div class="ws-name">
+            Partner Portal
+            <span class="ws-name-star">☆</span>
+          </div>
+          <div class="ws-desc">Template to create partner portals</div>
+          <div class="ws-badges">
+            <span class="ws-badge ws-badge-public">● Public</span>
+            <span class="ws-badge">👥 1 Member</span>
+            <span class="ws-badge ws-badge-external">⚠ External</span>
+          </div>
+        </div>
+        <div class="ws-header-actions">
+          <button class="btn-invite">+ Invite</button>
+          <div class="btn-icon" title="More">⋯</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page tab bar -->
+    <div class="ws-tabs">
+      <div class="ws-tab active">Overview</div>
+      <div class="ws-tab">Content</div>
+      <div class="ws-tab">Forums</div>
+      <div class="ws-tab">Events</div>
+      <div class="ws-tab">Knowledge Base</div>
+      <div class="ws-tabs-right">
+        <div class="ws-tabs-icon" title="Add page">＋</div>
+        <div class="ws-tabs-icon" title="Page settings">⚙</div>
+        <div class="ws-tabs-icon" title="More">☰</div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!--  PAGE CONTENT — WIDGETS                                  -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <div class="page-content">
+
+      <!-- ── TEMPLATE NOTE ───────────────────────────────────── -->
+      <div class="template-note">
+        <strong>Template Reference</strong> — External Portal Template layout in SAP Build Work Zone, advanced edition.
+        Sections <strong>1, 4–8</strong> are pre-configured by the template: Hero Image · Application Tiles · Forum Activity · Content List · People (Point of Contact) · Events.
+        Sections <strong>2–3</strong> are Text Template widgets to add early in the page: <strong>Key Highlights (×3)</strong> and <strong>Featured</strong>.
+        Section <strong>9</strong> is a plain <strong>Text widget</strong> used as the page footer.
+      </div>
+
+      <!-- ── WIDGET 1: HERO IMAGE + TEXT OVERLAY ─────────────── -->
+      <!-- Pre-configured by the External Portal Template.        -->
+      <!-- Upload a workspace image; add a text overlay widget.   -->
+      <div class="wz-widget">
+        <div class="widget-hero">
+          <span class="hero-img-label">Hero image (replace with workspace image)</span>
+          <div class="hero-overlay">
+            <div class="hero-text-box">
+              <h1>Hero Section</h1>
+              <p>One-line portal tagline or announcement</p>
+            </div>
+          </div>
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+          <div class="wz-edit-icon" title="Widget settings">⚙</div>
+        </div>
+      </div>
+
+      <!-- ── WIDGET 2: KEY HIGHLIGHTS (Text Template, 3-col) ─── -->
+      <!-- Add this widget: Text Template card (×3).              -->
+      <!-- Image area on top (illustrated icon), title + body.    -->
+      <div class="wz-widget">
+        <div class="section-header">
+          <span class="section-title">Key Highlights</span>
+        </div>
+        <div class="card-grid-3">
+
+          <div class="highlight-card">
+            <div class="highlight-card-img">
+              <!-- Illustrated icon placeholder: "Who & What" — people + key -->
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="26" r="10" stroke="#1C2B38" stroke-width="2"/>
+                <path d="M10 60c0-11 9-18 20-18s20 7 20 18" stroke="#1C2B38" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="54" cy="30" r="7" stroke="#0070F2" stroke-width="2"/>
+                <path d="M61 30h8M65 26v8" stroke="#0070F2" stroke-width="2" stroke-linecap="round"/>
+                <path d="M46 56c0-7 5-12 12-12" stroke="#0070F2" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 2"/>
+              </svg>
+            </div>
+            <div class="highlight-card-title">Who &amp; What?</div>
+            <div class="highlight-card-body">
+              Suggested text — explain who the target audience is and what
+              they can achieve in this portal.
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-card-img">
+              <!-- Illustrated icon placeholder: "Why" — clock + workflow -->
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="38" r="18" stroke="#1C2B38" stroke-width="2"/>
+                <path d="M40 24v14l8 6" stroke="#1C2B38" stroke-width="2" stroke-linecap="round"/>
+                <rect x="14" y="56" width="12" height="10" rx="2" stroke="#0070F2" stroke-width="1.8"/>
+                <rect x="34" y="60" width="12" height="6" rx="2" stroke="#0070F2" stroke-width="1.8"/>
+                <rect x="54" y="53" width="12" height="13" rx="2" stroke="#0070F2" stroke-width="1.8"/>
+                <path d="M20 56l-3-6M40 60l-3-8M60 53l-3-6" stroke="#0070F2" stroke-width="1.5" stroke-dasharray="2 2"/>
+              </svg>
+            </div>
+            <div class="highlight-card-title">Why?</div>
+            <div class="highlight-card-body">
+              Suggested text — why should partners regularly visit this portal?
+              Cover benefits like notifications and direct data access.
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-card-img">
+              <!-- Illustrated icon placeholder: "How" — checklist + flow -->
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="18" y="16" width="44" height="52" rx="4" stroke="#1C2B38" stroke-width="2"/>
+                <path d="M26 30h28M26 40h20M26 50h24" stroke="#1C2B38" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="57" cy="52" r="10" fill="white" stroke="#0070F2" stroke-width="2"/>
+                <path d="M53 52l3 3 5-5" stroke="#0070F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="highlight-card-title">How?</div>
+            <div class="highlight-card-body">
+              Suggested text — explain how to best use this workspace, stay
+              up to date, and make use of its features.
+            </div>
+          </div>
+
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+        </div>
+      </div>
+
+      <!-- ── WIDGET 3: FEATURED (Text Template, 2-col) ─────────── -->
+      <!-- Add this widget: Text Template (image left, text right). -->
+      <!-- Use a workspace image on the left and copy on the right. -->
+      <div class="wz-widget">
+        <div class="section-header">
+          <span class="section-title">Featured</span>
+        </div>
+        <div class="featured-section">
+          <div class="featured-image">
+            <span class="featured-img-label">Featured image (850 × 400 px)</span>
+          </div>
+          <div class="featured-content">
+            <span class="featured-tag">Featured</span>
+            <h2 class="featured-title">Featured Story or<br>Announcement Title</h2>
+            <p class="featured-body">
+              Supporting paragraph that gives context. Two to three sentences
+              describing the featured item — a product launch, a key update,
+              or a campaign. Keep it concise and action-oriented.
+            </p>
+            <button class="btn-action">Learn more →</button>
+          </div>
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+        </div>
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- ── SECTION LABEL: "Utilities & Capabilities" ────────── -->
+      <!-- Plain text widget used as a visual section heading.     -->
+      <div class="wz-widget section-label-widget">
+        <div class="section-label-title">Utilities &amp; Capabilities</div>
+      </div>
+
+      <!-- ── WIDGET 4: APPLICATION TILES (3×2) ───────────────── -->
+      <!-- Pre-configured by the External Portal Template.        -->
+      <!-- Shows workspace navigation shortcuts.                  -->
+      <div class="wz-widget">
+        <div class="app-tiles-grid">
+
+          <div class="app-tile">
+            <div class="app-tile-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/><circle cx="11" cy="11" r="2.5" stroke-width="1.2"/></svg>
+            </div>
+            <div class="app-tile-label">Search</div>
+          </div>
+
+          <div class="app-tile">
+            <div class="app-tile-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/><path d="M5 10v11h14V10"/></svg>
+            </div>
+            <div class="app-tile-label">Home</div>
+          </div>
+
+          <div class="app-tile">
+            <div class="app-tile-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </div>
+            <div class="app-tile-label">Applications</div>
+          </div>
+
+          <div class="app-tile">
+            <div class="app-tile-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 4v16M4 9h4M4 14h4"/></svg>
+            </div>
+            <div class="app-tile-label">Terms of Service</div>
+          </div>
+
+          <div class="app-tile">
+            <div class="app-tile-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </div>
+            <div class="app-tile-label">Calendar</div>
+          </div>
+
+          <div class="app-tile">
+            <div class="app-tile-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <div class="app-tile-label">Notifications</div>
+          </div>
+
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Widget settings">⚙</div>
+        </div>
+      </div>
+
+      <!-- ── WIDGETS 5–8: BUILT-IN TEMPLATE WIDGETS (2-col row) ─ -->
+      <!-- Pre-configured by the External Portal Template.         -->
+      <!-- Left column: Forum Activity + Content list              -->
+      <!-- Right column: People (Point of Contact) + Events        -->
+      <div class="two-col-layout">
+
+        <!-- Left column -->
+        <div class="col-stack">
+
+          <!-- Forum Activity Widget -->
+          <div class="wz-widget">
+            <div class="forum-widget">
+              <div class="forum-widget-header">
+                <div class="forum-type-tabs">
+                  <div class="forum-type-tab active">All Types</div>
+                  <div class="forum-type-tab">Questions</div>
+                  <div class="forum-type-tab">Discussions</div>
+                </div>
+                <a class="section-link" href="#">View all →</a>
+              </div>
+              <div class="forum-empty">
+                <div class="forum-empty-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <div class="forum-empty-text">No forum activities yet</div>
+                <button class="btn-outline">Engage with workspace members</button>
+              </div>
+            </div>
+            <div class="wz-edit-bar">
+              <div class="wz-edit-icon" title="Widget settings">⚙</div>
+            </div>
+          </div>
+
+          <!-- Content Widget -->
+          <div class="wz-widget">
+            <div class="content-widget">
+              <div class="content-widget-header">
+                <span>Content</span>
+                <a class="section-link" href="#">View all →</a>
+              </div>
+              <div class="content-item">
+                <div class="content-item-icon">📄</div>
+                <div class="content-item-body">
+                  <div class="content-item-title">Overview</div>
+                  <div class="content-item-meta">Workspace Owner · 14 minutes ago</div>
+                </div>
+                <div class="content-item-stats">
+                  <span>👍 0</span>
+                  <span>👁 8</span>
+                  <span>💬 0</span>
+                </div>
+              </div>
+              <div class="content-item">
+                <div class="content-item-icon">📄</div>
+                <div class="content-item-body">
+                  <div class="content-item-title">Page Title Placeholder</div>
+                  <div class="content-item-meta">Workspace Owner · DD Mon YYYY</div>
+                </div>
+                <div class="content-item-stats">
+                  <span>👍 0</span>
+                  <span>👁 0</span>
+                  <span>💬 0</span>
+                </div>
+              </div>
+            </div>
+            <div class="wz-edit-bar">
+              <div class="wz-edit-icon" title="Widget settings">⚙</div>
+            </div>
+          </div>
+
+        </div><!-- /left col -->
+
+        <!-- Right column -->
+        <div class="col-stack">
+
+          <!-- People Widget (Your Single Point of Contact) -->
+          <div class="wz-widget">
+            <div class="people-widget">
+              <div class="people-widget-header">Your Single Point of Contact</div>
+              <div class="people-profile">
+                <div class="people-avatar">AU</div>
+                <div class="people-name">Workspace Admin</div>
+                <div class="people-contributions">2 contributions</div>
+              </div>
+              <div class="people-actions">
+                <div class="people-action-item">
+                  <div class="people-action-icon">?</div>
+                  <span>Ask a Question</span>
+                </div>
+                <div class="people-action-item">
+                  <div class="people-action-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <span>Add a Discussion</span>
+                </div>
+                <div class="people-action-item">
+                  <div class="people-action-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  </div>
+                  <span>Upload a File</span>
+                </div>
+                <div class="people-action-item">
+                  <div class="people-action-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  </div>
+                  <span>Create an Event</span>
+                </div>
+              </div>
+            </div>
+            <div class="wz-edit-bar">
+              <div class="wz-edit-icon" title="Widget settings">⚙</div>
+            </div>
+          </div>
+
+          <!-- Events Widget -->
+          <div class="wz-widget">
+            <div class="events-widget">
+              <div class="events-widget-header">
+                <span>Upcoming Events</span>
+                <a class="section-link" href="#">View all →</a>
+              </div>
+              <div class="event-item">
+                <div class="event-date-badge">
+                  <div class="event-date-month">Nov</div>
+                  <div class="event-date-day">12</div>
+                </div>
+                <div class="event-body">
+                  <div class="event-title">Event Title Placeholder</div>
+                  <div class="event-meta">10:00 AM · Online</div>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-date-badge">
+                  <div class="event-date-month">Dec</div>
+                  <div class="event-date-day">05</div>
+                </div>
+                <div class="event-body">
+                  <div class="event-title">Event Title Placeholder</div>
+                  <div class="event-meta">2:00 PM · Room / Location</div>
+                </div>
+              </div>
+            </div>
+            <div class="wz-edit-bar">
+              <div class="wz-edit-icon" title="Widget settings">⚙</div>
+            </div>
+          </div>
+
+        </div><!-- /right col -->
+      </div><!-- /two-col-layout -->
+
+      <!-- ── WIDGET 9: FOOTER (plain text widget) ─────────────── -->
+      <!-- Add a Text widget at the bottom of the page.           -->
+      <!-- Use it for copyright notice and footer navigation links.-->
+      <div class="wz-widget">
+        <div class="footer-widget">
+          <div class="footer-brand">
+            Partner Portal
+            <span>© 2026 Your Company Name. All rights reserved.</span>
+          </div>
+          <div class="footer-links">
+            <a class="footer-link" href="#">Privacy Policy</a>
+            <a class="footer-link" href="#">Terms of Use</a>
+            <a class="footer-link" href="#">Contact Us</a>
+            <a class="footer-link" href="#">Accessibility</a>
+          </div>
+        </div>
+        <div class="wz-edit-bar">
+          <div class="wz-edit-icon" title="Edit widget">✎</div>
+        </div>
+      </div>
+
+    </div><!-- /page-content -->
+  </div><!-- /wz-main -->
+</div><!-- /wz-layout -->
+
+</body>
+</html>
