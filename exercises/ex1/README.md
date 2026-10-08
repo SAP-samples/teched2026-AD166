@@ -126,18 +126,14 @@ You will add the session moderator account as a member of your workspace. **AD16
     ![Joule responding to add member prompt with a confirmation or user search result](images/01_03_0010.png)
   
 
-2. Confirm the member addition in the Joule panel.
+2. Confirm the member addition in the Joule panel. Open the workspace **Members** settings to verify the new member appears in the list.
 
     ![Member successfully added confirmation in Joule](images/01_03_0020.png)
-    > *📸 Capture: Joule's success message confirming the user has been added to the workspace.*
 
-3. Open the workspace **Members** settings to verify the new member appears in the list.
-
-    > [!IMPORTANT]
-    > **TODO:** Add navigation path to the workspace members panel (e.g., workspace settings → members, or the admin console path).
+3. Make sure the User name *AD166-000* you added to your workspace (sent an invite from the Joule prompt) is part of the Members list.   
 
     ![Workspace members panel showing the added user](images/01_03_0030.png)
-    > *📸 Capture: The workspace Members panel listing the newly added user alongside the workspace owner.*
+ 
 
 ### Summary
 
@@ -147,33 +143,19 @@ Team members have been added to the workspace using Joule. You are now ready to 
 
 ## Exercise 1.4 Configure the Workspace as an External-Facing Portal
 
-By default, a workspace is accessible only to internal users. To make the BestRun EV Dealer Portal accessible to the external dealer network, you need to configure it as an external-facing portal.
+By default, a workspace is accessible only to internal users. To make the BestRun EV Dealer Portal accessible to the external dealer network, you need to enable external user access in the workspace settings.
 
-1. In the workspace administration view, navigate to **Settings**.
+1. Open **Edit Workspace** (workspace menu **'...'** > **Workspace Admin Settings** > **Edit Workspace**).
 
-    > [!IMPORTANT]
-    > **TODO:** Confirm the exact navigation path to external workspace settings in this version of SAP Build Work Zone advanced edition.
+    ![Edit Workspace open at the General tab](images/01_02_0040.png)
 
-    ![Workspace settings navigation, with the Settings option highlighted](images/01_04_0010.png)
-    > *📸 Capture: The workspace overview or admin panel with the Settings menu item clearly visible and selected.*
+2. Locate the **External Users** field and check **"Allow external users to access this workspace and be invited as members"**. This enables external access to your Dealer Portal.
 
-2. Locate the **Visibility** or **Access** section and enable **External Access**.
+    ![External Users checkbox enabled in Edit Workspace General tab](images/01_04_0020.png)
 
-    ![Workspace settings screen showing the External Access or Visibility toggle](images/01_04_0020.png)
-    > *📸 Capture: The settings panel showing the external access configuration option. The toggle or dropdown should be visible in its default (internal) state.*
+3. Click **Save** to apply the settings.
 
-3. Enable external access and configure the required settings.
-
-    > [!IMPORTANT]
-    > **TODO:** Document the specific fields that need to be configured for external access — e.g., domain allowlist, identity provider settings, invitation mode. Add sub-steps per field.
-
-    ![External access settings configured and enabled](images/01_04_0030.png)
-    > *📸 Capture: The settings panel after enabling external access — showing the confirmed configuration with a green indicator or enabled toggle.*
-
-4. Click **Save** to apply the settings.
-
-    ![Settings saved confirmation message or updated workspace state](images/01_04_0040.png)
-    > *📸 Capture: The success message or updated settings panel confirming changes were saved.*
+    ![Save button highlighted in Edit Workspace](images/01_04_0030.png)
 
 ### Summary
 
