@@ -8,14 +8,15 @@ Once enabled, Joule will answer dealer questions directly from the content of th
 
 Six documents have been prepared for this session. Download them to your laptop before uploading them to the workspace.
 
-1. Click the link below to download the document package:
+1. Click the link below. It opens the GitHub file page for the zip archive.
 
     ### [⬇ Download BestRun_EV_Apex_Series_Documents.zip](BestRun_EV_Apex_Series_Documents.zip)
 
-    ![Browser download bar or save dialog showing BestRun_EV_Apex_Series_Documents.zip being saved](images/03_01_0010.png)
-    > *📸 Capture: The browser download prompt or the downloaded zip file visible in the browser's download bar or the system Downloads folder.*
+2. On the GitHub file page, click the **download** icon (↓) in the top-right corner of the file view to save the zip to your local machine.
 
-2. Locate the downloaded zip file (typically in your **Downloads** folder) and extract it to a folder of your choice on your local drive.
+    ![GitHub file page for BestRun_EV_Apex_Series_Documents.zip with the download icon highlighted](images/03_01_0010.png)
+
+3. Locate the downloaded zip file (typically in your **Downloads** folder) and extract it to a folder of your choice on your local drive.
 
     > [!TIP]
     > Most operating systems let you right-click the zip file and choose an **Extract** or **Unarchive** option. You can also double-click the zip to open it and drag the files to a folder. Choose a location you can easily navigate back to — you will need to select these files one by one in the next step.
@@ -41,63 +42,77 @@ The documents are on your local drive and ready to upload. Continue to the next 
 
 You will upload all six documents to the workspace so that Document Grounding can index them.
 
-1. In the workspace, navigate to the **Documents** section or the content area where files can be uploaded.
+1. In the workspace, click the **Content** tab in the navigation bar.
 
-    > [!IMPORTANT]
-    > **TODO:** Confirm the exact navigation path to the document upload area in SAP Build Work Zone advanced edition for use with Document Grounding. This may be a dedicated Knowledge Base section or a Documents folder within the workspace.
+    ![Workspace navigation bar with the Content tab highlighted](images/03_02_0010.png)
 
-    ![Workspace documents or knowledge base section, ready for file upload](images/03_02_0010.png)
-    > *📸 Capture: The documents section or knowledge base area of the workspace. An upload button or drag-and-drop zone should be visible.*
+2. Click the **Upload File** button in the top-right of the Content section. This opens your operating system's file selection dialog.
 
-2. Upload the first document: **01_Apex_Series_Technical_Spec_Sheet.pdf**.
+    ![Content section showing the Upload File button highlighted](images/03_02_0020.png)
 
-    ![File upload dialog or drag-and-drop area with the spec sheet file selected](images/03_02_0020.png)
-    > *📸 Capture: The upload dialog or area showing the Apex Series Technical Spec Sheet file selected or in progress.*
+3. In the file picker, navigate to the folder where you extracted the zip archive. Select all six PDF files at once, then click **Open**.
 
-3. Repeat for all remaining five documents. When complete, verify that all six documents appear in the list.
+    > [!TIP]
+    > On most operating systems you can select all files at once by pressing **Ctrl+A** (Windows/Linux) or **Cmd+A** (macOS) after opening the folder, or by clicking the first file and then **Shift-clicking** the last one.
 
-    ![Documents section showing all six Apex Series documents uploaded successfully](images/03_02_0030.png)
-    > *📸 Capture: The documents list showing all six uploaded files with upload status confirmed (e.g., green checkmarks or status indicators).*
+    ![File picker showing all six Apex Series PDF files selected](images/03_02_0030.png)
+
+4. An **Upload Files** dialog appears, listing the selected files under **Upload To: Content**. Click **Upload** to start the transfer. The upload may take a minute — wait for it to complete before continuing.
+
+    ![Upload Files dialog with the files queued and the Upload button highlighted](images/03_02_0040.png)
+
+5. Once complete, all six PDF files appear in the Content list alongside the existing Overview page.
+
+    ![Content section listing all six uploaded Apex Series PDF files](images/03_02_0050.png)
 
 ### Summary
 
-All source documents are uploaded. You are ready to enable Document Grounding.
+All source documents are uploaded. Notify your instructor that your uploads are complete, then continue to Exercise 3.3.
 
 ---
 
-## Exercise 3.3 Configure Document Grounding
+## Exercise 3.3 Enable Document Grounding for the Workspace (Instructor-Led)
 
-Document Grounding is already available in the landscape. In this step you enable it for your workspace and confirm that the uploaded documents are included in the grounding scope.
+> [!NOTE]
+> **TechEd session participants:** You do not have workspace admin access and **cannot perform this step yourself**. Your instructor will enable Document Grounding for all participant workspaces during the session. The admin configuration will be shown on the projector so you can follow along. **Once the instructor confirms grounding is active, move on to Exercise 3.4.**
 
-1. Open the workspace **Settings** and navigate to the **AI** or **Document Grounding** section.
+Document Grounding in SAP Build Work Zone advanced edition is activated per workspace by designating it as an **AI Source**. This tells the BTP Document Grounding Service (DGS) to index the content of that workspace and make it available for Joule to draw from.
 
-    > [!IMPORTANT]
-    > **TODO:** Confirm the exact location of the Document Grounding settings within a workspace in this version of SAP Build Work Zone advanced edition (e.g., workspace settings → AI, or a dedicated Knowledge Base / Grounding panel).
+<details>
+<summary>&#9654;&nbsp; Admin configuration walkthrough (shown on projector)</summary>
 
-    ![Workspace settings open at the Document Grounding section](images/03_03_0010.png)
-    > *📸 Capture: The workspace settings panel showing the Document Grounding configuration section. The section should indicate Document Grounding is available (the service is pre-configured) but not yet enabled for this workspace.*
+<br>
 
-2. Enable **Document Grounding** for the workspace.
+1. Click the **user profile avatar** (initials circle) in the top-right corner of SAP Build Work Zone **(1)**, then click **Administration Console (2)**.
 
-    ![Document Grounding toggle switched to enabled](images/03_03_0020.png)
-    > *📸 Capture: The Document Grounding toggle or setting in its enabled state, with a confirmation message visible.*
+    ![User profile menu open showing the Administration Console option highlighted](images/03_03_0010.png)
 
-3. Confirm that all six uploaded documents are included in the grounding scope.
+2. In the Administration Console, expand **Area & Workspace Configuration (1)** in the left navigation and click **Workspaces (2)**. On the right panel, switch to the **All Workspaces (3)** tab. Use the search box to filter by workspace name and locate the **BestRun EV Dealer Portal XXX** row — the **Document Grounding** column shows **-** (not yet enabled). Click **Actions (5)** for that row and select **Enable as AI source (6)**.
 
-    > [!IMPORTANT]
-    > **TODO:** Confirm whether grounding scope is configured per document, per folder, or applied automatically to all workspace documents. Update this step accordingly.
+    ![Administration Console — Workspaces Management with the Actions menu open and Enable as AI source highlighted](images/03_03_0020.png)
 
-    ![Grounding scope showing all six documents included](images/03_03_0030.png)
-    > *📸 Capture: The grounding scope configuration showing all six BestRun EV documents selected or confirmed as included.*
+3. Once enabled, the **Document Grounding** column for the workspace shows the **AI Source** badge, confirming that DGS will index the uploaded content on its next sync cycle.
 
-4. Save the settings.
+    ![Workspaces Management list showing the AI Source badge in the Document Grounding column for BestRun EV Dealer Portal](images/03_03_0030.png)
 
-    ![Document Grounding enabled and saved — workspace is now grounded](images/03_03_0040.png)
-    > *📸 Capture: Confirmation that settings were saved — Document Grounding shown as active for the workspace.*
+</details>
+
+
+### About the Sync Timing
+
+> [!IMPORTANT]
+> The BTP Document Grounding Service syncs workspace content into its vector store on a scheduled cron interval. The minimum configurable interval is **1 hour** — meaning after AI Source is enabled, it can take up to an hour before Joule can answer questions from the uploaded documents.
+>
+> **For this TechEd session:** The instructor will manually trigger the DGS ingestion pipeline every **5–10 minutes** using the DGS pipeline APIs, so documents you uploaded in Exercise 3.2 will be indexed quickly. You do not need to wait. The instructor will confirm on the projector when ingestion is complete and grounding is ready.
 
 ### Summary
 
-Document Grounding is active for the workspace. Joule can now draw from the uploaded documents when answering questions in this workspace.
+Document Grounding is being activated by the instructor. Wait for the go-ahead before continuing. Once confirmed, Joule will be able to draw answers from the six uploaded documents.
+
+---
+
+> [!NOTE]
+> **Working in your own environment?** If you have workspace admin access and are running this exercise outside the TechEd session, expand the **Admin configuration walkthrough** above and follow those steps to enable AI Source for your workspace. After saving, allow up to **1 hour** for the first sync cycle to complete before proceeding to Exercise 3.4. You can also trigger an on-demand ingestion run via the [DGS pipeline API](https://help.sap.com/docs/document-grounding) if you need faster results.
 
 ---
 
