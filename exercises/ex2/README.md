@@ -13,12 +13,15 @@ The External Portal Template comes with a placeholder hero image and generic tit
     ![Workspace Overview page in view mode with the Edit button visible in the toolbar](images/02_01_0010.png)
     > *📸 Capture: The Overview page of the workspace with the edit mode button clearly visible — either as a toolbar button or a floating pencil icon on the page.*
 
-2. Click on the **Hero widget** at the top of the page. The widget should show an edit overlay or a toolbar with title and subtitle fields.
+ 2. Click on the **Edit Widget Settings** at the top right of the Hero Section.
 
-    ![Hero widget selected in edit mode, showing title and subtitle text fields](images/02_01_0020.png)
-    > *📸 Capture: The Hero widget in edit state — showing the image overlay with the title and tagline text fields available for editing. The placeholder text from the template should be visible.*
+    ![Hero widget Edit Widget settings](images/02_01_0020.png)
 
-3. With the Joule panel open, enter the following prompt to get copy suggestions for the hero:
+3. The widget should show an edit overlay or a toolbar with title and Description fields.
+
+    ![Hero widget selected in edit mode, showing title and description text fields](images/02_01_0030.png)
+
+4. With the Joule panel open, enter the following prompt to get copy suggestions for the hero:
 
     ```
     Suggest a short headline and tagline for the hero section of the BestRun EV dealer portal, 
@@ -26,16 +29,16 @@ The External Portal Template comes with a placeholder hero image and generic tit
     dealers. The tagline should be one sentence that sets up the pre-order opportunity.
     ```
 
-    ![Joule panel with the hero copy prompt entered](images/02_01_0030.png)
-    > *📸 Capture: The Joule panel alongside the page editor, with the prompt text entered and Joule returning suggested headline and tagline options.*
+    ![Joule panel with the hero copy prompt entered](images/02_01_0040.png)
 
-4. Copy Joule's suggested headline into the Hero widget's **title field** and the tagline into the **subtitle field**. Save the hero widget.
+5. Copy Joule's suggested headline into the Hero widget's **Title field** and the tagline into the **Description field** and Save the hero widget.
+
+    ![Hero widget with the updated title and tagline applied, showing the new copy over the image](images/02_01_0050.png)
 
     > [!TIP]
     > You can ask Joule to refine the suggestion if the first output is too long or not quite the right tone. Try: *"Make the headline punchier and under 6 words."*
 
-    ![Hero widget with the updated title and tagline applied, showing the new copy over the image](images/02_01_0040.png)
-    > *📸 Capture: The Hero widget in the page editor with the Joule-generated title and tagline applied. The updated text should be visible over the hero background image.*
+    ![Joule refine suggested title](images/02_01_0060.png)
 
 ### Summary
 
@@ -50,9 +53,8 @@ The Key Highlights section contains three text template cards — **Who & What?*
 1. In the page editor, click on the **Key Highlights widget** to enter its edit view.
 
     ![Key Highlights widget selected in edit mode, showing three card placeholders](images/02_02_0010.png)
-    > *📸 Capture: The Key Highlights section selected for editing, showing the three cards (Who & What? / Why? / How?) with their placeholder or existing body text visible.*
 
-2. Open the Joule panel and use the following prompt to generate the body text for the first card:
+2. Open the Joule panel and use the following prompt to generate the body text for the first card (Who & What?):
 
     ```
     Write 2 short sentences for a portal welcome card titled "Who & What?". 
@@ -63,9 +65,11 @@ The Key Highlights section contains three text template cards — **Who & What?*
     ```
 
     ![Joule panel returning suggested body text for the Who & What card](images/02_02_0020.png)
-    > *📸 Capture: The Joule panel showing the generated body text for the "Who & What?" card. The text should be visible in the Joule response area.*
+ 
 
-3. Copy the generated text into the body field of the **Who & What?** card.
+3. Copy the generated text into the body field of the **Who & What?** card (to open the Card text for Edit, simply click on it).
+    
+    ![Joule panel returning suggested body text for the Who & What card](images/02_02_0030.png)
 
 4. Repeat using Joule for the **Why?** card:
 
@@ -76,6 +80,7 @@ The Key Highlights section contains three text template cards — **Who & What?*
     pre-order information, live inventory data, and direct support from BestRun EV. 
     Maximum 30 words total.
     ```
+    ![Joule panel returning suggested body text for the Why card](images/02_02_0040.png)
 
 5. Repeat for the **How?** card:
 
@@ -87,13 +92,14 @@ The Key Highlights section contains three text template cards — **Who & What?*
     Maximum 30 words total.
     ```
 
-    ![All three Key Highlights cards updated with Joule-generated body text in the editor](images/02_02_0030.png)
-    > *📸 Capture: The three Key Highlights cards in edit mode with the Joule-generated body text entered in each card. All three cards should have non-placeholder content.*
+    ![Joule panel returning suggested body text for the Why card](images/02_02_0050.png)
 
-6. Save the Key Highlights widget.
+6. Save the Key Highlights widget (Click the 'Save Draft' button).
 
-    ![Key Highlights section in the live page view showing the three completed cards](images/02_02_0040.png)
-    > *📸 Capture: The Key Highlights section as it appears in the published/preview view — three cards (Who & What? / Why? / How?) with their illustrated icons at the top and the Joule-generated body text.*
+    ![Save Draft Key Highlights cards updated with Joule-generated body text in the editor](images/02_02_0060.png)
+
+7. All three Key Highlights cards updated with Joule-generated body text in the editor.
+    ![Key Highlights section in the live page view showing the three completed cards](images/02_02_0070.png)
 
 ### Summary
 
@@ -105,23 +111,33 @@ The Key Highlights section is complete. Next you will add a Featured section to 
 
 The Featured section sits below the Key Highlights and gives the portal a visual showcase for a specific product or campaign. You will add two widgets side by side — a product image on the left and a descriptive text block on the right — to spotlight the Apex Series launch.
 
-1. In the page editor, scroll below the Key Highlights section. Add a new **two-column row** or insert a **Featured** widget from the widget palette.
-
-    > [!IMPORTANT]
-    > **TODO:** Confirm the exact method to add a two-column section or featured widget in this version of SAP Build Work Zone advanced edition (e.g., via the + icon between sections, or from the widget library).
+1. In the page editor, scroll below the Key Highlights section. Add a new **Freestyle two-column section** using the 'Add Section' button between sections.
 
     ![Page editor showing the section below Key Highlights, with the add widget/row option visible](images/02_03_0010.png)
-    > *📸 Capture: The page editor with the Key Highlights section above and the row/section insertion control visible below — showing where the new Featured section will be placed.*
+
+    ![Page editor showing the section below Key Highlights, with the add widget/row option visible](images/02_03_0011.png)
+
+    ![Page editor showing the section below Key Highlights, with the add widget/row option visible](images/02_03_0012.png)
+  
 
 2. In the **left column**, add an **Image widget**. Upload or select the Apex Series product image provided in the session materials.
 
     > [!IMPORTANT]
     > **TODO:** Confirm the source location for the Apex Series product image (shared content library, session materials upload, or pre-loaded asset). Add the exact filename and path once confirmed.
 
-    ![Left column of the Featured row with the Apex Series product image inserted](images/02_03_0020.png)
-    > *📸 Capture: The left column of the new Featured section showing the Apex Series product image displayed — an e-bike or product line image provided for the session.*
+    ![Left column text widget how to 1](images/02_03_0020.png)
 
-3. In the **right column**, add a **Text widget**. Open the Joule panel and generate the featured copy:
+    ![Left column text widget how to 2](images/02_03_0021.png)
+
+    ![Left column text widget how to 2](images/02_03_0022.png)
+
+3. In the **right column**, add a **Text widget**.
+
+    ![Right column text widget how to 1](images/02_03_0030.png)
+
+    ![Right column text widget how to 2](images/02_03_0031.png)
+
+4. Open the Joule panel and generate the featured copy:
 
     ```
     Write a short 3–4 sentence featured section description for the BestRun EV Apex Series 
@@ -132,13 +148,12 @@ The Featured section sits below the Key Highlights and gives the portal a visual
     Tone: confident, premium, B2B.
     ```
 
-    ![Right column text widget with the Joule-generated Apex Series featured description](images/02_03_0030.png)
-    > *📸 Capture: The right column of the Featured section showing the Joule-generated text — a professional introduction to the Apex Series with a clear call to action at the end.*
+    ![Right column text widget with the Joule-generated Apex Series featured description](images/02_03_0040.png)
 
-4. Accept the generated text, then save the Featured section.
+5. Accept the generated text, then save the section (Save Draft)
 
-    ![Featured section in the page preview — Apex image on the left, descriptive text on the right](images/02_03_0040.png)
-    > *📸 Capture: The complete Featured section as it appears in the page preview or live view — product image on the left half, Apex Series text on the right half, both visually balanced.*
+    ![Featured section in the page preview — Apex image on the left, descriptive text on the right](images/02_03_0050.png)
+
 
 ### Summary
 
