@@ -79,7 +79,7 @@ All source documents are uploaded. Notify your instructor that your uploads are 
 Document Grounding in SAP Build Work Zone advanced edition is activated per workspace by designating it as an **AI Source**. This tells the BTP Document Grounding Service (DGS) to index the content of that workspace and make it available for Joule to draw from.
 
 <details>
-<summary>&#9654;&nbsp; Admin configuration walkthrough (shown on projector)</summary>
+<summary><b>Admin configuration walkthrough (shown on projector)</b></summary>
 
 <br>
 
