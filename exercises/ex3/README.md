@@ -1,158 +1,131 @@
-# Exercise 3 - Enable Document Grounding
+# Exercise 3 - Create the New Product Launch Content
 
-In this exercise you upload the BestRun EV product documents to the workspace and enable Document Grounding for it. Document Grounding is already provisioned and connected to SAP Build Work Zone in this landscape — you do not need to set it up from scratch. Your task is to upload the source documents and activate grounding specifically for the **BestRun EV Dealer Portal XXX** workspace.
-
-Once enabled, Joule will answer dealer questions directly from the content of those documents — without requiring dealers to open or search through any file.
-
-## Exercise 3.1 Download the Source Documents
-
-Six documents have been prepared for this session. Download them to your laptop before uploading them to the workspace.
-
-1. Click the link below. It opens the GitHub file page for the zip archive.
-
-    ### [⬇ Download BestRun_EV_Apex_Series_Documents.zip](BestRun_EV_Apex_Series_Documents.zip)
-
-2. On the GitHub file page, click the **download** icon (↓) in the top-right corner of the file view to save the zip to your local machine.
-
-    ![GitHub file page for BestRun_EV_Apex_Series_Documents.zip with the download icon highlighted](images/03_01_0010.png)
-
-3. Locate the downloaded zip file (typically in your **Downloads** folder) and extract it to a folder of your choice on your local drive.
-
-    > [!TIP]
-    > Most operating systems let you right-click the zip file and choose an **Extract** or **Unarchive** option. You can also double-click the zip to open it and drag the files to a folder. Choose a location you can easily navigate back to — you will need to select these files one by one in the next step.
-
-    Once extracted, you should have the following six PDF files:
-
-    | # | File | Contents |
-    |---|---|---|
-    | 1 | `01_Apex_Series_Technical_Spec_Sheet.pdf` | Range, motor, weight, colors, charging times per model |
-    | 2 | `02_Apex_Pro_Battery_Drive_Technology_Guide.pdf` | LFP battery system details, charging curve, range calculations |
-    | 3 | `03_Dealer_Commercial_Handbook.pdf` | Pricing tiers, dealer margins, ordering process |
-    | 4 | `04_Apex_Pre-Order_Discount_Policy.pdf` | Discount matrix by quantity and payment terms, bonus conditions |
-    | 5 | `05_After-Sales_Warranty_Guide.pdf` | Warranty terms, service intervals, spare parts |
-    | 6 | `06_Apex_Pre-Order_Terms_and_Conditions.pdf` | Pre-order eligibility, cancellation rights, delivery commitments |
-
-### Summary
-
-The documents are on your local drive and ready to upload. Continue to the next step.
-
----
-
-## Exercise 3.2 Upload Product Documents to the Workspace
-
-You will upload all six documents to the workspace so that Document Grounding can index them.
-
-1. In the workspace, click the **Content** tab in the navigation bar.
-
-    ![Workspace navigation bar with the Content tab highlighted](images/03_02_0010.png)
-
-2. Click the **Upload File** button in the top-right of the Content section. This opens your operating system's file selection dialog.
-
-    ![Content section showing the Upload File button highlighted](images/03_02_0020.png)
-
-3. In the file picker, navigate to the folder where you extracted the zip archive. Select all six PDF files at once, then click **Open**.
-
-    > [!TIP]
-    > On most operating systems you can select all files at once by pressing **Ctrl+A** (Windows/Linux) or **Cmd+A** (macOS) after opening the folder, or by clicking the first file and then **Shift-clicking** the last one.
-
-    ![File picker showing all six Apex Series PDF files selected](images/03_02_0030.png)
-
-4. An **Upload Files** dialog appears, listing the selected files under **Upload To: Content**. Click **Upload** to start the transfer. The upload may take a minute — wait for it to complete before continuing.
-
-    ![Upload Files dialog with the files queued and the Upload button highlighted](images/03_02_0040.png)
-
-5. Once complete, all six PDF files appear in the Content list alongside the existing Overview page.
-
-    ![Content section listing all six uploaded Apex Series PDF files](images/03_02_0050.png)
-
-### Summary
-
-All source documents are uploaded. Notify your instructor that your uploads are complete, then continue to Exercise 3.3.
-
----
-
-## Exercise 3.3 Enable Document Grounding for the Workspace (Instructor-Led)
+In this exercise you add the **Apex Series** product launch content to your dealer portal — directly on the **Overview page** you built in Exercise 2. Instead of creating files from scratch, you copy a ready-made content set from the shared **Dealer Management Team** workspace, then surface it on the page: a presentation-and-announcement section, and product images in the hero carousel. Finally, you switch to your dealer alias and ask Joule about the new product.
 
 > [!NOTE]
-> **TechEd session participants:** You do not have workspace admin access and **cannot perform this step yourself**. Your instructor will enable Document Grounding for all participant workspaces during the session. The admin configuration will be shown on the projector so you can follow along. **Once the instructor confirms grounding is active, move on to Exercise 3.4.**
+> There is **no new page** in this exercise — you enrich the existing Overview page. The launch content is copied from an existing workspace rather than downloaded and uploaded.
 
-Document Grounding in SAP Build Work Zone advanced edition is activated per workspace by designating it as an **AI Source**. This tells the BTP Document Grounding Service (DGS) to index the content of that workspace and make it available for Joule to draw from.
+> [!NOTE]
+> **TODO (screenshots):** Screenshots in this exercise are being recaptured to match the copy-content flow.
 
-<details>
-<summary><b>Admin configuration walkthrough (shown on projector)</b></summary>
+## Exercise 3.1 Copy the Launch Content from the Dealer Management Team Workspace
 
-<br>
+The Apex Series launch files are already prepared in the shared **Dealer Management Team** workspace, inside a **Product Launch Content** folder. You copy them into your own workspace in a single multi-select action — no download or upload needed.
 
-1. Click the **user profile avatar** (initials circle) in the top-right corner of SAP Build Work Zone **(1)**, then click **Administration Console (2)**.
+1. Open the **Dealer Management Team** workspace (the sample workspace you explored in Exercise 0) and go to its **Content** area.
 
-    ![User profile menu open showing the Administration Console option highlighted](images/03_03_0010.png)
+    ![Dealer Management Team workspace Content area](images/03_01_0010.png)
 
-2. In the Administration Console, expand **Area & Workspace Configuration (1)** in the left navigation and click **Workspaces (2)**. On the right panel, switch to the **All Workspaces (3)** tab. Use the search box to filter by workspace name and locate the **BestRun EV Dealer Portal XXX** row — the **Document Grounding** column shows **-** (not yet enabled). Click **Actions (5)** for that row and select **Enable as AI source (6)**.
+2. Open the **Product Launch Content** folder. It contains the Apex Series product images, the launch presentation, and the product documents (PDFs).
 
-    ![Administration Console — Workspaces Management with the Actions menu open and Enable as AI source highlighted](images/03_03_0020.png)
+    ![Product Launch Content folder with the Apex Series files](images/03_01_0020.png)
 
-3. Once enabled, the **Document Grounding** column for the workspace shows the **AI Source** badge, confirming that DGS will index the uploaded content on its next sync cycle.
+3. **Multi-select** all files in the folder (select the first file, then Shift-click or use the checkboxes to select the rest), then choose **Copy**.
 
-    ![Workspaces Management list showing the AI Source badge in the Document Grounding column for BestRun EV Dealer Portal](images/03_03_0030.png)
+    ![Files multi-selected in the Product Launch Content folder with the Copy action](images/03_01_0030.png)
 
-</details>
+4. In the copy dialog, choose **BestRun EV Dealer Portal XXX** as the destination workspace and confirm.
 
+    ![Copy destination dialog with the BestRun EV Dealer Portal workspace selected](images/03_01_0040.png)
 
-### About the Sync Timing
+5. Open your **BestRun EV Dealer Portal XXX** workspace Content and verify the copied files are now there.
+
+    ![Dealer portal workspace Content showing the copied launch files](images/03_01_0050.png)
 
 > [!IMPORTANT]
-> The BTP Document Grounding Service syncs workspace content into its vector store on a scheduled cron interval. The minimum configurable interval is **1 hour** — meaning after AI Source is enabled, it can take up to an hour before Joule can answer questions from the uploaded documents.
->
-> **For this TechEd session:** The instructor will manually trigger the DGS ingestion pipeline every **5–10 minutes** using the DGS pipeline APIs, so documents you uploaded in Exercise 3.2 will be indexed quickly. You do not need to wait. The instructor will confirm on the projector when ingestion is complete and grounding is ready.
+> The copied **PDF documents** are what **Document Grounding** indexes so Joule can answer product questions (Exercise 3.4). Grounding is enabled by your instructor for your workspace — if you have not already notified them (Exercise 1.2), do so now.
 
 ### Summary
 
-Document Grounding is being activated by the instructor. Wait for the go-ahead before continuing. Once confirmed, Joule will be able to draw answers from the six uploaded documents.
+The launch content is in your workspace. Next you will surface it on the Overview page.
 
 ---
 
-> [!NOTE]
-> **Working in your own environment?** If you have workspace admin access and are running this exercise outside the TechEd session, expand the **Admin configuration walkthrough** above and follow those steps to enable AI Source for your workspace. After saving, allow up to **1 hour** for the first sync cycle to complete before proceeding to Exercise 3.4. You can also trigger an on-demand ingestion run via the [DGS pipeline API](https://help.sap.com/docs/document-grounding) if you need faster results.
+## Exercise 3.2 Add a Presentation and Announcement Section
+
+You will add a two-column section to the Overview page — the Apex Series **presentation** on one side and a styled **announcement** on the other.
+
+1. Open **BestRun EV Dealer Portal XXX**, enter the page editor, and scroll below the self-service cards. Add a new **two-column section** using the **Add Section** button.
+
+    ![Page editor with a new two-column section added below the self-service cards](images/03_02_0010.png)
+
+2. In the **left column**, add a **Multimedia card** and point it at the copied **Apex Series presentation** (`Apex-Series-Launch-Brochure.pptx`). Dealers can page through the launch brochure inline.
+
+    ![Multimedia card configured with the Apex Series presentation](images/03_02_0020.png)
+
+3. In the **right column**, add a **Text widget**. Open the **`<>` (source code)** view in the toolbar and paste the announcement HTML prepared for this session (see [`planning/TextWidgetHTMLContent.html`](../../planning/TextWidgetHTMLContent.html)).
+
+    ![Text widget source view with the announcement HTML pasted in](images/03_02_0030.png)
+
+4. Save the section. The presentation and the announcement now sit side by side.
+
+    ![Overview page preview showing the presentation and announcement side by side](images/03_02_0040.png)
+
+### Summary
+
+The launch section is live. Next you will bring the product imagery into the hero banner.
 
 ---
 
-## Exercise 3.4 Test Grounding with a Product Question
+## Exercise 3.3 Add Product Images to the Hero Carousel
 
-Before handing off to Exercise 4, you will verify that Document Grounding is working by asking Joule a question that can only be answered from one of the uploaded documents.
+The hero banner at the top of the Overview page is a **Rotating Banner Widget** — it can hold up to 10 slides. You will add one slide per Apex model, turning the hero into a product carousel.
 
-1. Open the Joule panel from within the workspace.
+1. In the page editor, open **Edit Widget Settings** on the hero banner to open the **Rotating Banner Widget** dialog.
 
-    ![Joule panel opening within the BestRun EV Dealer Portal workspace](images/03_04_0010.png)
-    > *📸 Capture: The Joule panel open within the workspace context — showing the workspace name is visible in the Joule header or context indicator, confirming Joule is operating in the grounded workspace scope.*
+    ![Rotating Banner Widget dialog open](images/03_03_0010.png)
 
-2. Ask the following question:
+2. Click **+ Slide** and add a slide for each model, using the copied product images and the following **Title** and **Description (subtitle)**. Repeat for all three:
+
+    | Image | Title | Subtitle |
+    |---|---|---|
+    | `Apex-City.png` | Apex City | Lightweight urban commuter scooter |
+    | `Apex-Trail.png` | Apex Trail | 140 km adventure ebike, built for any terrain |
+    | `Apex-Pro.png` | Apex Pro | 200 km flagship with the new LFP battery |
+
+    ![Rotating Banner Widget with three Apex model slides added](images/03_03_0020.png)
+
+    > [!TIP]
+    > Each slide's **Description** field has the embedded **✨ AI** button. Use **Change Tone** or **Adjust Length** to refine a subtitle without rewriting it by hand.
+
+3. Save the hero banner. The Overview page now opens with a rotating showcase of the three Apex models.
+
+    ![Overview page with the hero carousel rotating through the three Apex models](images/03_03_0030.png)
+
+### Summary
+
+The Overview page now leads with the Apex Series and carries the full launch content. Time to see it — and Document Grounding — as a dealer.
+
+---
+
+## Exercise 3.4 Experience the Launch Content as a Dealer
+
+Switch to your dealer alias and ask Joule a question about the new product. With Document Grounding enabled on your workspace, Joule answers from the copied product documents.
+
+> [!IMPORTANT]
+> This step requires Document Grounding to be active for your workspace. If your instructor has not yet confirmed grounding is ready, wait for the go-ahead before testing the Joule query.
+
+1. Switch to your **Dealer-XXX** alias user and open **BestRun EV Dealer Portal XXX**. Review the Overview page — the Apex carousel, the presentation, and the announcement — as a dealer.
+
+    ![Dealer view of the Overview page with the Apex launch content](images/03_04_0010.png)
+
+2. Open the **Joule** panel from within the workspace and ask a question about the new product:
 
     ```
     What is the maximum range of the Apex Pro in eco mode?
     ```
 
-    ![Joule returning an answer about the Apex Pro range sourced from the Technical Spec Sheet](images/03_04_0020.png)
-    > *📸 Capture: Joule's response to the range question — the answer should include the specific range figure (200 km) and a source citation or reference indicator showing it came from the uploaded document.*
+    ![Joule returning a grounded answer about the Apex Pro range with a source citation](images/03_04_0020.png)
 
-3. Verify that Joule's answer includes a **source reference** pointing to the uploaded document.
+3. Verify that Joule's answer includes a **source reference** to one of the copied documents.
 
     > [!NOTE]
-    > A correctly grounded answer will show a citation, a document reference link, or a footnote indicating which uploaded document the answer was drawn from. If Joule answers without a source reference, grounding may not be correctly configured — revisit Exercise 3.3.
-
-    ![Joule answer with source citation highlighted — reference to the spec sheet document visible](images/03_04_0030.png)
-    > *📸 Capture: A close-up of the source citation in Joule's answer, showing the document name and optionally a page or section reference.*
-
-4. Ask a second test question to verify another document is grounded:
-
-    ```
-    What is the maximum pre-order discount I can get on the Apex Pro?
-    ```
-
-    ![Joule returning the Apex Pro discount cap from the Pre-Order Discount Policy with a source citation](images/03_04_0040.png)
-    > *📸 Capture: Joule's response citing the Pre-Order Discount Policy as the source. The answer should mention the 10% cap for Apex Pro units.*
+    > A correctly grounded answer shows a citation or document reference. If Joule answers without one, grounding may not yet be active for your workspace — check with your instructor.
 
 ### Summary
 
-Document Grounding is working correctly. Joule returns precise, sourced answers from the uploaded documents. Dealers will be able to use this capability in Exercise 5 — without needing to open any document directly.
+As a dealer, you got an instant, sourced answer about the new product — without opening a single file. Switch back to your admin user. The core session is complete.
 
-Continue to — [Exercise 4 - Add the Pre-Order Guided Experience](../ex4/README.md)
+The next exercises are **optional**:
+- [Exercise 4 - Create a Guided Experience (Optional)](../ex4/README.md)
+- [Exercise 5 - Access the Dealer Portal from Joule Work Mobile (Optional)](../ex5/README.md)
