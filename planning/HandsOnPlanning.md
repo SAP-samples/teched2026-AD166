@@ -65,8 +65,8 @@ You are the owner of an authorized BestRun EV dealership. At the end of each exe
 ## Source Documents (sample content)
 
 > **Where these are used in the current flow:**
-> - **ex3** is where the Apex-specific documents land in the dealer portal — **copied** from the "Dealer Management Team" workspace's **Product Launch Content** folder (not downloaded/uploaded), then indexed by Document Grounding for the ex3.4 Joule query.
-> - The source set lives in `exercises/ex3/content/` (6 PDFs + 3 bike images + `Apex-Series-Launch-Brochure.pptx`). These are pre-loaded into the Dealer Management Team workspace's Product Launch Content folder for participants to copy.
+> - **ex3** is where the Apex-specific documents land in the dealer portal — **copied** from the "Dealer Management" workspace's **Apex Launch Material** folder (not downloaded/uploaded), then indexed by Document Grounding for the ex3.4 Joule query.
+> - The source set lives in `exercises/ex3/content/` (6 PDFs + 3 bike images + `Apex-Series-Launch-Brochure.pptx`). These are pre-loaded into the Dealer Management workspace's Apex Launch Material folder for participants to copy.
 > - **ex2.4** no longer includes a document summary (per the latest decision — the dealer just accepts the invite and views the Overview page).
 
 | Document | Content | Where used |
@@ -146,7 +146,7 @@ The wizard is assembled from pre-built UI cards already available in the WZ Card
 ## Proposed Workshop Flow
 
 > **Updated flow — see `planning/overall-hands-on-flow.png` for the visual diagram.**
-> Key changes from the previous plan: ex2 is now generic dealer portal content (not Apex-specific); ex3 adds the product launch content to the **Overview page** (no new page) by **copying** a ready-made content set from the shared "Dealer Management Team" workspace (no download/upload); the standalone pre-order exercise is dropped; Guided Experience becomes optional **ex4** (placeholder for now, added to the Overview page); Mobile becomes optional **ex5**; the dealer experience moments are embedded as the final step within ex2, ex3, and ex4.
+> Key changes from the previous plan: ex2 is now generic dealer portal content (not Apex-specific); ex3 adds the product launch content to the **Overview page** (no new page) by **copying** a ready-made content set from the shared "Dealer Management" workspace (no download/upload); the standalone pre-order exercise is dropped; Guided Experience becomes optional **ex4** (placeholder for now, added to the Overview page); Mobile becomes optional **ex5**; the dealer experience moments are embedded as the final step within ex2, ex3, and ex4.
 
 **Total session time: ~2 hours**
 
@@ -160,7 +160,7 @@ README  Introduction (pre-reading)
 ex0  Detailed Overview of Scenario (~15 min)
       ├─ 0.1  Learn about the company, business scenario, and persona
       ├─ 0.2  Launch Work Zone and see what's where
-      ├─ 0.3  Access the existing "Dealer Management Team" workspace
+      ├─ 0.3  Access the existing "Dealer Management" workspace
       └─ 0.4  Explore the workspace and view tasks
 
 ex1  External Dealer Workspace Creation (~20 min)           [Admin persona]
@@ -175,9 +175,9 @@ ex2  External Dealer Workspace Content Update (~20 min)     [Admin then Dealer]
       ├─ 2.3  Add a cards section with 3 cards side by side: My Orders, My Invoices, My Tickets
       └─ 2.4  Experience the workspace: document summary & comment
 
-ex3  New Product Launch Content Creation (~20 min)          [Admin then Dealer]
-      ├─ 3.1  Copy launch content from the "Dealer Management Team" workspace
-      │        (Product Launch Content folder → your workspace; multi-select copy)
+ex3  New Apex Launch Material Creation (~20 min)          [Admin then Dealer]
+      ├─ 3.1  Copy launch content from the "Dealer Management" workspace
+      │        (Apex Launch Material folder → your workspace; multi-select copy)
       ├─ 3.2  Add a section with a Text block (announcement HTML) & the PPT (multimedia card)
       ├─ 3.3  Add 3 product images to the hero carousel — each with a title and subtitle
       └─ 3.4  Experience the workspace as Dealer — Joule query about the new product
@@ -235,12 +235,12 @@ Image sources: royalty-free electric bike/scooter images, or AI-generated produc
 
 Artifacts still needed to finalize the exercises:
 
-- [ ] **ex0:** The pre-configured **"Dealer Management Team"** sample workspace (user is creating it) + screenshots and the explore/view-tasks walkthrough for steps 0.3–0.4
+- [x] **ex0:** The **"Dealer Management"** sample workspace exists (Overview, Tasks, and Apex Launch Material content captured); ex0.3–0.4 elaborated. More WZ-explanation content to be added later by the user
 - [ ] **ex1:** `Dealer-001`…`Dealer-040` alias users provisioned in the landscape
 - [ ] **ex2:** Confirm the pre-built **My Orders / My Invoices / My Tickets** cards appear in the card picker; recapture all ex2 screenshots for the generic content
 - [ ] **ex2:** Confirm the dealer-alias user-profile switch path (for ex2.4)
 - [x] **ex3:** Launch content set in `exercises/ex3/content/` — 6 PDFs, 3 bike images, `Apex-Series-Launch-Brochure.pptx`
-- [ ] **ex3:** Pre-load the **Product Launch Content** folder in the **Dealer Management Team** workspace with the `exercises/ex3/content/` set, so participants can copy it
+- [x] **ex3:** The **Apex Launch Material** folder in the **Dealer Management** workspace is pre-loaded with the launch set (6 PDFs, 3 bike images, PPT brochure) for participants to copy
 - [ ] **ex3:** Instructor enables Document Grounding per workspace (participant notifies instructor at ex1.2)
 - [ ] **ex4 (optional):** Design and build the Guided Experience wizard cards (exercise is a placeholder until then)
 - [ ] **ex5 (optional):** Capture Joule Work Mobile screenshots
@@ -255,15 +255,14 @@ Artifacts still needed to finalize the exercises:
 - ex0 expanded to the 4-step scenario overview (0.3/0.4 are placeholders pending the sample workspace)
 - ex1 updated — "my managed workspaces" prompt, private+external merged, Dealer-XXX alias replaces the moderator
 - ex2 fully rewritten — generic portal content + My Orders/Invoices/Tickets cards + dealer accepts invite & views overview
-- ex3 rewritten — product launch content on the Overview page: copy from Dealer Management Team workspace, Text+PPT section, hero carousel slides, dealer Joule query
+- ex3 rewritten — product launch content on the Overview page: copy from Dealer Management workspace, Text+PPT section, hero carousel slides, dealer Joule query
 - ex4 reset to a Guided Experience placeholder (added to the Overview page); old pre-order content removed
 - Old dealer-experience ex5 removed; mobile moved ex6 → ex5; main README links updated
 - `ApexLine-Brochure-content.md` authored and `Apex-Series-Launch-Brochure.pptx` generated for ex3
 - `TextWidgetHTMLContent.html` authored for the ex3.2 announcement widget
 
 **Remaining:**
-1. Author ex0 steps 0.3–0.4 once the sample workspace screenshot is provided
-2. Build the ex4 Guided Experience cards, then author the exercise
-3. Pre-load the Dealer Management Team workspace's Product Launch Content folder with the `ex3/content/` set
-4. Recapture all ex2 and ex3 screenshots (current ones show the old content)
-5. Confirm landscape specifics flagged as **TODO** in each README (dealer-alias switch path, invitation surfacing, cross-workspace copy UI, widget names, mobile sign-in)
+1. Build the ex4 Guided Experience cards, then author the exercise
+2. Recapture ex2 and ex3 step screenshots (ex0 is done; current ex2/ex3 step images still show old content)
+3. Add more WZ-explanation content/screenshots to ex0.4 as the sample workspace is expanded
+4. Confirm landscape specifics flagged as **TODO** in each README (dealer-alias switch path, invitation surfacing, cross-workspace copy UI, widget names, mobile sign-in)

@@ -18,7 +18,7 @@ BestRun EV is about to launch their most significant product line in five years:
 | **Apex Trail** | Adventure ebike | 140 km range, all-terrain |
 | **Apex Pro** | Performance ebike | 200 km range, new LFP battery system |
 
-With the launch 90 days away, the digital team has decided: **migrate from the static portal to SAP Build Work Zone, advanced edition, and launch the Apex Series on the new platform.**
+With the launch in a few days, the digital team has decided: **migrate from the static portal to SAP Build Work Zone, advanced edition, and subsequently launch the Apex Series on the new platform.**
 
 <div align="center">
 
@@ -30,7 +30,7 @@ With the launch 90 days away, the digital team has decided: **migrate from the s
 
 ### Your Personas
 
-During this session you play two roles. You start as the portal admin who builds the portal, and at the end of each build exercise you switch to a dealer alias user to experience what you just built.
+During this session you play two roles. You start as the portal admin who builds the portal, and at the end of each build exercise you switch to a dealer alias user to experience what you just built from a end-user's perspective.
 
 | Persona | When | What you do |
 |---|---|---|
@@ -62,19 +62,64 @@ During this session you play two roles. You start as the portal admin who builds
     > [!IMPORTANT]
     > Throughout the exercises, replace `XXX` with your assigned participant number (e.g. if you are participant **AD166-005**, use **005**).
 
-## Exercise 0.3 Access the "Dealer Management Team" Workspace
+## Exercise 0.3 Access the "Dealer Management" Workspace
 
-A sample workspace called **Dealer Management Team** has been pre-provisioned in this landscape. You will open it to get familiar with how a Work Zone workspace is structured before you build your own.
+A sample workspace called **Dealer Management** has been pre-provisioned in this landscape — the internal operations cockpit for the BestRun EV dealer channel. You have been invited to join it. Opening it first gives you a feel for how a Work Zone workspace is organized before you build your own.
 
-> [!NOTE]
-> **TODO:** This step will be elaborated once the sample workspace is finalized. A screenshot and the exact navigation path to the **Dealer Management Team** workspace will be added here.
+1. After you log in, you land on the SAP Build Work Zone home page. On the right you will see a **Notification Summary**.
 
-## Exercise 0.4 Explore the Workspace and View Tasks
+    ![SAP Build Work Zone home page after login, with the Notification Summary panel](images/00_03_0010.png)
 
-Browse the **Dealer Management Team** workspace to see how pages, content, and tasks come together in a workspace.
+2. Click **View all notifications** (or the **bell icon** in the top bar) to open your notifications. You will see an invitation from **AD166-000 USER** to join the **Dealer Management** workspace. Click **Join**.
 
-> [!NOTE]
-> **TODO:** This step will be elaborated once the sample workspace is finalized. The walkthrough of exploring the workspace and viewing tasks will be added here along with screenshots.
+    ![Notifications view showing the invitation to join the Dealer Management workspace with a Join button](images/00_03_0020.png)
+
+3. The first time you join, you are asked to set your **Email Notifications** preference for this workspace. Leave it on **None** and click **Accept**.
+
+    ![Workspace Access Information prompt with Email Notifications set to None and the Accept button](images/00_03_0030.png)
+
+4. You are taken into the **Dealer Management** workspace — an internal team workspace where the dealer-management department collaborates. Its **Overview** page appears.
+
+    ![Dealer Management workspace Overview page](images/00_03_0040.png)
+
+    Take a moment to notice the anatomy of a workspace:
+
+    - **Header** — the workspace cover image, name, and description ("Operations cockpit for the BestRun EV dealer channel — monitor dealer health, orders, support, onboarding, and knowledge"), along with its **Private** visibility and member count.
+    - **Tab bar** — **Overview**, **Content**, **Feed Updates**, **Forums**, **Events**, **Knowledge Base**, and **Tasks**. Each tab is a different facet of the same workspace.
+    - **Overview page content** — a banner, a **Team Activity** feed, and an **Active Tasks** panel. This is the kind of page you will build for your own portal in Exercises 2 and 3.
+
+    > [!TIP]
+    > The invitation notification disappears once you have joined. **Next time** you want to reach this workspace, use the **Workspaces** navigation instead:
+    >
+    > 1. In the top navigation bar, open the **Workspaces** menu and choose **View All Workspaces**.
+    >
+    >     ![Workspaces menu with View All Workspaces, showing the Dealer Management workspace in the list](images/00_03_0050.png)
+    >
+    > 2. Open the **Dealer Management** workspace. Right now it is the only workspace you can see — once you create your own **BestRun EV Dealer Portal XXX** in Exercise 1, it will appear here too.
+
+## Exercise 0.4 Explore the Workspace: Tasks and Content
+
+Two tabs matter most for the story you are about to live out — **Tasks** (what the dealer-management team needs to get done) and **Content** (the material you will reuse).
+
+1. Open the **Tasks** tab.
+
+    ![Tasks tab of the Dealer Management workspace showing two open tasks](images/00_04_0010.png)
+
+    The team has two open, high-priority tasks:
+
+    - **Create a Dealer Portal for external use**
+    - **Incorporate Apex launch content into the Dealer Portal**
+
+    These are exactly what you will accomplish in this hands-on: in **Exercise 1** you create the external dealer portal, and in **Exercise 3** you incorporate the Apex launch content into it. You are, in effect, picking up the dealer-management team's to-do list.
+
+2. Open the **Content** tab.
+
+    ![Content tab showing the Apex Launch Material folder with documents, images, and the launch brochure](images/00_04_0020.png)
+
+    Inside the **Apex Launch Material** folder you will find everything needed for the product launch — the Apex Series documents (PDFs), the three product images, and the launch brochure (PPTX). In **Exercise 3** you will copy this material straight into your own dealer portal workspace, so there is nothing to download.
+
+    > [!NOTE]
+    > More guidance on exploring a Work Zone workspace will be added here as the sample workspace is expanded.
 
 ## Summary
 

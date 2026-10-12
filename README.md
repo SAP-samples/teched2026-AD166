@@ -16,8 +16,8 @@ You will build the dealer portal from scratch using Joule, give it a generic dea
 ### What you will learn
 
 - How to use **Joule** to create and manage workspaces in SAP Build Work Zone
-- How to generate dealer-facing content with **AI-assisted text generation**
-- How to build a product launch page with carousel, data sheet, and presentation widgets
+- How to generate professional content with **AI-assisted text generation**
+- How to design rich, engaging workspace pages that bring together **unstructured content and live business data**
 - How to configure **Document Grounding** so Joule can answer questions from your own documents
 - How to assemble a structured workflow using a **Guided Experience** with pre-built UI cards (optional)
 - How to access an external workspace from **Joule Work Mobile** (optional)
@@ -45,7 +45,7 @@ There are no specific technical requirements to follow exercises 0–3. For Exer
     - [Exercise 2.3 - Add the self-service cards section](exercises/ex2/README.md#exercise-23-add-the-self-service-cards-section)
     - [Exercise 2.4 - Experience the portal as a dealer](exercises/ex2/README.md#exercise-24-experience-the-portal-as-a-dealer)
 - [Exercise 3 - Create the New Product Launch Content](exercises/ex3/)
-    - [Exercise 3.1 - Copy the launch content from the Dealer Management Team workspace](exercises/ex3/README.md#exercise-31-copy-the-launch-content-from-the-dealer-management-team-workspace)
+    - [Exercise 3.1 - Copy the launch content from the Dealer Management workspace](exercises/ex3/README.md#exercise-31-copy-the-launch-content-from-the-dealer-management-workspace)
     - [Exercise 3.2 - Add a presentation and announcement section](exercises/ex3/README.md#exercise-32-add-a-presentation-and-announcement-section)
     - [Exercise 3.3 - Add product images to the hero carousel](exercises/ex3/README.md#exercise-33-add-product-images-to-the-hero-carousel)
     - [Exercise 3.4 - Experience the launch content as a dealer](exercises/ex3/README.md#exercise-34-experience-the-launch-content-as-a-dealer)
@@ -79,9 +79,6 @@ The following systems are used for this hands-on session. Please find your parti
 - [SAP Build Work Zone, advanced edition on Discovery Center](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-advanced-edition?service_plan=advanced&region=all&commercialModel=btpea)
 - [Joule documentation](https://help.sap.com/docs/joule)
 - [SAP Builders on SAP Community](https://pages.community.sap.com/topics/low-code-no-code)
-
-> [!IMPORTANT]
-> **TODO:** Add link to Joule Work Mobile app store pages (iOS / Android) once confirmed for TechEd 2026.
 
 ## Code of Conduct
 
