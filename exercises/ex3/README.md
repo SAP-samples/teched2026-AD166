@@ -1,6 +1,6 @@
 # Exercise 3 - Create the New Product Launch Content
 
-In this exercise you add the **Apex Series** product launch content to your dealer portal — directly on the **Overview page** you built in Exercise 2. Instead of creating files from scratch, you copy a ready-made content set from the shared **Dealer Management Team** workspace, then surface it on the page: a presentation-and-announcement section, and product images in the hero carousel. Finally, you switch to your dealer alias and ask Joule about the new product.
+In this exercise you add the **Apex Series** product launch content to your dealer portal — directly on the **Overview page** you built in Exercise 2. Instead of creating files from scratch, you copy a ready-made content set from the shared **Dealer Management** workspace, then surface it on the page: a presentation-and-announcement section, and product images in the hero carousel. Finally, you switch to your dealer alias and ask Joule about the new product.
 
 > [!NOTE]
 > There is **no new page** in this exercise — you enrich the existing Overview page. The launch content is copied from an existing workspace rather than downloaded and uploaded.
@@ -8,21 +8,21 @@ In this exercise you add the **Apex Series** product launch content to your deal
 > [!NOTE]
 > **TODO (screenshots):** Screenshots in this exercise are being recaptured to match the copy-content flow.
 
-## Exercise 3.1 Copy the Launch Content from the Dealer Management Team Workspace
+## Exercise 3.1 Copy the Launch Content from the Dealer Management Workspace
 
-The Apex Series launch files are already prepared in the shared **Dealer Management Team** workspace, inside a **Product Launch Content** folder. You copy them into your own workspace in a single multi-select action — no download or upload needed.
+The Apex Series launch files are already prepared in the shared **Dealer Management** workspace, inside an **Apex Launch Material** folder. You copy them into your own workspace in a single multi-select action — no download or upload needed.
 
-1. Open the **Dealer Management Team** workspace (the sample workspace you explored in Exercise 0) and go to its **Content** area.
+1. Open the **Dealer Management** workspace (the sample workspace you explored in Exercise 0) and go to its **Content** area.
 
-    ![Dealer Management Team workspace Content area](images/03_01_0010.png)
+    ![Dealer Management workspace Content area](images/03_01_0010.png)
 
-2. Open the **Product Launch Content** folder. It contains the Apex Series product images, the launch presentation, and the product documents (PDFs).
+2. Open the **Apex Launch Material** folder. It contains the Apex Series product images, the launch presentation, and the product documents (PDFs).
 
-    ![Product Launch Content folder with the Apex Series files](images/03_01_0020.png)
+    ![Apex Launch Material folder with the Apex Series files](images/03_01_0020.png)
 
 3. **Multi-select** all files in the folder (select the first file, then Shift-click or use the checkboxes to select the rest), then choose **Copy**.
 
-    ![Files multi-selected in the Product Launch Content folder with the Copy action](images/03_01_0030.png)
+    ![Files multi-selected in the Apex Launch Material folder with the Copy action](images/03_01_0030.png)
 
 4. In the copy dialog, choose **BestRun EV Dealer Portal XXX** as the destination workspace and confirm.
 
