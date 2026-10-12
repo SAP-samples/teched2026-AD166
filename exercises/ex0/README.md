@@ -64,18 +64,23 @@ During this session you play two roles. You start as the portal admin who builds
 
 ## Exercise 0.3 Access the "Dealer Management" Workspace
 
-A sample workspace called **Dealer Management** has been pre-provisioned in this landscape — the internal operations cockpit for the BestRun EV dealer channel. Opening it first gives you a feel for how a Work Zone workspace is organized before you build your own.
+A sample workspace called **Dealer Management** has been pre-provisioned in this landscape — the internal operations cockpit for the BestRun EV dealer channel. You have been invited to join it. Opening it first gives you a feel for how a Work Zone workspace is organized before you build your own.
 
-1. In the top navigation bar, open the **Workspaces** menu and choose **View All Workspaces**.
+1. After you log in, you land on the SAP Build Work Zone home page. On the right you will see a **Notification Summary**.
 
-    ![Workspaces menu with View All Workspaces, and the Dealer Management workspace in the All Workspaces list](images/workspaces.png)
+    ![SAP Build Work Zone home page after login, with the Notification Summary panel](images/00_03_0010.png)
 
-    > [!NOTE]
-    > Right now you see the **Dealer Management** workspace. After Exercise 1 you will also see your own **BestRun EV Dealer Portal XXX** here.
+2. Click **View all notifications** (or the **bell icon** in the top bar) to open your notifications. You will see an invitation from **AD166-000 USER** to join the **Dealer Management** workspace. Click **Join**.
 
-2. Open the **Dealer Management** workspace. Its **Overview** page appears.
+    ![Notifications view showing the invitation to join the Dealer Management workspace with a Join button](images/00_03_0020.png)
 
-    ![Dealer Management workspace Overview page](images/dealerManagement.png)
+3. The first time you join, you are asked to set your **Email Notifications** preference for this workspace. Leave it on **None** and click **Accept**.
+
+    ![Workspace Access Information prompt with Email Notifications set to None and the Accept button](images/00_03_0030.png)
+
+4. You are taken into the **Dealer Management** workspace — an internal team workspace where the dealer-management department collaborates. Its **Overview** page appears.
+
+    ![Dealer Management workspace Overview page](images/00_03_0040.png)
 
     Take a moment to notice the anatomy of a workspace:
 
@@ -83,13 +88,22 @@ A sample workspace called **Dealer Management** has been pre-provisioned in this
     - **Tab bar** — **Overview**, **Content**, **Feed Updates**, **Forums**, **Events**, **Knowledge Base**, and **Tasks**. Each tab is a different facet of the same workspace.
     - **Overview page content** — a banner, a **Team Activity** feed, and an **Active Tasks** panel. This is the kind of page you will build for your own portal in Exercises 2 and 3.
 
+    > [!TIP]
+    > The invitation notification disappears once you have joined. **Next time** you want to reach this workspace, use the **Workspaces** navigation instead:
+    >
+    > 1. In the top navigation bar, open the **Workspaces** menu and choose **View All Workspaces**.
+    >
+    >     ![Workspaces menu with View All Workspaces, showing the Dealer Management workspace in the list](images/00_03_0050.png)
+    >
+    > 2. Open the **Dealer Management** workspace. Right now it is the only workspace you can see — once you create your own **BestRun EV Dealer Portal XXX** in Exercise 1, it will appear here too.
+
 ## Exercise 0.4 Explore the Workspace: Tasks and Content
 
 Two tabs matter most for the story you are about to live out — **Tasks** (what the dealer-management team needs to get done) and **Content** (the material you will reuse).
 
 1. Open the **Tasks** tab.
 
-    ![Tasks tab of the Dealer Management workspace showing two open tasks](images/tasks.png)
+    ![Tasks tab of the Dealer Management workspace showing two open tasks](images/00_04_0010.png)
 
     The team has two open, high-priority tasks:
 
@@ -100,7 +114,7 @@ Two tabs matter most for the story you are about to live out — **Tasks** (what
 
 2. Open the **Content** tab.
 
-    ![Content tab showing the Apex Launch Material folder with documents, images, and the launch brochure](images/content.png)
+    ![Content tab showing the Apex Launch Material folder with documents, images, and the launch brochure](images/00_04_0020.png)
 
     Inside the **Apex Launch Material** folder you will find everything needed for the product launch — the Apex Series documents (PDFs), the three product images, and the launch brochure (PPTX). In **Exercise 3** you will copy this material straight into your own dealer portal workspace, so there is nothing to download.
 

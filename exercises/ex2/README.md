@@ -1,12 +1,9 @@
 # Exercise 2 - Update the Dealer Workspace Content
 
-In this exercise you make the workspace your own. Using the **AI text generation built into each content widget**, you update the hero banner and the Key Highlights with **generic dealer portal** content, then add a row of pre-built self-service cards — **My Orders**, **My Invoices**, and **My Tickets**. Finally, you switch to your dealer alias user to experience the portal as a dealer for the first time.
-
-> [!IMPORTANT]
-> This exercise builds the **generic dealer portal** — content that applies to the whole dealer relationship, not to any single product. The **Apex Series** product launch comes later, in Exercise 3, on a dedicated page. Keep the content here product-neutral.
+In this exercise you take the raw workspace generated from the Partner Portal Template and transform it into a professional, external dealer-facing portal — using the capabilities built into SAP Build Work Zone. You reshape the hero banner and the Key Highlights with the **AI text generation embedded in each content widget**, give dealers at-a-glance access through a row of pre-built self-service cards — **My Orders**, **My Invoices**, and **My Tickets** — and finally switch to your dealer alias user to experience the result as a dealer would for the first time.
 
 > [!NOTE]
-> **Use the embedded AI, not the Joule panel.** Every widget in SAP Build Work Zone that accepts text has a built-in AI text-generation button — the **✨ sparkle icon** in the rich-text toolbar (or next to a text field). Clicking it opens a menu:
+> **Use the embedded AI assisted text generation capability** Every widget in SAP Build Work Zone that accepts text has a built-in AI text-generation button — the <img src="images/aiassist.png" height="16" style="vertical-align: text-bottom;" alt="AI assisted text generation icon"> icon in the rich-text toolbar (or next to a text field). Clicking it opens a menu:
 > - **Generate Text** — appears when the field is empty; you type a short prompt and it writes the copy.
 > - **Change Tone** — rewrites existing text in a different tone (e.g. Professional, Confident).
 > - **Adjust Length** — makes existing text shorter or longer.
