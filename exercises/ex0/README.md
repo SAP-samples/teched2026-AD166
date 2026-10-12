@@ -1,12 +1,14 @@
-# Getting Started (Optional)
+# Exercise 0 - Detailed Overview of the Scenario (Optional)
 
-This section introduces the business scenario and tools you will work with throughout the session. If you are already familiar with SAP Build Work Zone, advanced edition, you can skip ahead to [Exercise 1](../ex1/README.md).
+This section introduces the business scenario, the personas you will play, and the SAP Build Work Zone environment you will work in. If you are already familiar with SAP Build Work Zone, advanced edition, you can skim this and jump ahead to [Exercise 1](../ex1/README.md).
 
-## The Scenario: BestRun EV
+## Exercise 0.1 Learn About the Company, Scenario, and Personas
+
+### The Company: BestRun EV
 
 **BestRun EV** is a premium electric mobility company that designs and sells ebikes and electric scooters through an authorized dealer network of 200+ dealers across Europe and Asia-Pacific.
 
-Their existing dealer portal is a static website — a collection of downloadable PDF spec sheets, a quarterly price list emailed to dealers, and a contact form. Dealers wait up to 48 hours for answers to product questions. There is no way to place an order through the portal.
+Their existing dealer portal is a static website — a collection of downloadable PDF spec sheets, a quarterly price list emailed to dealers, and a contact form. Dealers wait up to 48 hours for answers to product questions, and there is no way to place an order through the portal.
 
 BestRun EV is about to launch their most significant product line in five years: the **Apex Series**.
 
@@ -16,7 +18,7 @@ BestRun EV is about to launch their most significant product line in five years:
 | **Apex Trail** | Adventure ebike | 140 km range, all-terrain |
 | **Apex Pro** | Performance ebike | 200 km range, new LFP battery system |
 
-With the launch 90 days away, the digital team has decided: **migrate from the static portal to SAP Build Work Zone, advanced edition, and launch the Apex Series on the new platform.**
+With the launch in a few days, the digital team has decided: **migrate from the static portal to SAP Build Work Zone, advanced edition, and subsequently launch the Apex Series on the new platform.**
 
 <div align="center">
 
@@ -26,64 +28,101 @@ With the launch 90 days away, the digital team has decided: **migrate from the s
 
 </div>
 
-## What is SAP Build Work Zone, Advanced Edition?
+### Your Personas
 
-SAP Build Work Zone, advanced edition is a digital experience platform that lets organizations create structured workspaces — internal or external-facing — for teams, partners, and customers. It brings together apps, content, documents, and processes in one place, accessible from any device.
-
-In this session, you are using it to build an **external-facing dealer portal** — a workspace that BestRun EV's authorized dealers can access to find product information, place pre-orders, and get instant answers using AI.
-
-## Tools You Will Use
-
-### Joule
-
-Joule is SAP's AI copilot. In this session, Joule has two roles:
-
-1. **Content Creator tool** — you use Joule to create and configure the workspace (exercises 1–4)
-2. **Dealer assistant** — once the portal is live, dealers use Joule to ask product questions and get answers grounded in the uploaded documents (exercise 5)
-
-### AI-Assisted Text Generation
-
-SAP Build Work Zone includes built-in AI text generation powered by Joule. You use it to draft dealer-facing content for the workspace — product announcements, model overviews, and page copy — without leaving the editor.
-
-### Document Grounding
-
-Document Grounding allows Joule to answer questions based on documents you upload to the workspace. Instead of a dealer downloading a 40-page PDF and searching manually, they ask Joule a natural language question and receive a sourced answer in seconds.
-
-### Guided Experience
-
-A Guided Experience is a structured multi-step workflow built from UI cards. In this session, you will assemble a four-step pre-order wizard from pre-built cards already loaded in the workspace card catalog. Dealers use the wizard to configure and submit a pre-order for Apex Series units.
-
-### Joule Work Mobile
-
-Joule Work Mobile (formerly SAP Mobile Start) is the mobile app for accessing SAP Build Work Zone workspaces. In Exercise 6 (optional), you access the dealer portal from a smartphone.
-
-## Your Personas
-
-During this session you play two roles:
+During this session you play two roles. You start as the portal admin who builds the portal, and at the end of each build exercise you switch to a dealer alias user to experience what you just built from a end-user's perspective.
 
 | Persona | When | What you do |
 |---|---|---|
-| **Digital Experience Manager, BestRun EV** | Exercises 1–4 | Build and configure the dealer portal |
-| **Authorized Dealer, Amsterdam** | Exercises 5–6 | Experience and use the portal as a dealer |
+| **Digital Experience Manager, BestRun EV** | Building steps of ex1–ex4 | Create and configure the dealer portal, add content, build the product launch page |
+| **Authorized Dealer** (your `Dealer-XXX` alias) | Final step of ex2, ex3, ex4, and all of ex5 | Switch to your dealer alias user and experience the portal as a dealer would |
+
+> [!NOTE]
+> You will be given a dealer alias user — **Dealer-XXX**, matching your participant number (e.g. participant **AD166-005** uses **Dealer-005**). You switch to this alias from your user profile when an exercise asks you to experience the portal as a dealer.
+
+### Tools You Will Use
+
+- **SAP Build Work Zone, advanced edition** — the digital experience platform where you build the external-facing dealer portal.
+- **Joule** — SAP's AI copilot. You use it to create and configure the workspace, generate content, and (as a dealer) ask product questions.
+- **Document Grounding** — lets Joule answer questions based on the documents uploaded to the workspace, so a dealer gets a sourced answer in seconds instead of searching a PDF.
+- **Guided Experience** — a structured multi-step wizard built from UI cards (optional ex4).
+- **Joule Work Mobile** — the mobile app for accessing SAP Build Work Zone workspaces (optional ex5).
+
+## Exercise 0.2 Launch SAP Build Work Zone and See What's Where
+
+1. Open the following URL in your browser and log in with your participant credentials:
+
+    **[https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/](https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/)**
+
+    > [!NOTE]
+    > This URL is only accessible on-site at SAP TechEd 2026. Login credentials will be provided by the instructor.
+
+2. Take a moment to orient yourself on the SAP Build Work Zone home page — the top menu bar, the Joule icon, and the Workspaces navigation.
+
+    > [!IMPORTANT]
+    > Throughout the exercises, replace `XXX` with your assigned participant number (e.g. if you are participant **AD166-005**, use **005**).
+
+## Exercise 0.3 Access the "Dealer Management" Workspace
+
+A sample workspace called **Dealer Management** has been pre-provisioned in this landscape — the internal operations cockpit for the BestRun EV dealer channel. You have been invited to join it. Opening it first gives you a feel for how a Work Zone workspace is organized before you build your own.
+
+1. After you log in, you land on the SAP Build Work Zone home page. On the right you will see a **Notification Summary**.
+
+    ![SAP Build Work Zone home page after login, with the Notification Summary panel](images/00_03_0010.png)
+
+2. Click **View all notifications** (or the **bell icon** in the top bar) to open your notifications. You will see an invitation from **AD166-000 USER** to join the **Dealer Management** workspace. Click **Join**.
+
+    ![Notifications view showing the invitation to join the Dealer Management workspace with a Join button](images/00_03_0020.png)
+
+3. The first time you join, you are asked to set your **Email Notifications** preference for this workspace. Leave it on **None** and click **Accept**.
+
+    ![Workspace Access Information prompt with Email Notifications set to None and the Accept button](images/00_03_0030.png)
+
+4. You are taken into the **Dealer Management** workspace — an internal team workspace where the dealer-management department collaborates. Its **Overview** page appears.
+
+    ![Dealer Management workspace Overview page](images/00_03_0040.png)
+
+    Take a moment to notice the anatomy of a workspace:
+
+    - **Header** — the workspace cover image, name, and description ("Operations cockpit for the BestRun EV dealer channel — monitor dealer health, orders, support, onboarding, and knowledge"), along with its **Private** visibility and member count.
+    - **Tab bar** — **Overview**, **Content**, **Feed Updates**, **Forums**, **Events**, **Knowledge Base**, and **Tasks**. Each tab is a different facet of the same workspace.
+    - **Overview page content** — a banner, a **Team Activity** feed, and an **Active Tasks** panel. This is the kind of page you will build for your own portal in Exercises 2 and 3.
+
+    > [!TIP]
+    > The invitation notification disappears once you have joined. **Next time** you want to reach this workspace, use the **Workspaces** navigation instead:
+    >
+    > 1. In the top navigation bar, open the **Workspaces** menu and choose **View All Workspaces**.
+    >
+    >     ![Workspaces menu with View All Workspaces, showing the Dealer Management workspace in the list](images/00_03_0050.png)
+    >
+    > 2. Open the **Dealer Management** workspace. Right now it is the only workspace you can see — once you create your own **BestRun EV Dealer Portal XXX** in Exercise 1, it will appear here too.
+
+## Exercise 0.4 Explore the Workspace: Tasks and Content
+
+Two tabs matter most for the story you are about to live out — **Tasks** (what the dealer-management team needs to get done) and **Content** (the material you will reuse).
+
+1. Open the **Tasks** tab.
+
+    ![Tasks tab of the Dealer Management workspace showing two open tasks](images/00_04_0010.png)
+
+    The team has two open, high-priority tasks:
+
+    - **Create a Dealer Portal for external use**
+    - **Incorporate Apex launch content into the Dealer Portal**
+
+    These are exactly what you will accomplish in this hands-on: in **Exercise 1** you create the external dealer portal, and in **Exercise 3** you incorporate the Apex launch content into it. You are, in effect, picking up the dealer-management team's to-do list.
+
+2. Open the **Content** tab.
+
+    ![Content tab showing the Apex Launch Material folder with documents, images, and the launch brochure](images/00_04_0020.png)
+
+    Inside the **Apex Launch Material** folder you will find everything needed for the product launch — the Apex Series documents (PDFs), the three product images, and the launch brochure (PPTX). In **Exercise 3** you will copy this material straight into your own dealer portal workspace, so there is nothing to download.
+
+    > [!NOTE]
+    > More guidance on exploring a Work Zone workspace will be added here as the sample workspace is expanded.
 
 ## Summary
 
-You now have the context to start building. The landscape is already provisioned — you have access to SAP Build Work Zone, advanced edition with Joule and Document Grounding enabled.
+You now understand the scenario, your two personas, and the SAP Build Work Zone environment. The landscape is already provisioned with SAP Build Work Zone, advanced edition, Joule, and Document Grounding.
 
-The landscape for this session is already fully configured. You have access to:
-
-- **SAP Build Work Zone, advanced edition** — your starting point for every exercise
-- **Joule** — available directly within SAP Build Work Zone, no BTP cockpit access required
-- **Document Grounding** — already connected and ready to be enabled per workspace
-
-Open the following URL to access the landscape:
-
-> **[https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/](https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/)**
-
-> [!NOTE]
-> This URL is only accessible on-site at SAP TechEd 2026. Login credentials will be provided by the instructor.
-
-> [!IMPORTANT]
-> Throughout the exercises, replace `XXX` with your assigned participant number (e.g. if you are participant **AD166-005**, use **005**).
-
-Continue to — [Exercise 1 - Set Up the Dealer Portal with Joule](../ex1/README.md)
+Continue to — [Exercise 1 - Create the External Dealer Workspace](../ex1/README.md)

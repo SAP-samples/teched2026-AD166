@@ -32,4 +32,4 @@ package-lock.json
 Thumbs.db
 
 # Document generation scripts (not participant-facing)
-exercises/ex3/documents/generate_docs.py
+exercises/ex3/**/generate_docs.py

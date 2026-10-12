@@ -11,20 +11,20 @@ This repository contains the material for the SAP TechEd 2026 session **AD166 - 
 
 In this hands-on session, you take on the role of a Digital Experience Manager at **BestRun EV** — a premium electric mobility company launching a new product line, the **Apex Series**, through its 200+ strong authorized dealer network. Their existing dealer portal is a static website with PDF downloads and a contact form. With the Apex Series launching in 90 days, the team decides to migrate to an AI-powered external portal on **SAP Build Work Zone, advanced edition** — and use it as the launchpad for the new products.
 
-You will build the dealer portal from scratch using Joule, populate it with AI-generated content, ground it with product documents so dealers can get instant answers, and assemble a pre-order guided experience. Midway through the session you switch personas — you become an authorized dealer in Amsterdam experiencing the portal for the first time.
+You will build the dealer portal from scratch using Joule, give it a generic dealer-portal homepage with AI-generated content and self-service cards, then add a dedicated Apex Series product launch page grounded with product documents so dealers can get instant answers. At the end of each build exercise you switch to a dealer alias user to experience the portal exactly as a dealer would. Optional exercises add a Guided Experience wizard and mobile access.
 
 ### What you will learn
 
 - How to use **Joule** to create and manage workspaces in SAP Build Work Zone
-- How to generate dealer-facing content with **AI-assisted text generation**
+- How to generate professional content with **AI-assisted text generation**
+- How to design rich, engaging workspace pages that bring together **unstructured content and live business data**
 - How to configure **Document Grounding** so Joule can answer questions from your own documents
-- How to assemble a structured ordering workflow using a **Guided Experience** with pre-built UI cards
-- How to use Joule as an **inline assistant** while collaborating in the workspace or filling in a form within Guided Experiences — without leaving the page
-- How to access an external workspace from **Joule Work Mobile**
+- How to assemble a structured workflow using a **Guided Experience** with pre-built UI cards (optional)
+- How to access an external workspace from **Joule Work Mobile** (optional)
 
 ## Requirements
 
-There are no specific technical requirements to follow exercises 1–5. For Exercise 6 (optional), you will need:
+There are no specific technical requirements to follow exercises 0–3. For Exercise 5 (optional), you will need:
 
 - A smartphone (iOS or Android) with **Joule Work Mobile** installed
 
@@ -33,38 +33,27 @@ There are no specific technical requirements to follow exercises 1–5. For Exer
 
 ## Exercises
 
-- [Getting Started (Optional)](exercises/ex0/) — Meet BestRun EV, the Apex Series, and the tools you will use today
-- [Exercise 1 - Set Up the Dealer Portal with Joule](exercises/ex1/)
-    - [Exercise 1.1 - Log in and open Joule](exercises/ex1/README.md#exercise-11-log-in-and-open-joule)
-    - [Exercise 1.2 - Create the BestRun EV Dealer Portal workspace](exercises/ex1/README.md#exercise-12-create-the-bestrun-ev-dealer-portal-workspace)
-    - [Exercise 1.3 - Add team members using Joule](exercises/ex1/README.md#exercise-13-add-team-members-using-joule)
-    - [Exercise 1.4 - Configure the workspace as an external-facing portal](exercises/ex1/README.md#exercise-14-configure-the-workspace-as-an-external-facing-portal)
-- [Exercise 2 - Personalize the Portal and Launch the Apex Series](exercises/ex2/)
-    - [Exercise 2.1 - Update the Hero title and tagline with Joule](exercises/ex2/README.md#exercise-21-update-the-hero-title-and-tagline-with-joule)
-    - [Exercise 2.2 - Update the Key Highlights with Joule](exercises/ex2/README.md#exercise-22-update-the-key-highlights-with-joule)
-    - [Exercise 2.3 - Add a Featured section for the Apex product line](exercises/ex2/README.md#exercise-23-add-a-featured-section-for-the-apex-product-line)
-    - [Exercise 2.4 - Create the Apex Series product announcement page](exercises/ex2/README.md#exercise-24-create-the-apex-series-product-announcement-page)
-- [Exercise 3 - Enable Document Grounding](exercises/ex3/)
-    - [Exercise 3.1 - Upload product documents to the workspace](exercises/ex3/README.md#exercise-31-upload-product-documents-to-the-workspace)
-    - [Exercise 3.2 - Configure Document Grounding](exercises/ex3/README.md#exercise-32-configure-document-grounding)
-    - [Exercise 3.3 - Test grounding with a product question](exercises/ex3/README.md#exercise-33-test-grounding-with-a-product-question)
-- [Exercise 4 - Add the Pre-Order Guided Experience](exercises/ex4/)
-    - [Exercise 4.1 - Find the pre-built Apex pre-order cards](exercises/ex4/README.md#exercise-41-find-the-pre-built-apex-pre-order-cards)
-    - [Exercise 4.2 - Create the Order Now page](exercises/ex4/README.md#exercise-42-create-the-order-now-page)
-    - [Exercise 4.3 - Assemble the pre-order Guided Experience](exercises/ex4/README.md#exercise-43-assemble-the-pre-order-guided-experience)
-    - [Exercise 4.4 - Publish the Order Now page](exercises/ex4/README.md#exercise-44-publish-the-order-now-page)
-- [Exercise 5 - Experience the Portal as a Dealer](exercises/ex5/)
-    - [Exercise 5.1 - Accept the dealer portal invitation](exercises/ex5/README.md#exercise-51-accept-the-dealer-portal-invitation)
-    - [Exercise 5.2 - Explore the Apex Series launch content](exercises/ex5/README.md#exercise-52-explore-the-apex-series-launch-content)
-    - [Exercise 5.3 - Ask Joule a product question](exercises/ex5/README.md#exercise-53-ask-joule-a-product-question)
-    - [Exercise 5.4 - Use AI to summarize the Battery Technology Guide](exercises/ex5/README.md#exercise-54-use-ai-to-summarize-the-battery-technology-guide)
-    - [Exercise 5.5 - Open the pre-order Guided Experience](exercises/ex5/README.md#exercise-55-open-the-pre-order-guided-experience)
-    - [Exercise 5.6 - Ask Joule about your pre-order discount](exercises/ex5/README.md#exercise-56-ask-joule-about-your-pre-order-discount)
-    - [Exercise 5.7 - Submit your pre-order](exercises/ex5/README.md#exercise-57-submit-your-pre-order)
-- [Exercise 6 - Access the Dealer Portal from Joule Work Mobile (Optional)](exercises/ex6/)
-    - [Exercise 6.1 - Set up Joule Work Mobile](exercises/ex6/README.md#exercise-61-set-up-joule-work-mobile)
-    - [Exercise 6.2 - Access the BestRun EV Dealer Portal](exercises/ex6/README.md#exercise-62-access-the-bestrun-ev-dealer-portal)
-    - [Exercise 6.3 - Ask Joule a question from your phone](exercises/ex6/README.md#exercise-63-ask-joule-a-question-from-your-phone)
+- [Exercise 0 - Detailed Overview of the Scenario (Optional)](exercises/ex0/) — Meet BestRun EV, the Apex Series, your personas, and explore a sample workspace
+- [Exercise 1 - Create the External Dealer Workspace](exercises/ex1/)
+    - [Exercise 1.1 - Access Work Zone and launch Joule](exercises/ex1/README.md#exercise-11-access-work-zone-and-launch-joule)
+    - [Exercise 1.2 - Create the dealer portal workspace from a template](exercises/ex1/README.md#exercise-12-create-the-dealer-portal-workspace-from-a-template)
+    - [Exercise 1.3 - Make the workspace private and external](exercises/ex1/README.md#exercise-13-make-the-workspace-private-and-external)
+    - [Exercise 1.4 - Add your dealer alias user to the workspace](exercises/ex1/README.md#exercise-14-add-your-dealer-alias-user-to-the-workspace)
+- [Exercise 2 - Update the Dealer Workspace Content](exercises/ex2/)
+    - [Exercise 2.1 - Update the hero section with a generic dealer portal tagline](exercises/ex2/README.md#exercise-21-update-the-hero-section-with-a-generic-dealer-portal-tagline)
+    - [Exercise 2.2 - Update the Key Highlights with generic portal content](exercises/ex2/README.md#exercise-22-update-the-key-highlights-with-generic-portal-content)
+    - [Exercise 2.3 - Add the self-service cards section](exercises/ex2/README.md#exercise-23-add-the-self-service-cards-section)
+    - [Exercise 2.4 - Experience the portal as a dealer](exercises/ex2/README.md#exercise-24-experience-the-portal-as-a-dealer)
+- [Exercise 3 - Create the New Product Launch Content](exercises/ex3/)
+    - [Exercise 3.1 - Copy the launch content from the Dealer Management workspace](exercises/ex3/README.md#exercise-31-copy-the-launch-content-from-the-dealer-management-workspace)
+    - [Exercise 3.2 - Add a presentation and announcement section](exercises/ex3/README.md#exercise-32-add-a-presentation-and-announcement-section)
+    - [Exercise 3.3 - Add product images to the hero carousel](exercises/ex3/README.md#exercise-33-add-product-images-to-the-hero-carousel)
+    - [Exercise 3.4 - Experience the launch content as a dealer](exercises/ex3/README.md#exercise-34-experience-the-launch-content-as-a-dealer)
+- [Exercise 4 - Create a Guided Experience (Optional)](exercises/ex4/) — *under construction*
+- [Exercise 5 - Access the Dealer Portal from Joule Work Mobile (Optional)](exercises/ex5/)
+    - [Exercise 5.1 - Set up Joule Work Mobile](exercises/ex5/README.md#exercise-51-set-up-joule-work-mobile)
+    - [Exercise 5.2 - Access the BestRun EV Dealer Portal](exercises/ex5/README.md#exercise-52-access-the-bestrun-ev-dealer-portal)
+    - [Exercise 5.3 - Ask Joule a question from your phone](exercises/ex5/README.md#exercise-53-ask-joule-a-question-from-your-phone)
 
 ## System Access
 
@@ -90,9 +79,6 @@ The following systems are used for this hands-on session. Please find your parti
 - [SAP Build Work Zone, advanced edition on Discovery Center](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-advanced-edition?service_plan=advanced&region=all&commercialModel=btpea)
 - [Joule documentation](https://help.sap.com/docs/joule)
 - [SAP Builders on SAP Community](https://pages.community.sap.com/topics/low-code-no-code)
-
-> [!IMPORTANT]
-> **TODO:** Add link to Joule Work Mobile app store pages (iOS / Android) once confirmed for TechEd 2026.
 
 ## Code of Conduct
 
