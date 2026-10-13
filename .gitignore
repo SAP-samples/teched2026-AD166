@@ -33,3 +33,6 @@ Thumbs.db
 
 # Document generation scripts (not participant-facing)
 exercises/ex3/**/generate_docs.py
+
+# Planning / working material (not participant-facing)
+planning/
