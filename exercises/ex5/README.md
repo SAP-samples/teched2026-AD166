@@ -37,16 +37,14 @@ SAP Build Work Zone content can be accessed not only from a desktop browser, but
 
 5. Open **Joule Work** on your smartphone.
 
-    - **Fresh install:** tap **Scan QR Code**.
-    - **Already connected to another environment:** tap **Switch Environment?**, then scan the QR code from the next step.
+    - **Fresh install:** tap **Scan QR Code**. Follow any on-screen permission prompts — allow **camera access** when asked (required to scan the QR code), and allow **push notifications** if you wish.
 
-    <img src="images/05_01_0040.png" alt="Joule Work app — if already connected to another environment, tap Switch Environment?" width="500" height="1053">
+    > [!TIP]
+    > You can change these permissions later in your device's settings.
 
-    > [!CAUTION]
-    > If you freshly installed Joule Work, your operating system may prompt you to allow push notifications. You can change this decision later in your device's settings.
+    - **Already connected to another environment:** sign out and tap **Switch Environment** at the bottom of the screen, then scan the QR code from the next step.
 
-     > [!IMPORTANT]
-    > **TODO:** Confirm for fresh install if there is a Scan QR Code or not.. in case not, remove it from step 5 above 
+    <img src="images/05_01_0040.png" alt="Joule Work app — if already connected to another environment, tap Switch Environment at the bottom of the screen" width="500" height="1053">
 
 6. Scan the QR code displayed on the desktop screen. The app shows a **Confirmation** screen — *"Scan succeeded. You will be connected to: jw164-djmbomr8..."*. Tap **Continue**.
 
