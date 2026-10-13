@@ -162,7 +162,7 @@ In this exercise you will add a dedicated **Apex Series Launch** announcement se
 
 ## Exercise 3.4 Experience the Launch Content as a Dealer
 
-Time to step into a dealer's shoes and see the portal exactly as they will on launch day.
+Time to step into a dealer's shoes and see the portal exactly as they will on launch day — and then put its AI to work answering real product questions.
 
 1. Open the **profile menu** (your avatar / initials in the top-right corner) and select **Switch to Alias Account**, just as you did in Exercise 2.6. Choose your **Dealer-XXX** alias to switch into the dealer view.
 
@@ -188,8 +188,57 @@ Time to step into a dealer's shoes and see the portal exactly as they will on la
 
     ![Brochure detail view showing the AI Generated Summary panel with the Apex Series launch overview](images/03_04_0040.png)
 
+6. Close the brochure detail view (the **X** in the top-right) to return to the portal. The brochure gave you the headlines, but you want to dig deeper — so open the **Content** tab and expand the **Apex Launch Material** folder. BestRun EV's dealer manager has shared the full launch pack here: the technical spec sheet, the Apex Pro battery & drive technology guide, the dealer commercial handbook, the after-sales & warranty guide, and the pre-order policy documents.
+
+    ![Content tab showing the Apex Launch Material folder expanded with all the shared launch documents](images/03_04_0050.png)
+
+    You run an **up-market store**, so your customers are mostly premium riders — which means your real questions are about the flagship model, its battery, and whether you can service it. You start opening the PDFs one by one, but the answers are spread across several documents and skimming each file is slow.
+
+    Instead, open **Joule** from the top navigation bar and simply ask. Because this workspace was enabled as an AI source in **Exercise 3.2**, Joule answers *only* from these documents and cites where every answer came from. You will ask three questions, moving from a broad overview down to the battery and service detail you care about.
+
+7. Start broad — get your bearings on the line-up and find the premium model:
+
+    ```
+    What are the 3 different Apex product lines and which one has best of them? What is it's unique selling feature?
+    ```
+
+    Joule lays out all three models — **Apex City** (lightweight urban commuter scooter), **Apex Trail** (adventure ebike, 140 km range, all-terrain), and **Apex Pro** (performance ebike, 200 km range, new LFP battery system) — and points you to the **Apex Pro** as the flagship. Every statement carries an inline citation.
+
+    ![Joule listing the three Apex product lines with inline citations](images/03_04_0060.png)
+
+
+8. Your premium customers always ask about the battery, so make that your next question:
+
+    ```
+    Why did BestRun EV move to an LFP battery for the Apex Pro and what is the battery warranty for Apex Pro?
+    ```
+
+    Joule returns a single, consolidated answer with inline citations (**[1]**, **[2]**, **[3]**). The LFP rationale and lifespan (2,000+ charge cycles, over five years of daily use) are drawn from the **Apex Pro Battery & Drive Technology Guide**, while the warranty figure — **3 years or 1,000 cycles, whichever comes first** — comes from the **After-Sales & Warranty Guide**. Open **Sources (3)** to confirm, and click through to either document to verify.
+
+    ![Joule answering the LFP battery question in the side panel, with inline citations and a Sources (3) control](images/03_04_0090.png)
+
+    > [!NOTE]
+    > None of this detail is in the launch brochure. One plain-language question returned a trustworthy, cited answer assembled from **two** different dealer documents — no downloading, no skimming.
+
+9. Finally, the commercial and service question — can you make a margin on it, and can your workshop look after it?
+
+    ```
+    What dealer margin do I get on the Apex Pro at Gold tier, and do my technicians need any special certification to service its motor and battery?
+    ```
+
+    Joule answers both halves in one reply: the **Gold-tier dealer net price of EUR 4,279 (ex-VAT), a 15% base margin** [1] — from the **Dealer Commercial Handbook** — and the requirement that the **BRD-750 motor and LFP battery need BestRun EV Apex-Certified Technician training** before any dealer-level service [2], even surfacing the enrolment link — from the **Apex Pro Battery & Drive Technology Guide**. **Sources (2)** confirms the answer was pieced together from those two documents.
+
+    ![Joule answering the margin and certification question, combining the commercial handbook and the battery guide, with a Sources (2) control](images/03_04_0100.png)
+
+
 > [!NOTE]
-> **TODO:** Joule interaction with Document Grounding (asking product questions, getting answers grounded in the Apex Launch Material documents) is pending and will be added here.
+> **How Joule shows its sources.** In every answer, Joule marks each fact with a numbered link — **[1]**, **[2]**, **[3]**, … — pointing to the document that fact came from. At the bottom of each response there is a **Sources** section that lists all of those references together. Click any entry to open the underlying document (in a new tab) and read it in full — so you can always trace an answer back to the original and dig into the detail when you need to.
+
+### What the Dealer Just Achieved
+
+In three plain-language questions, you went from *"what's in this line-up?"* to the exact **battery technology, warranty terms, dealer margin, and service-certification requirements** for your flagship model — without downloading or reading a single document end to end. Joule pulled every answer straight from BestRun EV's dealer documents and cited its sources, so you could trust and verify each one.
+
+This is the power of **Document Grounding**: Joule generates its answers **only** from the content in this workspace — the files you copied in Exercise 3.1 and enabled as an AI source in Exercise 3.2 — not from the open internet. For the dealer, that means fast, accurate, source-backed answers in the field. For BestRun EV, it means dealers always get the **official** product information, straight from the documents the company published.
 
 ---
 
