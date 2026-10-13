@@ -91,7 +91,7 @@ There are two ways to create a workspace in SAP Build Work Zone — using Joule 
 
     ![Full Overview page of the template-based BestRun EV Dealer Portal workspace](images/01_02_0060.png)
 
-    This template gives you a running start. Over the next exercises you will replace the placeholder content and make the portal dealer-ready — personalizing this Overview page in **Exercise 2**, and adding the Apex Series product launch content in **Exercise 3**.
+    This template gives you a running start. Over the next exercises you will replace the placeholder content and make the portal dealer-ready — personalizing this Overview page in **Exercise 2**, adding the Apex Series product launch content in **Exercise 3**, and building a dedicated **Apex Pre-Order** page with a 5-step guided wizard and a live order status card in **Exercise 4**.
 
 </details>
 
@@ -157,7 +157,7 @@ The workspace is now a private, external-facing dealer portal. Next, you will ad
 
 ## Exercise 1.4 Add Your Dealer Alias User to the Workspace
 
-Every participant has been assigned a corresponding **alias user**, named **Dealer XXX** — where `XXX` is the same three digits as your participant ID for this hands-on session (e.g. participant **AD166-005** has the alias **Dealer 005**). You will use this alias user throughout the session to experience the Dealer Portal from a **dealer's perspective**.
+Every participant has been assigned a corresponding **alias user**, named **Dealer XXX** — where `XXX` is the same three digits as your participant ID for this hands-on session (e.g. participant **AD166-005** has the alias **Dealer 005**). You will use this alias user throughout the session to experience the Dealer Portal from a **dealer's perspective** — reviewing the product launch content in Exercise 3 and walking through the full Apex Series pre-order wizard in Exercise 4.
 
 Add this alias as a member now, so that later — when an exercise asks you to switch to the dealer view — your alias already has access.
 
