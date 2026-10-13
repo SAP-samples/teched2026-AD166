@@ -11,7 +11,7 @@ The Apex Series launch announcement is live on the Overview page. Now it's time 
 
 ---
 
-## Exercise 4.1 — Create the "Apex Pre-Order" Page
+## Exercise 4.1 Create the Apex Pre-Order Page
 
 First, create a new page in your Dealer Portal that will host the pre-order wizard.
 
@@ -42,7 +42,7 @@ First, create a new page in your Dealer Portal that will host the pre-order wiza
 
 ---
 
-## Exercise 4.2 — Add the Intro Text Widget
+## Exercise 4.2 Add the Intro Text Widget
 
 Before the wizard, add a short call-to-action banner so dealers understand what the page is for as soon as they land on it.
 
@@ -73,7 +73,7 @@ Before the wizard, add a short call-to-action banner so dealers understand what 
 
 ---
 
-## Exercise 4.3 — Add the Guided Experience Section
+## Exercise 4.3 Add the Guided Experience Section
 
 Now add the 5-step pre-order wizard below the intro banner.
 
@@ -188,7 +188,7 @@ The five pre-order cards have been pre-loaded into the **Card Catalog** of this 
 
 ---
 
-## Exercise 4.4 — Add the Order Status Card
+## Exercise 4.4 Add the Order Status Card
 
 Below the wizard, add the **Pre-Order Status** card in a new Freestyle section. This card listens to the wizard's progress and shows the dealer a live summary of their pre-order on the same page — updating in real time as they move through the steps.
 
@@ -235,7 +235,7 @@ Below the wizard, add the **Pre-Order Status** card in a new Freestyle section. 
 
 ---
 
-## Exercise 4.5 — Add a Button Card on the Overview Page
+## Exercise 4.5 Add a Button Card on the Overview Page
 
 Now that the Apex Pre-Order page exists, give dealers a clear path to it straight from the **Overview** page. You will add a **Button card** below the Apex Series launch announcement that links directly to the pre-order wizard.
 
@@ -281,7 +281,7 @@ Dealers now have a clear call-to-action on the Overview page that takes them str
 
 ---
 
-## Exercise 4.6 — Experience the Full Flow as Dealer-XXX
+## Exercise 4.6 Experience the Full Flow as Dealer-XXX
 
 > [!NOTE]
 > **This section is a work in progress.** Detailed steps and screenshots will be added once the full landscape setup is confirmed.
