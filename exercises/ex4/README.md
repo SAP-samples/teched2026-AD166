@@ -283,10 +283,129 @@ Dealers now have a clear call-to-action on the Overview page that takes them str
 
 ## Exercise 4.6 Experience the Full Flow as Dealer-XXX
 
-> [!NOTE]
-> **This section is a work in progress.** Detailed steps and screenshots will be added once the full landscape setup is confirmed.
->
-> **Planned content:** Switch to the **Dealer-XXX** alias and walk through the complete pre-order flow from start to finish — opening the Dealer Portal, navigating to the Apex Pre-Order page, completing all 5 wizard steps, using Joule at the Step 3 discount moment, and reviewing the confirmed pre-order summary in the status card.
+Everything is now in place. Time to put yourself back in the dealer's shoes and run the complete pre-order journey end to end — from spotting the call-to-action on the Overview page to receiving a confirmed pre-order.
+
+1. Switch to your dealer alias: open the **profile menu** (your avatar / initials in the top-right corner) and select **Switch to Alias Account**, just as you did in Exercises 2.6 and 3.4. Choose your **Dealer-XXX** alias to switch into the dealer view, then navigate to your **BestRun EV Dealer Portal AD166-XXX** and open the **Overview** page.
+
+    Below the Apex Series announcement you will spot the new, full-width **Start Your Apex Series Pre-Order** button you added in Exercise 4.5. This is the dealer's clear path from "I heard about the launch" to "let me reserve my units." Click the big blue button to begin.
+
+    ![Dealer view of the Overview page with the full-width "Start Your Apex Series Pre-Order" button below the Apex Series announcement](images/04_06_0010.png)
+
+2. The button takes you straight to the new **Apex Pre-Order** page. Take a moment to review it — the intro banner (*"Ready to secure your Apex Series allocation?"*), the **Apex Series Pre-Order** guided experience with its **Start** button, and, further down, the **Pre-Order Status** card showing its empty **"No pre-order started yet"** state (it will fill in as you progress).
+
+    When you are ready, click **Start** on the guided experience to begin the pre-order wizard.
+
+    ![Apex Pre-Order page showing the intro banner, the guided experience with the Start button, and the empty Pre-Order Status card](images/04_06_0020.png)
+
+3. The wizard opens on **Step 1 — Choose Your Models**, showing all three Apex models with their key specs and dealer net pricing. Select **all three** — **Apex City**, **Apex Trail**, and **Apex Pro** — by ticking each card's checkbox. The counter updates to **"3 models selected"** and **Save & Continue** becomes available.
+
+    ![Step 1 of the wizard with Apex models shown; Apex Pro carries a "Limited Allocation" badge](images/04_06_0030.png)
+
+    Before moving on, notice the orange **Limited Allocation** badge on the **Apex Pro** — a detail a premium-focused dealer will immediately want to understand. Rather than guess, open **Joule** from the top navigation bar and ask (the step card even suggests this question):
+
+    ```
+    Why is the Apex Pro marked as limited allocation?
+    ```
+
+    Joule answers from the Apex Launch Material documents, so you get the official reason without leaving the pre-order flow.
+
+4. Open **Joule** from the top navigation bar — the panel opens **alongside the wizard**, so the guided experience stays exactly where it is. Ask:
+
+    ```
+    Why is Apex Pro marked as limited allocation?
+    ```
+
+    Joule explains the allocation policy in full — production allocation is managed by priority, so **Platinum and Gold dealers who pre-order more than 60 days before launch are guaranteed their full order**, **Silver dealers (or any tier ordering 30+ days ahead) are guaranteed up to 5 units**, later orders draw on remaining allocation, and dealers are notified at least 30 days ahead if an order cannot be fully filled (with the option to cancel unfulfillable units without penalty). The answer carries an inline **[1]** citation and a **Sources (1)** control — click the citation to open the underlying document in a new tab and read the full policy.
+
+    ![Joule answering "Why is Apex Pro marked as limited allocation?" in the side panel while the pre-order wizard stays open underneath](images/04_06_0040.png)
+
+    Once you have the answer, **close the Joule panel**, click **Save & Continue** on the step card, then **Next** at the bottom of the wizard to advance to **Step 2 — Quantities & Variants**.
+
+5. **Step 2 — Quantities & Variants.** For each model, pick a colour variant and set the order quantity. The **subtotal**, the running **units total**, and the **Discount Tier Progress** bar all update live. Try, for example:
+
+    - **Apex City** — Midnight Black, **5** units
+    - **Apex Trail** — Forest Green, **10** units
+    - **Apex Pro** stays at its minimum of **2** units (recall the MOQ for the Apex Pro)
+
+    That makes **17 units total**, which puts you in the **10–19 units → 10% base discount** tier — and the bar even nudges you that just 3 more units would reach the **20–49 (14%)** tier. Adjust the quantities up and down to watch the discount tier change in real time.
+
+    ![Step 2 of the wizard with quantities and colours set, the 17-unit total, and the Discount Tier Progress bar showing the 10% tier](images/04_06_0050.png)
+
+    The step card suggests more Joule questions. Open **Joule** and ask one, for example:
+
+    ```
+    Do I need to order all models at once to qualify for the higher discount tier?
+    ```
+
+    Then click **Save & Continue** and **Next** to move on to **Step 3 — Payment Terms**.
+
+6. **Step 3 — Payment Terms.** Choose how you want to pay — the choice directly affects your discount:
+
+    - **Upfront** (100% at checkout, no invoice) → **10% base discount**
+    - **Net 30** (invoice on launch date, due 30 days later) → **8% base discount**
+    - **Net 60** → Gold / Platinum tier only (greyed out as *Not available* for a Silver dealer)
+
+    Pick **Upfront** to maximise the discount. The **Discount Breakdown** then shows exactly how your effective discount is built up: **10% base + 2% early-bird** (ordering ≥60 days before launch) **+ 1% first-ever pre-order = 13% effective** for City & Trail — while the **Apex Pro is capped at 10%**.
+
+    ![Step 3 of the wizard showing the Upfront/Net 30/Net 60 options and the Discount Breakdown with the 13% effective discount and Apex Pro capped at 10%](images/04_06_0060.png)
+
+    This is the most intricate moment in the flow — exactly where grounded answers help. The step card lists several Joule questions; open **Joule** and let it do the math for your exact order:
+
+    ```
+    How much more do I save with upfront payment vs Net 30 if I order 5 Apex City, 10 Apex Trail and 2 Apex Pro units?
+    ```
+
+    Joule works through it step by step — totalling your 17 units, reading the base-discount matrix (10% upfront vs 8% Net 30 for the 10–19 tier), and concluding that upfront payment gives a **2% higher discount** — with every figure cited back to the source policy. This is the comparative analysis that helps the dealer understand the concrete difference between the plans while deciding how to pre-order.
+
+    ![Joule's side-by-side comparison of upfront vs Net 30 savings for the dealer's exact 5 / 10 / 2-unit order](images/04_06_0070.png)
+
+    When you are satisfied with the terms, click **Save & Continue** and **Next** to advance to **Step 4 — Order Summary**.
+
+7. **Step 4 — Order Summary.** This is the complete review before you commit. The table lists every model with its colour, quantity, **net (list)** price, the **discount** applied, the **net (final)** price, and the **line total**:
+
+    | Model | Colour | Qty | Net (list) | Disc. | Net (final) | Line total |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | Apex City | Midnight Black | 5 | EUR 1,471 | −13% | EUR 1,280 | EUR 6,399 |
+    | Apex Trail | Forest Green | 10 | EUR 2,581 | −13% | EUR 2,245 | EUR 22,455 |
+    | Apex Pro | Matte Black | 2 | EUR 4,430 | −10% | EUR 3,987 | EUR 7,974 |
+
+    The totals confirm **17 units**, a pre-discount value of **EUR 42,025**, **savings of EUR 5,197**, and a **total dealer net payable of EUR 36,828**. A **Discount Summary** restates the tier and terms (10–19 units → 10% base + 2% early bird + 1% first-order; Apex Pro capped at 10%), and a **Delivery** panel shows the per-model windows (Apex City & Trail 5–10 business days, Apex Pro 7–14 business days — from the official launch date, priority batch allocation confirmed).
+
+    ![Step 4 Order Summary with per-model discounted pricing, the 17-unit totals, discount summary, delivery windows, and the Terms & Conditions acceptance checkbox](images/04_06_0080.png)
+
+    Before you can continue, tick the box to **accept the Apex Series Pre-Order Terms & Conditions** — acknowledging that the pre-order is binding on submission and subject to the cancellation and delivery terms in the document.
+
+    > [!TIP]
+    > Unsure what you are agreeing to? The step card suggests Joule questions for exactly this moment, such as *"What are my cancellation rights after submitting a pre-order?"* and *"What happens if BestRun EV cannot deliver within the stated window?"* — ask Joule before you accept.
+
+    With the terms accepted, click **Save & Continue** and **Next** to move on to **Step 5 — Confirm Pre-Order**.
+
+8. **Step 5 — Confirm Pre-Order.** The wizard confirms **"Pre-Order Submitted Successfully"** — you have secured your Apex Series allocation, and BestRun EV will confirm within 2 business days. The screen gives you everything to keep on file:
+
+    - A unique **Pre-Order Reference** (for example `APEX-PRE-2026-37350`) with the submission date — quote it in any communication with BestRun EV.
+    - An **Order Recap** — Apex City ×5 (Midnight Black), Apex Trail ×10 (Forest Green), Apex Pro ×2 (Matte Black); **17 units**, **Upfront** payment, **EUR 5,197** total savings, **EUR 36,828** payable.
+    - A **What Happens Next** panel — confirmation email, processing within 2 business days, batch-allocation confirmation by your regional account manager, and invoicing on the official launch date per your terms.
+    - A **Keep Joule open for what comes next** panel suggesting post-order questions such as *"What are the warranty terms for the Apex Trail?"*, *"How do I report damage on delivery of a pre-ordered unit?"*, and *"Can I change the quantities in my pre-order after submission?"*
+
+    ![Step 5 confirmation showing the success banner, pre-order reference, order recap, what-happens-next panel, and the Pre-Order Status card now Confirmed behind the dialog](images/04_06_0090.png)
+
+    Look at the page **behind** the wizard: the **Pre-Order Status card** you added in Exercise 4.4 has already flipped from its empty state to **CONFIRMED**, mirroring this exact order — the live cross-card update you built now paying off end to end.
+
+9. **Step 6 — Pre-Order Successful.** A final **"Congrats! You're all done"** screen confirms the guided experience is complete. Click **Finish**, then **Close** to exit the wizard and return to the Apex Pre-Order page.
+
+    ![Final wizard step showing the "Congrats! You're all done" confirmation with the Finish button](images/04_06_0100.png)
+
+10. **Review your order status.** Back on the Apex Pre-Order page, the guided experience now shows a completed progress bar, and the **Pre-Order Status card** below it displays your **CONFIRMED** pre-order in full — reference **APEX-PRE-2026-37350**, the three models with their quantities and colours, the pre-discount total, your **EUR 5,197** saving, the **EUR 36,828** total payable, and the estimated delivery window. This card is the dealer's home for the pre-order: they can return here any time to check the **latest status** and follow up once BestRun EV has processed the order.
+
+    ![Apex Pre-Order page after completing the wizard, showing the Pre-Order Status card with the CONFIRMED order details](images/04_06_0110.png)
+
+### What the Dealer Just Experienced
+
+In one guided flow, the dealer went from the launch announcement to a **confirmed, discounted pre-order** — choosing models, setting quantities and variants, comparing payment terms, accepting the terms, and receiving a reference number — without ever leaving the portal. The **Pre-Order Status card** now gives them a lasting, at-a-glance view to return to for the latest status and follow-up.
+
+The real lesson is how two capabilities combine. The **Guided Experience** breaks a genuinely complex process — tiered pricing, stacked discounts, allocation rules, payment terms, binding T&Cs — into clear, confident steps, while **Joule** stands beside every decision with instant, cited answers grounded in BestRun EV's own documents. Together they let a dealer make smooth, well-informed decisions and complete an intricate execution flow quickly, with AI assistance at exactly the moments it matters.
+
+That is the promise of an **AI-enabled business site** on SAP Build Work Zone: unstructured content, a live business process, and grounded AI — brought together on a single page.
 
 ---
 
