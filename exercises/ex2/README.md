@@ -11,9 +11,6 @@ In this exercise you take the raw workspace generated from the Partner Portal Te
 >
 > You will use **Generate Text** to create copy from a prompt, and **Change Tone / Adjust Length** to refine text that already exists. This is the SAP Build Work Zone editing experience — the standalone Joule panel is not needed here.
 
-> [!NOTE]
-> **TODO (screenshots):** The screenshots in this exercise are being recaptured to match the generic dealer portal content. Current images may still show earlier product-specific content.
-
 ## Exercise 2.1 Update the Hero Banner with a Generic Dealer Portal Tagline
 
 The Partner Portal Template comes with a hero banner that has placeholder title and description text. You will replace the copy using the widget's embedded AI, so dealers immediately understand what the portal is for.
