@@ -1,7 +1,7 @@
 # AD166 - Experience AI-enabled business sites with SAP Build Work Zone
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2026-AD166)](https://api.reuse.software/info/github.com/SAP-samples/teched2026-AD166)
 
-<p align="center"><img src="./AD166-HOW-Banner.jpeg" width="80%" /></p>
+<p align="center"><img src="./AD166-HOW-Banner.jpeg" width="100%" /></p>
 
 ## Description
 
@@ -32,6 +32,8 @@ There are no specific technical requirements to follow exercises 0–3. For Exer
 > For the SAP TechEd 2026 session we have already prepared the landscape with **SAP Build Work Zone, advanced edition**, Joule, and Document Grounding enabled. If following these exercises outside of SAP TechEd 2026, you will need to set up the environment first.
 
 ## Exercises
+
+<p align="center"><img src="./exercise-flow.png" width="100%" /></p>
 
 - [Exercise 0 - Detailed Overview of the Scenario (Optional)](exercises/ex0/) — Meet BestRun EV, the Apex Series, your personas, and explore a sample workspace
 - [Exercise 1 - Create the External Dealer Workspace](exercises/ex1/)
