@@ -35,7 +35,7 @@ The Partner Portal Template comes with a hero banner that has placeholder title 
     The portal is the single place where dealers manage their relationship with BestRun EV — orders, invoices, support, and product information.
     ```
 
-       Add your own description, then use the embedded AI to refine it to your needs. Click the <img src="images/aiassist.png" height="16" style="vertical-align: text-bottom;" alt="AI assisted text generation icon"> (AI assist) button next to the field and choose **Change Tone → Make More Professional** to polish your draft.
+    Add your own description, then use the embedded AI to refine it to your needs. Click the <img src="images/aiassist.png" height="16" style="vertical-align: text-bottom;" alt="AI assisted text generation icon"> (AI assist) button next to the field and choose **Change Tone → Make More Professional** to polish your draft.
 
     ![Rotating Banner Widget Description with the AI Change Tone → Make More Professional option](images/02_01_0030.png)
 
@@ -85,6 +85,9 @@ The Key Highlights section has three text cards — **Who & What?**, **Why?**, a
     Review the **Generated Text** and click **Accept** to insert it into the card. If you would like a different result, use **Retry** to regenerate, or **Discard** and try your own prompt or wording.
 
     ![Generate Text dialog showing the Who & What prompt and the generated response with Accept, Retry, and Discard](images/02_02_0020.png)
+
+> [!TIP]
+> If you did not delete the existing **"Suggested text …"** placeholder before generating, you can do it now — select it in the card and delete it.
 
 ### The Why? and How? Cards
 
@@ -151,7 +154,7 @@ The Key Highlights section now explains the portal to dealers, authored entirely
 
     ![Add Content selection screen with the Cards option](images/02_03_0030.png)
 
-5. The **Add Cards** screen lists the pre-built cards available in this landscape (**All Cards (9)**) — including company info cards such as Factory Inventory, Portfolio Performance, and eBike Demand Mix. For the first card, select **BestRun EV | Factory Inventory** — "Available-to-ship factory inventory by eBike model, with stock threshold reference lines."
+5. The **Add Cards** screen lists the pre-built cards available in this landscape — including company info cards such as Factory Inventory, Portfolio Performance, and eBike Demand Mix. For the first card, select **BestRun EV | Factory Inventory** — "Available-to-ship factory inventory by eBike model, with stock threshold reference lines."
 
     ![Add Cards screen showing the pre-built cards with BestRun EV Factory Inventory selected](images/02_03_0040.png)
 
@@ -205,6 +208,9 @@ The Overview page now features a section of BestRun EV company info cards — in
 
     ![Dealer 360 section with three empty columns, each showing an Add Content button](images/02_04_0040.png)
 
+> [!IMPORTANT]
+> If you added each card one at a time without setting up the three columns first, the cards may have ended up with unequal widths. You can still fix this — hover over the section and drag the column dividers to equalize the card widths.
+
 6. The three cards are added, but they show **"No open orders / invoices / support cases found."** This is **expected, not a bug** — these are **self-service cards** that only load data for the signed-in **dealer** user. As the admin, you have no dealer data, so they appear empty. The cards will show real content later, when you switch to your **Dealer XXX** alias in Exercise 3.
 
     ![Dealer 360 section with My Orders, My Invoices, and My Support Cases cards showing empty states for the admin user](images/02_04_0050.png)
@@ -221,7 +227,7 @@ The **Dealer 360** section is in place with the three self-service cards. They l
 
     ![Footer text widget selected in the page editor, showing the generic Partner Portal copyright line](images/02_05_0010.png)
 
-2. Edit the footer text to reflect BestRun EV:
+2. **Delete** the existing **"Partner Portal © 2026 Your Company Name. All rights reserved."** text and replace it with:
 
     ```
     Dealer Portal © 2026 BestRun EV. All rights reserved.

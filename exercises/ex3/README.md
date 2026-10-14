@@ -19,12 +19,12 @@ Rather than downloading and uploading files, you will **copy** the ready-made co
 
 3. In the **Copy To…** dialog that opens, use the dropdown to select the **Dealer Portal** you created in Exercise 2 (e.g. *BestRun EV Dealer Portal AD166-XXX*) as the target workspace. Then click **Select Folder** to start the copy.
 
-    > [!NOTE]
-    > This is a **copy** — the original content stays in the **Dealer Management** workspace so that all other participants can still copy it for themselves.
-    >
-    > The copy may take a few minutes. You can continue with the next steps once it completes.
-
     ![Copy To dialog with the Dealer Portal selected as target and Select Folder button highlighted](images/03_01_0030.png)
+
+> [!NOTE]
+> This is a **copy** — the original content stays in the **Dealer Management** workspace so that all other participants can still copy it for themselves.
+>
+> The copy may take a few minutes. You can continue with the next steps once it completes.
 
 4. Once the copy completes, navigate to your **BestRun EV Dealer Portal AD166-XXX** — the workspace you created in Exercise 2. Open the **Workspaces** menu in the top navigation, hover **Recently Visited Workspaces**, and select your Dealer Portal. In the next steps you will use the copied content to build the product launch section.
 
@@ -168,10 +168,10 @@ Time to step into a dealer's shoes and see the portal exactly as they will on la
 
 2. Navigate to your **BestRun EV Dealer Portal AD166-XXX**. You will see the Overview page as a dealer — the new **Announcement: New Product Line Launch** section now sits prominently below the hero banner, with the styled announcement on the left and the interactive brochure slideshow on the right.
 
-    > [!NOTE]
-    > Document grounding is already enabled for this workspace, so Joule is ready to answer questions about the Apex Series content right away. Dealers can click **Ask Joule** in the announcement text or open Joule from the navigation to get instant answers grounded in the product documents you copied over.
-
     <a href="images/03_04_0010.png" target="_blank"><img src="images/03_04_0010.png" height="500" alt="Full dealer view of the BestRun EV Dealer Portal showing the Apex launch section, Key Highlights, Dealer 360 cards, and Joule-ready content — click to view full size" /></a>
+
+> [!NOTE]
+> Document grounding is already enabled for this workspace, so Joule is ready to answer questions about the Apex Series content right away. Dealers can click **Ask Joule** in the announcement text or open Joule from the navigation to get instant answers grounded in the product documents you copied over.
 
 3. Use the **`<`** and **`>`** navigation buttons on the brochure slideshow to flip through the presentation slides directly on the page — no download required.
 
@@ -179,10 +179,10 @@ Time to step into a dealer's shoes and see the portal exactly as they will on la
 
 4. Click on the brochure itself to open its detail view. From here you can open it full-screen, download it, comment on it, or open it in a native application. Try clicking **✨ Summarize** — Joule generates a concise summary of the presentation without you having to read through all ten slides.
 
-    > [!NOTE]
-    > **Summarize** works across all content types in SAP Build Work Zone: uploaded documents, portal pages, native content like blogs, wikis, and Knowledge Base articles. Whenever a dealer (or any workspace member) wants a quick overview, one click is all it takes.
-
     ![Brochure detail view with the Summarize button highlighted and the AI summary tooltip visible](images/03_04_0030.png)
+
+> [!NOTE]
+> **Summarize** works across all content types in SAP Build Work Zone: uploaded documents, portal pages, native content like blogs, wikis, and Knowledge Base articles. Whenever a dealer (or any workspace member) wants a quick overview, one click is all it takes.
 
 5. The **AI Generated Summary** appears above the document — a concise paragraph covering the key product highlights, pre-order opportunity, and dealer benefits, all extracted directly from the presentation content.
 
@@ -217,8 +217,8 @@ Time to step into a dealer's shoes and see the portal exactly as they will on la
 
     ![Joule answering the LFP battery question in the side panel, with inline citations and a Sources (3) control](images/03_04_0090.png)
 
-    > [!NOTE]
-    > None of this detail is in the launch brochure. One plain-language question returned a trustworthy, cited answer assembled from **two** different dealer documents — no downloading, no skimming.
+> [!NOTE]
+> None of this detail is in the launch brochure. One plain-language question returned a trustworthy, cited answer assembled from **two** different dealer documents — no downloading, no skimming.
 
 9. Finally, the commercial and service question — can you make a margin on it, and can your workshop look after it?
 

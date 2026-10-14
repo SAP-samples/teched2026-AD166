@@ -54,13 +54,13 @@ During this session you play two roles. You start as the portal admin who builds
 
     **[https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/](https://jw164-djmbomr8.workzone.cfapps.eu10.hana.ondemand.com/)**
 
-    > [!NOTE]
-    > This URL is only accessible on-site at SAP TechEd 2026. Login credentials will be provided by the instructor.
+> [!NOTE]
+> This URL is only accessible on-site at SAP TechEd 2026. Login credentials will be provided by the instructor.
 
 2. Take a moment to orient yourself on the SAP Build Work Zone home page — the top menu bar, the Joule icon, and the Workspaces navigation.
 
-    > [!IMPORTANT]
-    > Throughout the exercises, replace `XXX` with your assigned participant number (e.g. if you are participant **AD166-005**, use **005**).
+> [!IMPORTANT]
+> Throughout the exercises, replace `XXX` with your assigned participant number (e.g. if you are participant **AD166-005**, use **005**).
 
 ## Exercise 0.3 Access the "Dealer Management" Workspace
 
@@ -88,14 +88,14 @@ A sample workspace called **Dealer Management** has been pre-provisioned in this
     - **Tab bar** — **Overview**, **Content**, **Feed Updates**, **Forums**, **Events**, **Knowledge Base**, and **Tasks**. Each tab is a different facet of the same workspace.
     - **Overview page content** — a banner, a **Team Activity** feed, and an **Active Tasks** panel. This is the kind of page you will build for your own portal in Exercises 2 and 3.
 
-    > [!TIP]
-    > The invitation notification disappears once you have joined. **Next time** you want to reach this workspace, use the **Workspaces** navigation instead:
-    >
-    > 1. In the top navigation bar, open the **Workspaces** menu and choose **View All Workspaces**.
-    >
-    >     ![Workspaces menu with View All Workspaces, showing the Dealer Management workspace in the list](images/00_03_0050.png)
-    >
-    > 2. Open the **Dealer Management** workspace. Right now it is the only workspace you can see — once you create your own **BestRun EV Dealer Portal XXX** in Exercise 1, it will appear here too.
+> [!TIP]
+> The invitation notification disappears once you have joined. **Next time** you want to reach this workspace, use the **Workspaces** navigation instead.
+
+1. In the top navigation bar, open the **Workspaces** menu and choose **View All Workspaces**.
+
+    ![Workspaces menu with View All Workspaces, showing the Dealer Management workspace in the list](images/00_03_0050.png)
+
+2. Open the **Dealer Management** workspace. Right now it is the only workspace you can see — once you create your own **BestRun EV Dealer Portal XXX** in Exercise 1, it will appear here too.
 
 ## Exercise 0.4 Explore the Workspace: Tasks and Content
 
@@ -118,8 +118,8 @@ Two tabs matter most for the story you are about to live out — **Tasks** (what
 
     Inside the **Apex Launch Material** folder you will find everything needed for the product launch — the Apex Series documents (PDFs), the three product images, and the launch brochure (PPTX). In **Exercise 3** you will copy this material straight into your own dealer portal workspace, so there is nothing to download.
 
-    > [!NOTE]
-    > More guidance on exploring a Work Zone workspace will be added here as the sample workspace is expanded.
+> [!NOTE]
+> More guidance on exploring a Work Zone workspace will be added here as the sample workspace is expanded.
 
 ## Summary
 

@@ -214,8 +214,8 @@ Below the wizard, add the **Pre-Order Status** card in a new Freestyle section. 
 
     ![Add Cards dialog with "Pre-Order Status" searched, showing the BestRun EV | Pre-Order Status card](images/04_04_0020.png)
 
-    > [!IMPORTANT]
-    > Make sure you select **BestRun EV | Pre-Order Status**, *not* the Guided5 confirmation card. The status card is the one purpose-built for this page — it starts empty and fills in as the dealer works through the wizard. (If it doesn't appear in the picker, upload `preorder-status-card.card.zip` to the Card Catalog first.)
+> [!IMPORTANT]
+> Make sure you select **BestRun EV | Pre-Order Status**, *not* the Guided5 confirmation card. The status card is the one purpose-built for this page — it starts empty and fills in as the dealer works through the wizard. (If it doesn't appear in the picker, upload `preorder-status-card.card.zip` to the Card Catalog first.)
 
 6. The card is added below the wizard. Because no pre-order has been started yet, it shows its empty state — a **"No pre-order started yet"** illustration. This is exactly what you want: the card stays empty until a dealer runs the wizard.
 
@@ -227,8 +227,8 @@ Below the wizard, add the **Pre-Order Status** card in a new Freestyle section. 
 
     ![Published Apex Pre-Order page with the browser address bar showing the page URL to copy](images/04_04_0040.png)
 
-    > [!TIP]
-    > The URL looks like `https://<host>.workzone.cfapps.eu10.hana.ondemand.com/site#workzone-home&/groups/<groupId>/workpage_tab/...`. Copy the whole thing — it points directly to this Apex Pre-Order workpage.
+> [!TIP]
+> The URL looks like `https://<host>.workzone.cfapps.eu10.hana.ondemand.com/site#workzone-home&/groups/<groupId>/workpage_tab/...`. Copy the whole thing — it points directly to this Apex Pre-Order workpage.
 
 > [!NOTE]
 > When no wizard data exists yet, the status card shows an empty-state illustration ("No pre-order started yet"). As soon as the dealer progresses through the wizard, the card updates automatically — first showing an "in progress" checklist, then switching to the confirmed order summary once Step 5 is completed.
@@ -265,7 +265,7 @@ Now that the Apex Pre-Order page exists, give dealers a clear path to it straigh
     | Title Font Size (rem) | `2` |
     | Subtitle Font Size (rem) | `1.5` |
     | Target URL | *paste the Apex Pre-Order page URL you copied in Exercise 4.4* |
-    | Open in new tab | **Yes** |
+    | Open in new tab | **No** |
 
     ![Button Card configuration dialog with the title, subtitle and sizing values set, showing the blue filled preview](images/04_05_0030.png)
 
@@ -375,10 +375,10 @@ Everything is now in place. Time to put yourself back in the dealer's shoes and 
 
     Before you can continue, tick the box to **accept the Apex Series Pre-Order Terms & Conditions** — acknowledging that the pre-order is binding on submission and subject to the cancellation and delivery terms in the document.
 
-    > [!TIP]
-    > Unsure what you are agreeing to? The step card suggests Joule questions for exactly this moment, such as *"What are my cancellation rights after submitting a pre-order?"* and *"What happens if BestRun EV cannot deliver within the stated window?"* — ask Joule before you accept.
+> [!TIP]
+> Unsure what you are agreeing to? The step card suggests Joule questions for exactly this moment, such as *"What are my cancellation rights after submitting a pre-order?"* and *"What happens if BestRun EV cannot deliver within the stated window?"* — ask Joule before you accept.
 
-    With the terms accepted, click **Save & Continue** and **Next** to move on to **Step 5 — Confirm Pre-Order**.
+With the terms accepted, click **Save & Continue** and **Next** to move on to **Step 5 — Confirm Pre-Order**.
 
 8. **Step 5 — Confirm Pre-Order.** The wizard confirms **"Pre-Order Submitted Successfully"** — you have secured your Apex Series allocation, and BestRun EV will confirm within 2 business days. The screen gives you everything to keep on file:
 
