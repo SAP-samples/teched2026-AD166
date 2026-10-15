@@ -28,8 +28,8 @@ Joule is available directly within SAP Build Work Zone — no BTP cockpit access
 
     ![Joule showing a My Workspaces overview with the Dealer Management workspace card](images/01_01_0030.png)
 
-    > [!NOTE]
-    > Joule in SAP Build Work Zone goes beyond general chat — it understands **Work Zone–specific actions**. Alongside listing your workspaces, it can create new workspaces, add members, navigate to content, and more. You will use several of these Work Zone capabilities in the exercises that follow — starting with creating your dealer portal in the next step.
+> [!NOTE]
+> Joule in SAP Build Work Zone goes beyond general chat — it understands **Work Zone–specific actions**. Alongside listing your workspaces, it can create new workspaces, add members, navigate to content, and more. You will use several of these Work Zone capabilities in the exercises that follow — starting with creating your dealer portal in the next step.
 
 ### Summary
 
@@ -61,8 +61,8 @@ There are two ways to create a workspace in SAP Build Work Zone — using Joule 
 
     ![Joule template list scrolled to the bottom showing the Partner Portal template with a Select link](images/01_02_0020.png)
 
-    > [!NOTE]
-    > Joule may skip the template list if it selects a template automatically based on your prompt. If no template selection appears, continue to the next step.
+> [!NOTE]
+> Joule may skip the template list if it selects a template automatically based on your prompt. If no template selection appears, continue to the next step.
 
 3. Joule creates the workspace and confirms with **"Great! The workspace has been created, and you can start building it."**
 
@@ -72,11 +72,11 @@ There are two ways to create a workspace in SAP Build Work Zone — using Joule 
 
     ![Home feed refreshed, showing the workspace-creation update with a link to BestRun EV Dealer Portal XXX](images/01_02_0040.png)
 
-    > [!TIP]
-    > Opening the workspace from the feed link keeps the Joule panel available on the right. You can also use the **View Workspace** button in the Joule chat, but that opens the workspace in a new tab and closes the panel.
+> [!TIP]
+> Opening the workspace from the feed link keeps the Joule panel available on the right. You can also use the **View Workspace** button in the Joule chat, but that opens the workspace in a new tab and closes the panel.
 
-    > [!NOTE]
-    > If you don't see the update, open the **Workspaces** menu in the top navigation and browse to **BestRun EV Dealer Portal XXX** from the list of your workspaces.
+> [!NOTE]
+> If you don't see the update, open the **Workspaces** menu in the top navigation and browse to **BestRun EV Dealer Portal XXX** from the list of your workspaces.
 
 5. Your new **BestRun EV Dealer Portal XXX** workspace opens on its **Overview** page. Close the Joule panel (the **X** in the top-right of the panel) to give yourself the full width for the next steps.
 
@@ -116,15 +116,12 @@ There are two ways to create a workspace in SAP Build Work Zone — using Joule 
 
     ![Newly created workspace open in the classical UI flow](images/01_02_B_0040.png)
 
-    > [!NOTE]
-    > You might need to refresh the workspace to get the cover image from the template.
+> [!NOTE]
+> You might need to refresh the workspace to get the cover image from the template.
 
 </details>
 
 ---
-
-> [!IMPORTANT]
-> As soon as your workspace is created, **notify your instructor**. The instructor needs your workspace name to enable **Document Grounding** for it (used in Exercise 3). Enabling grounding takes time to sync, so flagging it early means it is ready when you reach Exercise 3.
 
 ### Summary
 

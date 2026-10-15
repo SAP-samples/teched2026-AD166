@@ -16,8 +16,8 @@ SAP Build Work Zone content can be accessed not only from a desktop browser, but
 
     Start the download and continue with the next steps on the desktop while the app installs.
 
-    > [!NOTE]
-    > If you already have Joule Work installed and connected to another environment, you can still use it here. You can switch the connected environment from your user profile screen inside the app (+ Add New Environment)
+> [!NOTE]
+> If you already have Joule Work installed and connected to another environment, you can still use it here. You can switch the connected environment from your user profile screen inside the app (+ Add New Environment)
 
 ### Generate the registration QR code (on the desktop)
 
@@ -44,7 +44,7 @@ SAP Build Work Zone content can be accessed not only from a desktop browser, but
 
     - **Already connected to another environment:** sign out and tap **Switch Environment** at the bottom of the screen, then scan the QR code from the next step.
 
-    <img src="images/05_01_0040.png" alt="Joule Work app — if already connected to another environment, tap Switch Environment at the bottom of the screen" width="500" height="1053">
+    <img src="images/05_01_0040.png" alt="Joule Work splash screen on a fresh install, showing the Scan QR Code button" width="500" height="1045">
 
 6. Scan the QR code displayed on the desktop screen. The app shows a **Confirmation** screen — *"Scan succeeded. You will be connected to: jw164-djmbomr8..."*. Tap **Continue**.
 
@@ -80,10 +80,10 @@ Joule Work is installed and connected to the session landscape. You are ready to
 
 4. If you completed the optional **Guided Experience** (Exercise 4), navigate to the **Apex Pre-Order** page and confirm the wizard is accessible on mobile — the step-by-step cards render correctly on a phone screen.
 
-    > [!NOTE]
-    > This step only applies if you built the Guided Experience in Exercise 4.
+> [!NOTE]
+> This step only applies if you built the Guided Experience in Exercise 4.
 
-    <img src="images/05_02_0040.png" alt="Apex Series Pre-Order Guided Experience wizard open on mobile, showing Step 1 — Choose Your Models" width="500" height="1053">
+<img src="images/05_02_0040.png" alt="Apex Series Pre-Order Guided Experience wizard open on mobile, showing Step 1 — Choose Your Models" width="500" height="1053">
 
 ### Summary
 
@@ -117,7 +117,8 @@ You have completed all exercises. You have experienced the BestRun EV Dealer Por
 
 ## Session Complete
 
-Congratulations — you have completed **AD166: Experience AI-enabled business sites with SAP Build Work Zone**.
+> **Congratulations!** :clap: :clap: - 
+> you have completed **AD166: Experience AI-enabled business sites with SAP Build Work Zone**.
 
 Here is what you built and explored in this session:
 
