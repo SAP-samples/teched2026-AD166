@@ -1,6 +1,6 @@
 # Exercise 0 - Detailed Overview of the Scenario
 
-This section introduces the business scenario, the personas you will play, and the SAP Build Work Zone environment you will work in. If you are already familiar with SAP Build Work Zone, advanced edition, you can skim this and jump ahead to [Exercise 1](../ex1/README.md).
+This section introduces the business scenario, the personas you will play, and the SAP Build Work Zone environment you will work in.
 
 ## Exercise 0.1 Learn About the Company, Scenario, and Personas
 
