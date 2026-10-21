@@ -70,7 +70,7 @@ Joule Work is installed and connected to the session landscape. You are ready to
 
     <img src="images/05_02_0020.png" alt="BestRun EV Dealer Portal Overview page open in Joule Work" width="500" height="1053">
 
-3. Navigate to the **Apex Series** page and scroll through the launch content — the product descriptions for Apex City, Apex Trail, and Apex Pro, and the brochure carousel below.
+3. From the Overview page, tap the **Apex Series** tab to navigate to the Apex Series page and scroll through the launch content — the product descriptions for Apex City, Apex Trail, and Apex Pro, and the brochure carousel below.
 
     <img src="images/05_02_0030.png" alt="Apex Series page in mobile layout showing product descriptions and brochure carousel" width="500" height="1053">
 
