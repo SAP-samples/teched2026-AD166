@@ -133,6 +133,3 @@ Here is what you built and explored in this session:
 - [Documentation for SAP Build Work Zone, advanced edition](https://help.sap.com/docs/WZ)
 - [Joule documentation](https://help.sap.com/docs/joule)
 - [SAP Build Work Zone, advanced edition on Discovery Center](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-advanced-edition?service_plan=advanced&region=all&commercialModel=btpea)
-
-> [!IMPORTANT]
-> **TODO:** Add the session feedback survey link once available for SAP TechEd 2026.
