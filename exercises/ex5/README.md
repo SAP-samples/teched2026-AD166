@@ -9,12 +9,11 @@ SAP Build Work Zone content can be accessed not only from a desktop browser, but
 
 ### Install the app
 
-1. On your smartphone, install the **Joule Work** app:
+The download may take a moment depending on network conditions — start it now and continue with the next steps on the desktop while the app installs.
 
-    - **iOS:** [Joule Work on the App Store](https://apps.apple.com/us/app/joule-work/id1540195902)
-    - **Android:** [Joule Work on Google Play](https://play.google.com/store/apps/details?id=com.sap.mobile.apps.sapstart)
+1. On your smartphone, go to the app store for your platform and install **Joule Work**. Scan the QR code for your device:
 
-    Start the download and continue with the next steps on the desktop while the app installs.
+    <img src="images/05_01_download.png" alt="App Store and Google Play badges with QR codes for downloading Joule Work" width="600">
 
 > [!NOTE]
 > If you already have Joule Work installed and connected to another environment, you can still use it here. You can switch the connected environment from your user profile screen inside the app (+ Add New Environment)
@@ -37,10 +36,7 @@ SAP Build Work Zone content can be accessed not only from a desktop browser, but
 
 5. Open **Joule Work** on your smartphone.
 
-    - **Fresh install:** tap **Scan QR Code**. Follow any on-screen permission prompts — allow **camera access** when asked (required to scan the QR code), and allow **push notifications** if you wish.
-
-    > [!TIP]
-    > You can change these permissions later in your device's settings.
+    - **Fresh install:** tap **Scan QR Code**. Follow any on-screen permission prompts — allow **camera access** when asked (required to scan the QR code), and allow **push notifications** if you wish. You can change these permissions later in your device's settings.
 
     - **Already connected to another environment:** sign out and tap **Switch Environment** at the bottom of the screen, then scan the QR code from the next step.
 
@@ -74,7 +70,7 @@ Joule Work is installed and connected to the session landscape. You are ready to
 
     <img src="images/05_02_0020.png" alt="BestRun EV Dealer Portal Overview page open in Joule Work" width="500" height="1053">
 
-3. Navigate to the **Apex Series** page and scroll through the launch content — the product descriptions for Apex City, Apex Trail, and Apex Pro, and the brochure carousel below.
+3. Scroll through the **Overview page** to see the launch content — the product descriptions for Apex City, Apex Trail, and Apex Pro, and the brochure carousel below.
 
     <img src="images/05_02_0030.png" alt="Apex Series page in mobile layout showing product descriptions and brochure carousel" width="500" height="1053">
 
@@ -137,6 +133,3 @@ Here is what you built and explored in this session:
 - [Documentation for SAP Build Work Zone, advanced edition](https://help.sap.com/docs/WZ)
 - [Joule documentation](https://help.sap.com/docs/joule)
 - [SAP Build Work Zone, advanced edition on Discovery Center](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-advanced-edition?service_plan=advanced&region=all&commercialModel=btpea)
-
-> [!IMPORTANT]
-> **TODO:** Add the session feedback survey link once available for SAP TechEd 2026.

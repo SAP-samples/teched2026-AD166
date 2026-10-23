@@ -96,7 +96,7 @@ Now add the 5-step pre-order wizard below the intro banner.
 
 ### 4.3.2 Add the five wizard steps
 
-5. Click **Add step**. Set the step **Title** and **Description** exactly as shown:
+1. Click **Add step**. Set the step **Title** and **Description** exactly as shown:
 
     | Field | Value |
     |-------|-------|
@@ -133,17 +133,17 @@ Now add the 5-step pre-order wizard below the intro banner.
 
 The wizard now shows a 5-step indicator. Each step is empty until you assign a card in the next section.
 
-10. **(Optional)** The dialog also shows a final **Done** step (auto-added by WZ to mark completion). Rename it to `Pre-Order Successful` to make the end state clearer for dealers.
+6. **(Optional)** The dialog also shows a final **Done** step (auto-added by WZ to mark completion). Rename it to `Pre-Order Successful` to make the end state clearer for dealers.
 
     Once all steps are filled in you will see the **Wizard Cover Preview** at the bottom of the dialog — showing the wizard title and description as dealers will see it on the launch card.
 
     ![Add Wizard dialog with all 5 steps filled in and the final step renamed to Pre-Order Successful, showing the Wizard Cover Preview](images/04_03_0030.png)
 
-11. Click **Save** to create the wizard section.
+7. Click **Save** to create the wizard section.
 
 The five pre-order cards have been pre-loaded into the **Card Catalog** of this tenant by the workshop team. You will assign one card to each step.
 
-10. After saving, the wizard section appears on the page showing the 6-step indicator. Step 1 **Choose Your Models** is active. Click the **Add Content** button inside the step area.
+1. After saving, the wizard section appears on the page showing the 6-step indicator. Step 1 **Choose Your Models** is active. Click the **Add Content** button inside the step area.
 
     ![Wizard section on the page showing the 6-step indicator, with Add Content button visible in Step 1](images/04_03_0040.png)
 
@@ -159,9 +159,7 @@ The five pre-order cards have been pre-loaded into the **Card Catalog** of this 
 
     ![Step 1 of the wizard showing the Guided1 card rendered with the three Apex models](images/04_03_0070.png)
 
-11. In the step indicator bar, click **2 — Quantities & Variants** to navigate to Step 2. The step area switches to an empty **Add Content** state. Repeat the same process — click **Add Content** → **Cards** → search `Guided` → select **Guided2 Card | Quantities & Variants**.
-
-11. In the step indicator bar, click **2 — Quantities & Variants** to navigate to Step 2. The step area switches to an empty **Add Content** state, just like Step 1 looked before you added its card.
+2. In the step indicator bar, click **2 — Quantities & Variants** to navigate to Step 2. The step area switches to an empty **Add Content** state, just like Step 1 looked before you added its card.
 
     ![Step 2 Quantities & Variants active in the wizard, showing the empty Add Content state](images/04_03_0080.png)
 
@@ -271,7 +269,7 @@ Now that the Apex Pre-Order page exists, give dealers a clear path to it straigh
 
 4. Click **Save** to close the Button card dialog, then click **Publish** in the top-right toolbar to publish the updated **Overview** page.
 
-    The Overview page now shows a full-width **"Start Your Apex Series Pre-Order"** button beneath the Apex Series announcement. Click it to confirm it opens the **Apex Pre-Order** page (in a new tab).
+    The Overview page now shows a full-width **"Start Your Apex Series Pre-Order"** button beneath the Apex Series announcement. Click it to confirm it opens the **Apex Pre-Order** page.
 
     ![Published Overview page showing the full-width Start Your Apex Series Pre-Order button below the announcement](images/04_05_0040.png)
 
@@ -301,15 +299,9 @@ Everything is now in place. Time to put yourself back in the dealer's shoes and 
 
     ![Step 1 of the wizard with Apex models shown; Apex Pro carries a "Limited Allocation" badge](images/04_06_0030.png)
 
-    Before moving on, notice the orange **Limited Allocation** badge on the **Apex Pro** — a detail a premium-focused dealer will immediately want to understand. Rather than guess, open **Joule** from the top navigation bar and ask (the step card even suggests this question):
+    Before moving on, notice the orange **Limited Allocation** badge on the **Apex Pro** — a detail a premium-focused dealer will immediately want to understand. Notice also the suggested Joule questions on the step card.
 
-    ```
-    Why is the Apex Pro marked as limited allocation?
-    ```
-
-    Joule answers from the Apex Launch Material documents, so you get the official reason without leaving the pre-order flow.
-
-4. Open **Joule** from the top navigation bar — the panel opens **alongside the wizard**, so the guided experience stays exactly where it is. Ask:
+4. Open **Joule** from the top navigation bar — the panel opens **alongside the wizard**, so the guided experience stays exactly where it is. Joule answers from the Apex Launch Material documents, so you get the official reason without leaving the pre-order flow. Ask:
 
     ```
     Why is Apex Pro marked as limited allocation?
@@ -319,7 +311,7 @@ Everything is now in place. Time to put yourself back in the dealer's shoes and 
 
     ![Joule answering "Why is Apex Pro marked as limited allocation?" in the side panel while the pre-order wizard stays open underneath](images/04_06_0040.png)
 
-    Once you have the answer, **close the Joule panel**, click **Save & Continue** on the step card, then **Next** at the bottom of the wizard to advance to **Step 2 — Quantities & Variants**.
+    Once you have the answer, **close the Joule panel**, click **Save & Continue** on the step card, then **Next Step** at the bottom of the wizard to advance to **Step 2 — Quantities & Variants**.
 
 5. **Step 2 — Quantities & Variants.** For each model, pick a colour variant and set the order quantity. The **subtotal**, the running **units total**, and the **Discount Tier Progress** bar all update live. Try, for example:
 
@@ -337,7 +329,7 @@ Everything is now in place. Time to put yourself back in the dealer's shoes and 
     Do I need to order all models at once to qualify for the higher discount tier?
     ```
 
-    Then click **Save & Continue** and **Next** to move on to **Step 3 — Payment Terms**.
+    Then click **Save & Continue** and **Next Step** to move on to **Step 3 — Payment Terms**.
 
 6. **Step 3 — Payment Terms.** Choose how you want to pay — the choice directly affects your discount:
 
@@ -359,7 +351,7 @@ Everything is now in place. Time to put yourself back in the dealer's shoes and 
 
     ![Joule's side-by-side comparison of upfront vs Net 30 savings for the dealer's exact 5 / 10 / 2-unit order](images/04_06_0070.png)
 
-    When you are satisfied with the terms, click **Save & Continue** and **Next** to advance to **Step 4 — Order Summary**.
+    When you are satisfied with the terms, click **Save & Continue** and **Next Step** to advance to **Step 4 — Order Summary**.
 
 7. **Step 4 — Order Summary.** This is the complete review before you commit. The table lists every model with its colour, quantity, **net (list)** price, the **discount** applied, the **net (final)** price, and the **line total**:
 
@@ -378,7 +370,7 @@ Everything is now in place. Time to put yourself back in the dealer's shoes and 
 > [!TIP]
 > Unsure what you are agreeing to? The step card suggests Joule questions for exactly this moment, such as *"What are my cancellation rights after submitting a pre-order?"* and *"What happens if BestRun EV cannot deliver within the stated window?"* — ask Joule before you accept.
 
-With the terms accepted, click **Save & Continue** and **Next** to move on to **Step 5 — Confirm Pre-Order**.
+With the terms accepted, click **Accept & Continue** and **Next Step** to move on to **Step 5 — Confirm Pre-Order**.
 
 8. **Step 5 — Confirm Pre-Order.** The wizard confirms **"Pre-Order Submitted Successfully"** — you have secured your Apex Series allocation, and BestRun EV will confirm within 2 business days. The screen gives you everything to keep on file:
 

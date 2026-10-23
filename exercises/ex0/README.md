@@ -1,6 +1,6 @@
-# Exercise 0 - Detailed Overview of the Scenario (Optional)
+# Exercise 0 - Detailed Overview of the Scenario
 
-This section introduces the business scenario, the personas you will play, and the SAP Build Work Zone environment you will work in. If you are already familiar with SAP Build Work Zone, advanced edition, you can skim this and jump ahead to [Exercise 1](../ex1/README.md).
+This section introduces the business scenario, the personas you will play, and the SAP Build Work Zone environment you will work in.
 
 ## Exercise 0.1 Learn About the Company, Scenario, and Personas
 
@@ -28,9 +28,17 @@ With the launch in a few days, the digital team has decided: **migrate from the 
 
 </div>
 
+> [!TIP]
+> **Why using SAP Build Work Zone?**
+> Before you start building, consider the two biggest pain points of the old PDF portal:
+> - A dealer asks: *"Does the Apex Trail come in matte black?"* — with a static PDF and a contact form, how long do they wait for an answer?
+> - The quarterly price list was emailed last month. A dealer is quoting a customer right now. How do they know if the price is still current?
+>
+> As you work through the exercises, notice how each step directly addresses one of these gaps — real-time answers from Joule, always-up-to-date content in the workspace, and a structured pre-order flow instead of a contact form.
+
 ### Your Personas
 
-During this session you play two roles. You start as the portal admin who builds the portal, and at the end of each build exercise you switch to a dealer alias user to experience what you just built from a end-user's perspective.
+During this session you play two roles. You start as the portal admin who builds the portal, and at the end of each build exercise you switch to a dealer alias user to experience what you just built from an end-user's perspective.
 
 | Persona | When | What you do |
 |---|---|---|

@@ -35,7 +35,7 @@ There are no specific technical requirements to follow exercises 0–3. For Exer
 
 <p align="center"><img src="./exercise-flow.png" width="100%" /></p>
 
-- [Exercise 0 - Detailed Overview of the Scenario (Optional)](exercises/ex0/) — Meet BestRun EV, the Apex Series, your personas, and explore a sample workspace
+- [Exercise 0 - Detailed Overview of the Scenario](exercises/ex0/) — Meet BestRun EV, the Apex Series, your personas, and explore a sample workspace
 - [Exercise 1 - Create the External Dealer Workspace](exercises/ex1/)
     - [Exercise 1.1 - Access Work Zone and launch Joule](exercises/ex1/README.md#exercise-11-access-work-zone-and-launch-joule)
     - [Exercise 1.2 - Create the dealer portal workspace from a template](exercises/ex1/README.md#exercise-12-create-the-dealer-portal-workspace-from-a-template)

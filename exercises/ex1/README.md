@@ -46,8 +46,7 @@ There are two ways to create a workspace in SAP Build Work Zone — using Joule 
 
 ---
 
-<details open>
-<summary><strong>Option A — Create with Joule (recommended)</strong></summary>
+### Option A — Create with Joule (recommended)
 
 1. With the Joule panel open, type the following prompt:
 
@@ -57,20 +56,20 @@ There are two ways to create a workspace in SAP Build Work Zone — using Joule 
 
     ![Joule responding to the create workspace prompt](images/01_02_0010.png)
 
+> [!NOTE]
+> Joule may skip the template list if it selects a template automatically based on your prompt. If no template selection appears, continue to the next step.
+
 2. Joule responds with a list of workspace templates. **Scroll down to the end of the list** in the Joule panel to find the **Partner Portal** template — described as a template for "engaging and informative external-facing partner portals, such as dealer portals." Click **Select** next to it.
 
     ![Joule template list scrolled to the bottom showing the Partner Portal template with a Select link](images/01_02_0020.png)
 
-> [!NOTE]
-> Joule may skip the template list if it selects a template automatically based on your prompt. If no template selection appears, continue to the next step.
+3. Joule creates the workspace and confirms with **"Great! The workspace has been created, and you can start building it."** On the Work Zone home feed, a banner reading **"There are 2 New Updates"** appears above the feed.
 
-3. Joule creates the workspace and confirms with **"Great! The workspace has been created, and you can start building it."**
+    ![Home feed showing the "There are 2 New Updates" banner with the Refresh link highlighted](images/01_02_0030.png)
 
-    ![Joule confirming the workspace has been created, with a View Workspace button](images/01_02_0030.png)
+4. Click **Refresh** on the banner to reveal the workspace-creation update in the feed, then click the **BestRun EV Dealer Portal XXX** link to open your new workspace.
 
-4. Open your new workspace from the Work Zone home feed. A banner reading **"There are 2 New Updates"** appears above the feed — click **Refresh**.
-
-    ![Home feed refreshed, showing the workspace-creation update with a link to BestRun EV Dealer Portal XXX](images/01_02_0040.png)
+    ![Home feed after refreshing, showing the workspace-creation update with a link to BestRun EV Dealer Portal XXX](images/01_02_0040.png)
 
 > [!TIP]
 > Opening the workspace from the feed link keeps the Joule panel available on the right. You can also use the **View Workspace** button in the Joule chat, but that opens the workspace in a new tab and closes the panel.
@@ -92,8 +91,6 @@ There are two ways to create a workspace in SAP Build Work Zone — using Joule 
     ![Full Overview page of the template-based BestRun EV Dealer Portal workspace](images/01_02_0060.png)
 
     This template gives you a running start. Over the next exercises you will replace the placeholder content and make the portal dealer-ready — personalizing this Overview page in **Exercise 2**, adding the Apex Series product launch content in **Exercise 3**, and building a dedicated **Apex Pre-Order** page with a 5-step guided wizard and a live order status card in **Exercise 4**.
-
-</details>
 
 ---
 
